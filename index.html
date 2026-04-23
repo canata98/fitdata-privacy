@@ -304,61 +304,33 @@
     }
 
     /* iPhone + Apple Watch side by side */
-    .iphone-watch-group { display: flex; align-items: flex-end; gap: 20px; }
+    .iphone-watch-group { display: flex; align-items: center; gap: 20px; }
 
-    /* Apple Watch Ultra 3 — Black Titanium */
-    .watch-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
-    .watch-band-t, .watch-band-b {
-      width: 68px;
-      background: linear-gradient(180deg, #1d1d1d 0%, #141414 100%);
-      box-shadow: inset 1px 0 0 rgba(255,255,255,0.04), inset -1px 0 0 rgba(255,255,255,0.04);
-    }
-    .watch-band-t { height: 38px; border-radius: 5px 5px 0 0; border-top: 1.5px solid rgba(255,255,255,0.07); }
-    .watch-band-b { height: 52px; border-radius: 0 0 5px 5px; border-bottom: 1.5px solid rgba(0,0,0,0.5); }
-    .watch-frame {
+    /* Apple Watch Ultra 3 — SVG frame (same technique as iPhone) */
+    /* SVG viewBox 380×500; screen area x=74 y=108 w=232 h=344 rx=58 */
+    .watch {
       position: relative; flex-shrink: 0;
-      width: 128px; height: 156px;
-      border-radius: 33px;
-      background: linear-gradient(150deg, #2e2e2e 0%, #1c1c1c 50%, #0e0e0e 100%);
-      box-shadow:
-        inset 0 1px 0 rgba(255,255,255,0.09),
-        inset 0 0 0 1px rgba(255,255,255,0.04),
-        rgba(0,0,0,0.65) 0px 18px 48px -6px,
-        rgba(0,0,0,0.22) 0px 3px 8px 0px;
-      padding: 10px;
+      width: 158px; height: 208px;
+      filter: drop-shadow(0px 16px 40px rgba(0,0,0,0.60))
+              drop-shadow(0px 2px 6px rgba(0,0,0,0.28));
     }
-    /* Digital Crown (right side) */
-    .watch-frame::before {
+    .watch::after {
       content: '';
-      position: absolute;
-      right: -9px; top: 27%;
-      width: 11px; height: 28px;
-      border-radius: 5px;
-      background: linear-gradient(90deg, #2a2a2a 0%, #1e1e1e 60%, #161616 100%);
-      box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,0.07),
-        inset 0 1px 0 rgba(255,255,255,0.12),
-        2px 0 6px rgba(0,0,0,0.5);
+      position: absolute; inset: 0;
+      background: url('assets/apple-watch-frame.svg') center / 100% 100% no-repeat;
+      pointer-events: none; z-index: 3;
     }
-    /* Side button below crown */
-    .watch-frame::after {
-      content: '';
+    /* Screen area — percentages from SVG coords */
+    .watch-screen {
       position: absolute;
-      right: -8px; top: 56%;
-      width: 9px; height: 20px;
-      border-radius: 4px;
-      background: linear-gradient(90deg, #282828 0%, #1a1a1a 100%);
-      box-shadow:
-        inset 0 0 0 1px rgba(255,255,255,0.05),
-        2px 0 4px rgba(0,0,0,0.45);
-    }
-    .watch-inner {
-      width: 100%; height: 100%;
-      border-radius: 24px;
+      left: 19.47%;   /* 74/380 */
+      top:  21.60%;   /* 108/500 */
+      width: 61.05%;  /* 232/380 */
+      height: 68.80%; /* 344/500 */
       overflow: hidden; background: #000;
+      border-radius: 24px; z-index: 1;
     }
-    /* 90% scale — screenshot inset inside bezel */
-    .watch-inner img {
+    .watch-screen img {
       width: 100%; height: 100%;
       object-fit: cover; object-position: center top;
       display: block;
@@ -610,14 +582,10 @@
               <img src="assets/en/Workout_Active.PNG" alt="Workout Active" />
             </div>
           </div>
-          <div class="watch-wrap">
-            <div class="watch-band-t"></div>
-            <div class="watch-frame">
-              <div class="watch-inner">
-                <img src="assets/en/Watch_Workout_Active.PNG" alt="Apple Watch" />
-              </div>
+          <div class="watch">
+            <div class="watch-screen">
+              <img src="assets/en/Watch_Workout_Active.PNG" alt="Apple Watch" />
             </div>
-            <div class="watch-band-b"></div>
           </div>
         </div>
       </div>
@@ -669,14 +637,11 @@
               <img src="assets/en/Run_Active.png" alt="Run Active" />
             </div>
           </div>
-          <div class="watch-wrap">
-            <div class="watch-band-t"></div>
-            <div class="watch-frame">
-              <div class="watch-inner">
-                <img src="assets/en/Watch_Run_Active.png" alt="Apple Watch" />
-              </div>
+          <div class="watch">
+            <div class="watch-screen">
+              <img src="assets/en/Watch_Run_Active.png" alt="Apple Watch" />
             </div>
-            <div class="watch-band-b"></div>
+          </div>
           </div>
         </div>
       </div>

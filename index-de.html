@@ -260,6 +260,8 @@
     .feat-row.flip { direction: rtl; }
     .feat-row.flip > * { direction: ltr; }
     .feat-row:last-child { margin-bottom: 0; }
+    /* Extra breathing room before detail-section */
+    .features-inner { padding-bottom: 120px; }
 
     .feat-text .tag {
       font-family: 'Gabarito', sans-serif;
@@ -293,6 +295,7 @@
     }
 
     /* ── FAQ ── */
+    .faq-outer { background: var(--bg-cream); }
     .faq-wrap { max-width: 720px; margin: 0 auto; padding: 96px 24px; }
     .faq-wrap .label-tag { display: block; margin-bottom: 12px; }
     .faq-wrap h2 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 48px; }
@@ -528,7 +531,6 @@
             </div>
           </div>
           <img class="watch-mockup" src="assets/de/Watch_Workout_Active_DE-portrait.png" alt="Apple Watch" />
-          </div>
         </div>
       </div>
     </div>
@@ -580,7 +582,6 @@
             </div>
           </div>
           <img class="watch-mockup" src="assets/de/Watch_Run_Active_DE-portrait.png" alt="Apple Watch" />
-          </div>
         </div>
       </div>
     </div>
@@ -651,6 +652,7 @@
 </div>
 
 <!-- ── FAQ ── -->
+<div class="faq-outer">
 <div class="faq-wrap" id="faq">
   <span class="label-tag">FAQ</span>
   <h2>Häufige Fragen</h2>
@@ -660,6 +662,7 @@
   <details class="fq"><summary>Sind meine KI-Chat-Daten privat?</summary><div class="fqb">Ja. KI-Gespräche sind verschlüsselt und werden von vertrauenswürdigen Anbietern unter strengen Datenschutzvereinbarungen verarbeitet. Du kannst kontrollieren, welche Pläne die KI sehen kann, und deine Historie jederzeit löschen.</div></details>
   <details class="fq"><summary>Synchronisiert FitData geräteübergreifend?</summary><div class="fqb">Ja. Melde dich auf einem beliebigen Gerät mit demselben Account an und deine Workouts, Pläne und Fortschritte synchronisieren automatisch. Offline-Änderungen synchronisieren, sobald du wieder online bist.</div></details>
   <details class="fq"><summary>Wie kündige ich mein Abo?</summary><div class="fqb">Verwalte oder kündige dein Pro-Abo jederzeit über iOS Einstellungen → Apple ID → Abonnements. Ohne Umwege.</div></details>
+</div>
 </div>
 
 <!-- ── CTA ── -->

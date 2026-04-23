@@ -276,6 +276,8 @@
     .feat-row.flip { direction: rtl; }
     .feat-row.flip > * { direction: ltr; }
     .feat-row:last-child { margin-bottom: 0; }
+    /* Extra breathing room before detail-section */
+    .features-inner { padding-bottom: 120px; }
 
     .feat-text .tag {
       font-family: 'Gabarito', sans-serif;
@@ -317,6 +319,7 @@
 
 
     /* ── FAQ ── */
+    .faq-outer { background: var(--bg-cream); }
     .faq-wrap { max-width: 720px; margin: 0 auto; padding: 96px 24px; }
     .faq-wrap .label-tag { display: block; margin-bottom: 12px; }
     .faq-wrap h2 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 48px; }
@@ -683,6 +686,7 @@
 </div>
 
 <!-- ── FAQ ── -->
+<div class="faq-outer">
 <div class="faq-wrap" id="faq">
   <span class="label-tag">FAQ</span>
   <h2>Common questions</h2>
@@ -692,6 +696,7 @@
   <details class="fq"><summary>Is my AI chat data private?</summary><div class="fqb">Yes. AI conversations are encrypted and processed by trusted providers under strict privacy agreements. You control which plans the AI can see, and you can delete your history anytime.</div></details>
   <details class="fq"><summary>Does FitData sync across devices?</summary><div class="fqb">Yes. Log in with the same account on any device and your workouts, plans, and progress sync automatically. Offline changes sync as soon as you're back online.</div></details>
   <details class="fq"><summary>How do I cancel my subscription?</summary><div class="fqb">Manage or cancel your Pro subscription anytime through iOS Settings → Apple ID → Subscriptions. No hoops to jump through.</div></details>
+</div>
 </div>
 
 <!-- ── CTA ── -->

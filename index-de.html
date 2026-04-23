@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitData — Dein KI Fitness Coach</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      /* FitData color system — clean neutral + vibrant orange */
+      --text:     #111111;
+      --text-2:   #555550;
+      --text-3:   #999990;
+      --accent:   #E8722A;
+      --accent-h: #D4621A;
+      --bg:       #FDFAF7;
+      --bg-cream: #F7EFE5;
+      --bg-card:  #FFFFFF;
+      --border:   #EAD9CC;
+      --shadow-sm: rgba(232,114,42,0.07) 0px 1px 2px 0px, rgba(232,114,42,0.13) 0px 16px 32px 0px;
+      --shadow-md: rgba(232,114,42,0.20) 0px 2px 8px 0px;
+      --shadow-nav: rgb(234,217,204) 0px 1px 0px 0px, rgba(0,0,0,0.10) 0px 10px 30px -18px;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3, h4, h5, button, .btn, .label-tag, .eyebrow, nav .nav-logo span {
+      font-family: 'Gabarito', system-ui, sans-serif;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 80px;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 80px;
+      background: rgba(253,248,244,0.92);
+      backdrop-filter: saturate(180%) blur(20px);
+      box-shadow: var(--shadow-nav);
+    }
+    .nav-logo {
+      display: flex; align-items: center; gap: 10px;
+      text-decoration: none; color: var(--text);
+    }
+    .nav-logo img { width: 36px; height: 36px; border-radius: 9px; }
+    .nav-logo span { font-family: 'Gabarito', sans-serif; font-size: 18px; font-weight: 700; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a {
+      font-family: 'Atkinson Hyperlegible', sans-serif;
+      font-size: 17px; color: var(--text); text-decoration: none;
+      transition: color .15s;
+    }
+    .nav-links a:hover { color: var(--accent); text-decoration: underline; }
+    .btn-nav {
+      font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 700;
+      background: var(--accent); color: white;
+      padding: 8px 20px; border-radius: 999px; border: none;
+      text-decoration: none; cursor: pointer;
+      box-shadow: var(--shadow-md);
+      transition: background .15s, box-shadow .15s;
+    }
+    .btn-nav:hover { background: var(--accent-h); box-shadow: rgba(232,114,42,0.28) 0px 4px 14px 0px; }
+    .nav-lang { display: flex; gap: 6px; align-items: center; }
+    .nav-lang a {
+      font-family: 'Gabarito', sans-serif; font-size: 13px; font-weight: 700;
+      padding: 5px 12px; border-radius: 999px; text-decoration: none;
+      border: 1.5px solid var(--border); color: var(--text-2); background: transparent;
+      transition: all .15s;
+    }
+    .nav-lang a.active, .nav-lang a:hover { background: var(--text); color: white; border-color: var(--text); }
+
+    /* ── HERO ── */
+    .hero {
+      height: 100svh;
+      display: grid; grid-template-columns: 1fr 1fr;
+      padding: 80px 80px 0;
+      gap: 0;
+      overflow: hidden;
+    }
+    .hero-left {
+      display: flex; flex-direction: column; justify-content: center;
+    }
+    .eyebrow {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 14.64px; font-weight: 700; color: var(--accent);
+      letter-spacing: 0.5px; text-transform: uppercase;
+      display: block; margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-size: 56px; font-weight: 700; line-height: 1.05;
+      letter-spacing: -1px; color: var(--text);
+      margin-bottom: 20px;
+    }
+    .hero p {
+      font-family: 'Atkinson Hyperlegible', sans-serif;
+      font-size: 17px; color: var(--text-2); line-height: 1.6;
+      max-width: 420px; margin-bottom: 36px;
+    }
+    .hero-btns { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
+    .btn-primary {
+      display: inline-flex; align-items: center;
+      text-decoration: none;
+      transition: opacity .15s;
+      flex-shrink: 0;
+    }
+    .btn-primary:hover { opacity: .84; }
+    .btn-primary img { height: 46px; display: block; border-radius: 10px; }
+    .btn-ghost {
+      font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 500;
+      background: transparent; color: var(--text);
+      padding: 10px 20px; border-radius: 8px;
+      border: 1px solid var(--border); text-decoration: none;
+      transition: background .15s, border-color .15s;
+    }
+    .btn-ghost:hover { background: var(--bg-cream); border-color: var(--accent); }
+    .hero-trust {
+      font-family: 'Atkinson Hyperlegible', sans-serif;
+      font-size: 14px; color: var(--text-3);
+      display: flex; gap: 4px; flex-wrap: wrap; align-items: center;
+    }
+    .hero-trust span + span::before { content: ' · '; }
+
+    /* Hero phones — two overlapping iPhones, same level */
+    .hero-right {
+      display: flex; justify-content: center; align-items: center;
+      height: 100%;
+    }
+    .hero-phones {
+      position: relative; display: flex; align-items: flex-end;
+    }
+    /* Left phone is ON TOP (in front) */
+    .hero-phone-back {
+      z-index: 2;
+      margin-right: -20px;
+      flex-shrink: 0;
+    }
+    /* Right phone is BEHIND */
+    .hero-phone-front {
+      z-index: 1;
+      filter: brightness(0.78);
+      flex-shrink: 0;
+    }
+    /* ── iPhone 17 Pro Deep Blue SVG frame overlay ── */
+    .iphone {
+      position: relative; flex-shrink: 0;
+      filter:
+        drop-shadow(0px 20px 48px rgba(0,0,0,0.30))
+        drop-shadow(0px 2px 8px rgba(0,0,0,0.14));
+    }
+    .iphone::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: url('assets/iphone17-frame.svg') center / 100% 100% no-repeat;
+      pointer-events: none;
+      z-index: 3;
+    }
+    .iphone.lg { width: 286px; height: 596px; }
+    .iphone.md { width: 252px; height: 525px; }
+    .iphone.sm { width: 226px; height: 471px; }
+    .iphone-inner {
+      position: absolute;
+      left: 4.32%; top: 2.29%;
+      width: 91.36%; height: 95.42%;
+      overflow: hidden;
+      background: #080808;
+      z-index: 1;
+      border-radius: 18px;
+    }
+    .iphone.md .iphone-inner { border-radius: 16px; }
+    .iphone.sm .iphone-inner { border-radius: 14px; }
+    .iphone-inner img {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      display: block;
+    }
+    .iphone-di { display: none; }
+
+    /* ── MEET FITDATA (zoom section) ── */
+    .zoom-section { position: relative; height: 200vh; }
+    .zoom-sticky {
+      position: sticky; top: 0; height: 100vh;
+      display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      gap: 20px; overflow: hidden;
+      background: var(--bg);
+    }
+    .zoom-headline {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 42px; font-weight: 700; letter-spacing: -1px;
+      color: var(--text); text-align: center;
+      transition: opacity .4s ease;
+    }
+    .zoom-phones {
+      display: flex; align-items: flex-end; gap: 20px;
+      transform-origin: center bottom;
+      will-change: transform;
+    }
+    .zoom-phones .side-wrap {
+      /* side phones fully visible, slightly smaller than center */
+    }
+
+    /* Video inside iphone frame */
+    .iphone-inner video {
+      width: 100%; height: 100%;
+      object-fit: cover; object-position: top center;
+      display: block;
+    }
+
+    /* ── DETAIL PHONES (3-up showcase) ── */
+    .detail-section { background: var(--bg-cream); }
+    .detail-inner { max-width: 1200px; margin: 0 auto; padding: 96px 80px; }
+    .detail-header { text-align: center; margin-bottom: 64px; }
+    .detail-header h3 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.15; margin-bottom: 14px; }
+    .detail-header p { font-size: 17px; color: var(--text-2); line-height: 1.6; max-width: 480px; margin: 0 auto; }
+    .detail-phones {
+      display: flex; justify-content: center; align-items: flex-end;
+      gap: 24px; flex-wrap: wrap;
+    }
+    .detail-phones .dp-side {
+      opacity: 0.72;
+      transform: scale(0.92) translateY(24px);
+      transform-origin: bottom center;
+    }
+
+    /* ── DIVIDER ── */
+    .divider { height: 1px; background: var(--border); max-width: 1200px; margin: 0 auto; }
+
+    /* ── FEATURES ── */
+    .features-section { background: var(--bg); }
+    .features-inner { max-width: 1200px; margin: 0 auto; padding: 96px 80px; }
+
+    .feat-header { text-align: center; margin-bottom: 80px; }
+    .label-tag {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 14.64px; font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 0.6px;
+      display: block; margin-bottom: 12px;
+    }
+    .feat-header h2 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.2; margin-bottom: 14px; }
+    .feat-header p { font-size: 17px; color: var(--text-2); line-height: 1.6; max-width: 480px; margin: 0 auto; }
+
+    .feat-row {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 80px; align-items: center;
+      margin-bottom: 96px;
+    }
+    .feat-row.flip { direction: rtl; }
+    .feat-row.flip > * { direction: ltr; }
+    .feat-row:last-child { margin-bottom: 0; }
+
+    .feat-text .tag {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 14.64px; font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 0.6px;
+      display: block; margin-bottom: 14px;
+    }
+    .feat-text h3 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; line-height: 1.15; margin-bottom: 14px; }
+    .feat-text p { font-size: 17px; color: var(--text-2); line-height: 1.6; margin-bottom: 24px; }
+    .feat-bullets { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+    .feat-bullets li {
+      font-family: 'Atkinson Hyperlegible', sans-serif;
+      font-size: 17px; color: var(--text-2); display: flex; gap: 12px; line-height: 1.5;
+    }
+    .feat-bullets li::before { content: '–'; color: var(--accent); flex-shrink: 0; }
+
+    .feat-phone-wrap {
+      display: flex; justify-content: center; align-items: flex-end;
+      min-height: 480px;
+    }
+
+    /* iPhone + Apple Watch side by side */
+    .iphone-watch-group { display: flex; align-items: flex-end; gap: 20px; }
+    /* Apple Watch Ultra 3 — Black Titanium */
+    .watch-wrap { display: flex; flex-direction: column; align-items: center; flex-shrink: 0; }
+    .watch-band-t, .watch-band-b {
+      width: 68px;
+      background: linear-gradient(180deg, #1d1d1d 0%, #141414 100%);
+      box-shadow: inset 1px 0 0 rgba(255,255,255,0.04), inset -1px 0 0 rgba(255,255,255,0.04);
+    }
+    .watch-band-t { height: 38px; border-radius: 5px 5px 0 0; border-top: 1.5px solid rgba(255,255,255,0.07); }
+    .watch-band-b { height: 52px; border-radius: 0 0 5px 5px; border-bottom: 1.5px solid rgba(0,0,0,0.5); }
+    .watch-frame {
+      position: relative; flex-shrink: 0;
+      width: 128px; height: 156px; border-radius: 33px;
+      background: linear-gradient(150deg, #2e2e2e 0%, #1c1c1c 50%, #0e0e0e 100%);
+      box-shadow:
+        inset 0 1px 0 rgba(255,255,255,0.09),
+        inset 0 0 0 1px rgba(255,255,255,0.04),
+        rgba(0,0,0,0.65) 0px 18px 48px -6px,
+        rgba(0,0,0,0.22) 0px 3px 8px 0px;
+      padding: 10px;
+    }
+    .watch-frame::before {
+      content: '';
+      position: absolute; right: -9px; top: 27%;
+      width: 11px; height: 28px; border-radius: 5px;
+      background: linear-gradient(90deg, #2a2a2a 0%, #1e1e1e 60%, #161616 100%);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.07), inset 0 1px 0 rgba(255,255,255,0.12), 2px 0 6px rgba(0,0,0,0.5);
+    }
+    .watch-frame::after {
+      content: '';
+      position: absolute; right: -8px; top: 56%;
+      width: 9px; height: 20px; border-radius: 4px;
+      background: linear-gradient(90deg, #282828 0%, #1a1a1a 100%);
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,0.05), 2px 0 4px rgba(0,0,0,0.45);
+    }
+    .watch-inner {
+      width: 100%; height: 100%;
+      border-radius: 24px;
+      overflow: hidden; background: #000;
+    }
+    .watch-inner img { width: 100%; height: 100%; object-fit: cover; object-position: center top; display: block; transform: scale(0.90); transform-origin: top center; }
+
+    /* ── FAQ ── */
+    .faq-wrap { max-width: 720px; margin: 0 auto; padding: 96px 24px; }
+    .faq-wrap .label-tag { display: block; margin-bottom: 12px; }
+    .faq-wrap h2 { font-size: 36px; font-weight: 700; letter-spacing: -0.5px; margin-bottom: 48px; }
+    details.fq { border-bottom: 1px solid var(--border); }
+    details.fq summary {
+      padding: 22px 0; font-family: 'Gabarito', sans-serif; font-size: 20px; font-weight: 700;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      list-style: none; user-select: none; color: var(--text);
+    }
+    details.fq summary::-webkit-details-marker { display: none; }
+    details.fq summary::after { content: '+'; font-size: 22px; color: var(--text-3); flex-shrink: 0; transition: transform .2s; font-family: system-ui; }
+    details.fq[open] summary::after { transform: rotate(45deg); }
+    details.fq[open] summary { color: var(--accent); }
+    details.fq .fqb { padding-bottom: 20px; font-size: 17px; color: var(--text-2); line-height: 1.7; }
+
+    /* ── CTA ── */
+    .cta-sec { background: var(--text); padding: 96px 80px; text-align: center; }
+    .cta-sec .label-tag { color: rgba(255,255,255,0.45); }
+    .cta-sec h2 { font-size: 56px; font-weight: 700; letter-spacing: -1.5px; color: white; margin-bottom: 16px; }
+    .cta-sec p { font-size: 17px; color: rgba(255,255,255,0.5); margin-bottom: 40px; line-height: 1.6; }
+    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+    .btn-cta-primary { display: inline-flex; align-items: center; text-decoration: none; transition: opacity .15s; flex-shrink: 0; }
+    .btn-cta-primary:hover { opacity: .84; }
+    .btn-cta-primary img { height: 52px; display: block; border-radius: 11px; }
+
+    /* ── FOOTER ── */
+    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 64px 80px 40px; }
+    .ft { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 48px; }
+    .fb { max-width: 280px; }
+    .fb .nav-logo { margin-bottom: 12px; }
+    .fb p { font-size: 17px; color: var(--text-2); line-height: 1.6; }
+    .fcol h4 { font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-3); margin-bottom: 16px; }
+    .fcol a { display: block; font-size: 17px; color: var(--text-2); text-decoration: none; margin-bottom: 10px; transition: color .15s; }
+    .fcol a:hover { color: var(--accent); text-decoration: underline; }
+    .fbot { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .fbot p { font-size: 14px; color: var(--text-3); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      nav { padding: 0 32px; }
+      .hero { grid-template-columns: 1fr; height: auto; min-height: 100svh; padding: 80px 32px 0; text-align: center; }
+      .hero-left { padding-top: 40px; }
+      .hero h1 { font-size: 44px; }
+      .hero p { max-width: 100%; }
+      .hero-btns { justify-content: center; }
+      .hero-trust { justify-content: center; }
+      .hero-right { height: auto; padding: 48px 0 0; align-items: flex-start; }
+      .hero-phone-back { margin-right: -40px; }
+      .zoom-phones .side-wrap { display: none; }
+      .feat-row { grid-template-columns: 1fr; gap: 40px; }
+      .feat-row.flip { direction: ltr; }
+      .feat-phone-wrap { min-height: 340px; }
+      .detail-inner { padding: 64px 32px; }
+      .detail-phones .dp-side { display: none; }
+      .features-inner { padding: 64px 32px; }
+      .cta-sec { padding: 64px 32px; }
+      .cta-sec h2 { font-size: 40px; }
+      footer { padding: 48px 32px 32px; }
+      .ft { flex-direction: column; gap: 32px; }
+    }
+    @media (max-width: 600px) {
+      nav { padding: 0 20px; height: 64px; }
+      .nav-links { display: none; }
+      .hero { padding: 80px 20px 0; }
+      .hero h1 { font-size: 36px; }
+      .hero-phone-back { display: none; }
+      .features-inner { padding: 48px 20px; }
+      .detail-inner { padding: 48px 20px; }
+      .cta-sec { padding: 48px 20px; }
+      .cta-sec h2 { font-size: 32px; }
+      footer { padding: 40px 20px 28px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <a class="nav-logo" href="index-de.html">
+    <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
+    <span>FitData</span>
+  </a>
+  <div class="nav-links">
+    <a href="#features">Features</a>
+    <a href="#faq">FAQ</a>
+    <a href="support.html">Support</a>
+    <a href="privacy-de.html">Datenschutz</a>
+    <div class="nav-lang">
+      <a href="index.html">EN</a>
+      <a class="active" href="index-de.html">DE</a>
+    </div>
+    <a class="btn-nav" href="#">Download</a>
+  </div>
+</nav>
+
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-left">
+    <span class="eyebrow">Für iPhone &amp; Apple Watch</span>
+    <h1>Trainier smarter.<br>Nicht nur härter.</h1>
+    <p>Workout-Tracking, strukturierte Trainingspläne und ein KI-Coach, der deine Daten kennt – alles in einer App.</p>
+    <div class="hero-btns">
+      <a class="btn-primary" href="#">
+        <img src="assets/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg" alt="Laden im App Store" />
+      </a>
+      <a class="btn-ghost" href="#zoom-section">Entdecke was drin steckt ↓</a>
+    </div>
+    <div class="hero-trust">
+      <span>Kostenlos laden</span>
+      <span>Offline verfügbar</span>
+      <span>iPhone &amp; Apple Watch</span>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="hero-phones">
+      <!-- Back phone (Run plan) -->
+      <div class="hero-phone-back">
+        <div class="iphone lg">
+          <div class="iphone-di"></div>
+          <div class="iphone-inner">
+            <img src="assets/de/Run_RunPlan.png" alt="Laufplan" />
+          </div>
+        </div>
+      </div>
+      <!-- Front phone (Workout start) -->
+      <div class="hero-phone-front">
+        <div class="iphone lg">
+          <div class="iphone-di"></div>
+          <div class="iphone-inner">
+            <img src="assets/de/Workout_Start.PNG" alt="Workout starten" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ── ENTDECKE FITDATA ── -->
+<div class="zoom-section" id="zoom-section">
+  <div class="zoom-sticky" id="zoom-sticky">
+    <p class="zoom-headline" id="zoom-headline">Entdecke FitData</p>
+    <div class="zoom-phones" id="zoom-phones">
+
+      <!-- Links: Exercise Performance — md size -->
+      <div class="side-wrap">
+        <div class="iphone md">
+          <div class="iphone-di"></div>
+          <div class="iphone-inner">
+            <img src="assets/de/Workout_ExercisePerformance.PNG" alt="Übungs-Performance" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Mitte: Workout Home — lg (gleich groß wie Feature-Phones) -->
+      <div class="iphone lg">
+        <div class="iphone-di"></div>
+        <div class="iphone-inner">
+          <img src="assets/de/Workout_Home.PNG" alt="Workout" />
+        </div>
+      </div>
+
+      <!-- Rechts: Workout Detail — md size -->
+      <div class="side-wrap">
+        <div class="iphone md">
+          <div class="iphone-di"></div>
+          <div class="iphone-inner">
+            <img src="assets/de/Home_WorkoutDetail1.png" alt="Workout Detail" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div style="height:1px; background: var(--border); margin: 0 80px;"></div>
+
+<!-- ── FEATURES ── -->
+<div class="features-section" id="features">
+  <div class="features-inner">
+
+    <div class="feat-header">
+      <span class="label-tag">Features</span>
+      <h2>Alles was dein Training braucht</h2>
+      <p>Von deinem ersten Satz bis zu deinem Rekord – alles an einem Ort.</p>
+    </div>
+
+    <!-- 1: Pläne erstellen (Video) -->
+    <div class="feat-row">
+      <div class="feat-text">
+        <span class="tag">Workout-Tracking</span>
+        <h3>Pläne erstellen.<br>Sets loggen.<br>Rekorde brechen.</h3>
+        <p>Erstelle strukturierte Trainingspläne mit Übungen, Sätzen, Wiederholungen und Gewichten. Verfolge deine Performance in Echtzeit mit integriertem Pause-Timer.</p>
+        <ul class="feat-bullets">
+          <li>Übungsdatenbank mit Performance-Charts</li>
+          <li>Echtzeit-Satzerfassung mit Pause-Timer</li>
+          <li>Persönliche Rekorde werden automatisch erfasst</li>
+          <li>Wöchentliche Volumen- und Krafttrends</li>
+        </ul>
+      </div>
+      <div class="feat-phone-wrap">
+        <div class="iphone lg">
+          <div class="iphone-di"></div>
+          <div class="iphone-inner">
+            <video autoplay muted loop playsinline>
+              <source src="assets/de/Create_Workoutplan.MP4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 2: Workout Aktiv (iPhone + Apple Watch) -->
+    <div class="feat-row flip">
+      <div class="feat-text">
+        <span class="tag">Aktives Workout</span>
+        <h3>Workout starten.<br>Jeden Satz dominieren.</h3>
+        <p>Starte einen Plan und FitData führt dich durch – Satz für Satz, mit automatischen Pause-Timern und Echtzeit-Feedback. Alles steuerbar vom Handgelenk.</p>
+        <ul class="feat-bullets">
+          <li>Schritt-für-Schritt Plan-Führung</li>
+          <li>Automatischer Pause-Timer zwischen Sätzen</li>
+          <li>Live Gewichts- und Wiederholungs-Erfassung</li>
+          <li>Apple Watch Steuerung am Handgelenk</li>
+        </ul>
+      </div>
+      <div class="feat-phone-wrap">
+        <div class="iphone-watch-group">
+          <div class="iphone lg">
+            <div class="iphone-di"></div>
+            <div class="iphone-inner">
+              <img src="assets/de/Workout_Active.png" alt="Workout Aktiv" />
+            </div>
+          </div>
+          <div class="watch-wrap">
+            <div class="watch-band-t"></div>
+            <div class="watch-frame">
+              <div class="watch-inner">
+                <img src="assets/de/Watch_Workout_Active.png" alt="Apple Watch" />
+              </div>
+            </div>
+            <div class="watch-band-b"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3: Performance & Analyse (Video) -->
+    <div class="feat-row">
+      <div class="feat-text">
+        <span class="tag">Performance &amp; Analyse</span>
+        <h3>Sieh deinen Fortschritt.<br>In Zahlen.</h3>
+        <p>FitData erfasst jeden Satz und jede Session – und macht daraus klare Charts und Einblicke, damit du immer weißt, wie du dich verbesserst.</p>
+        <ul class="feat-bullets">
+          <li>Volumen-, Kraft- und Häufigkeitstrends</li>
+          <li>Performance-Verlauf pro Übung</li>
+          <li>Persönliche Rekorde werden automatisch markiert</li>
+          <li>Vollständige Trainingshistorie mit Session-Details</li>
+        </ul>
+      </div>
+      <div class="feat-phone-wrap">
+        <div class="iphone lg">
+          <div class="iphone-di"></div>
+          <div class="iphone-inner">
+            <video autoplay muted loop playsinline>
+              <source src="assets/de/Workout_History+Performanc.MP4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 4: Aktiver Lauf (iPhone + Apple Watch) -->
+    <div class="feat-row flip">
+      <div class="feat-text">
+        <span class="tag">Aktiver Lauf</span>
+        <h3>Lauf starten.<br>Jede Kennzahl, live.</h3>
+        <p>Verfolge Tempo, Distanz und Herzfrequenz in Echtzeit – mit voller Apple Watch Unterstützung, damit du das Handy zu Hause lassen kannst.</p>
+        <ul class="feat-bullets">
+          <li>Live Tempo, Distanz und Dauer</li>
+          <li>Herzfrequenz-Monitoring via Apple Watch</li>
+          <li>Intervall- und strukturierte Lauf-Unterstützung</li>
+          <li>Steuerung direkt am Handgelenk</li>
+        </ul>
+      </div>
+      <div class="feat-phone-wrap">
+        <div class="iphone-watch-group">
+          <div class="iphone lg">
+            <div class="iphone-di"></div>
+            <div class="iphone-inner">
+              <img src="assets/de/Run_Active.png" alt="Aktiver Lauf" />
+            </div>
+          </div>
+          <div class="watch-wrap">
+            <div class="watch-band-t"></div>
+            <div class="watch-frame">
+              <div class="watch-inner">
+                <img src="assets/de/Watch_Run_Active.png" alt="Apple Watch" />
+              </div>
+            </div>
+            <div class="watch-band-b"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- ── WORKOUT DETAIL (3 Phones) ── -->
+<div class="detail-section">
+  <div class="detail-inner">
+    <div class="detail-header">
+      <span class="label-tag">Lauf-Detail</span>
+      <h3>Jede Split.<br>Jede Kennzahl.</h3>
+      <p>Tauche in jeden Lauf ein – sieh deine Pace-Splits, Herzfrequenz und Performance vs. Ziel. Deine vollständige Laufhistorie auf einen Blick.</p>
+    </div>
+    <div class="detail-phones">
+      <div class="dp-side">
+        <div class="iphone sm">
+          <div class="iphone-di"></div>
+          <div class="iphone-inner">
+            <img src="assets/de/Home_WorkoutDetail1.png" alt="Workout Detail" />
+          </div>
+        </div>
+      </div>
+      <div class="iphone md">
+        <div class="iphone-di"></div>
+        <div class="iphone-inner">
+          <img src="assets/de/Home_WorkoutDetail2.png" alt="Workout Detail 2" />
+        </div>
+      </div>
+      <div class="dp-side">
+        <div class="iphone sm">
+          <div class="iphone-di"></div>
+          <div class="iphone-inner">
+            <img src="assets/de/Home_WorkoutDetail3.png" alt="Workout Detail 3" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── KI PERSONAL TRAINER ── -->
+<div class="features-section">
+  <div class="features-inner" style="padding-top: 96px; padding-bottom: 96px;">
+    <div class="feat-row" style="margin-bottom: 0;">
+      <div class="feat-text">
+        <span class="tag">KI Personal Trainer</span>
+        <h3>Ein Coach, der<br>deine Daten kennt.</h3>
+        <p>FitData's KI analysiert deine Trainingshistorie und gibt personalisierte Ratschläge – keine allgemeinen Tipps. Basierend auf deinen eigenen Performance-Zahlen.</p>
+        <ul class="feat-bullets">
+          <li>Verknüpft mit deinen Plänen und der Übungshistorie</li>
+          <li>Erstellt und passt Trainingspläne für dich an</li>
+          <li>80+ Gespräche pro Monat (Pro)</li>
+          <li>Verschlüsselt – deine Daten bleiben privat</li>
+        </ul>
+      </div>
+      <div class="feat-phone-wrap">
+        <div class="iphone lg">
+          <div class="iphone-di"></div>
+          <div class="iphone-inner">
+            <img src="assets/de/Workout_KI.png" alt="KI Coach" />
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FAQ ── -->
+<div class="faq-wrap" id="faq">
+  <span class="label-tag">FAQ</span>
+  <h2>Häufige Fragen</h2>
+  <details class="fq"><summary>Funktioniert FitData offline?</summary><div class="fqb">Ja – FitData ist offline-first. Du kannst Workouts loggen, Pläne ansehen und Sätze tracken ohne Internetverbindung. Daten synchronisieren automatisch, sobald du wieder online bist. Nur der KI-Chat benötigt eine Verbindung.</div></details>
+  <details class="fq"><summary>Was ist in FitData Pro enthalten?</summary><div class="fqb">Pro schaltet frei: KI Personal Trainer mit 80+ monatlichen Gesprächen, unbegrenzte Trainingspläne, erweiterte Performance-Analysen, vollständige Trainingshistorie, Kalenderansicht und Priority-Support.</div></details>
+  <details class="fq"><summary>Wie funktioniert die Apple Health-Integration?</summary><div class="fqb">FitData liest und schreibt in Apple Health mit deiner Erlaubnis. Abgeschlossene Workouts schließen automatisch deine Activity Rings, und HealthKit-Daten bereichern deine Analysen in FitData.</div></details>
+  <details class="fq"><summary>Sind meine KI-Chat-Daten privat?</summary><div class="fqb">Ja. KI-Gespräche sind verschlüsselt und werden von vertrauenswürdigen Anbietern unter strengen Datenschutzvereinbarungen verarbeitet. Du kannst kontrollieren, welche Pläne die KI sehen kann, und deine Historie jederzeit löschen.</div></details>
+  <details class="fq"><summary>Synchronisiert FitData geräteübergreifend?</summary><div class="fqb">Ja. Melde dich auf einem beliebigen Gerät mit demselben Account an und deine Workouts, Pläne und Fortschritte synchronisieren automatisch. Offline-Änderungen synchronisieren, sobald du wieder online bist.</div></details>
+  <details class="fq"><summary>Wie kündige ich mein Abo?</summary><div class="fqb">Verwalte oder kündige dein Pro-Abo jederzeit über iOS Einstellungen → Apple ID → Abonnements. Ohne Umwege.</div></details>
+</div>
+
+<!-- ── CTA ── -->
+<div class="cta-sec">
+  <span class="label-tag">Loslegen</span>
+  <h2>Starte heute<br>smarter mit dem Training.</h2>
+  <p>Kostenlos laden. Pro wenn du bereit bist.</p>
+  <div class="cta-btns">
+    <a class="btn-cta-primary" href="#">
+      <img src="assets/Download_on_the_App_Store_Badge_DE_RGB_wht_092917.svg" alt="Laden im App Store" />
+    </a>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="ft">
+    <div class="fb">
+      <a class="nav-logo" href="index-de.html">
+        <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
+        <span>FitData</span>
+      </a>
+      <p>Dein KI-gestützter Fitness-Begleiter für iPhone und Apple Watch.</p>
+    </div>
+    <div class="fcol"><h4>App</h4><a href="index-de.html">Startseite</a><a href="#features">Features</a><a href="#faq">FAQ</a></div>
+    <div class="fcol"><h4>Rechtliches</h4><a href="privacy-en.html">Privacy Policy</a><a href="privacy-de.html">Datenschutz</a><a href="terms-en.html">Terms of Use</a><a href="terms-de.html">Nutzungsbedingungen</a></div>
+    <div class="fcol"><h4>Support</h4><a href="support-en.html">Help Center (EN)</a><a href="support.html">Hilfe (DE)</a><a href="mailto:fit.data1@gmail.com">Kontakt</a><a href="https://www.instagram.com/fitdataapp/" target="_blank">Instagram</a></div>
+  </div>
+  <div class="fbot">
+    <p>© 2025 FitData. Alle Rechte vorbehalten.</p>
+    <p>Gemacht für Athleten überall.</p>
+  </div>
+</footer>
+
+<!-- ── SCROLL JS ── -->
+<script>
+  const section  = document.getElementById('zoom-section');
+  const phones   = document.getElementById('zoom-phones');
+  const headline = document.getElementById('zoom-headline');
+
+  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
+  function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
+
+  window.addEventListener('scroll', () => {
+    const rect     = section.getBoundingClientRect();
+    const total    = section.offsetHeight - window.innerHeight;
+    const scrolled = clamp(-rect.top, 0, total);
+    const p        = scrolled / total;
+
+    const scale = 0.84 + ease(p) * 0.16;
+    phones.style.transform = `scale(${scale})`;
+    headline.style.opacity = clamp(1 - (p - 0.45) / 0.3, 0, 1);
+  }, { passive: true });
+</script>
+
+</body>
+</html>

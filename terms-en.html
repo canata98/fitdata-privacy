@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitData — Terms of Service</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text:     #111111;
+      --text-2:   #555550;
+      --text-3:   #999990;
+      --accent:   #E8722A;
+      --accent-h: #D4621A;
+      --bg:       #FDFAF7;
+      --bg-cream: #F7EFE5;
+      --bg-card:  #FFFFFF;
+      --border:   #EAD9CC;
+      --shadow-sm: rgba(232,114,42,0.08) 0px 1px 2px 0px, rgba(232,114,42,0.12) 0px 14px 30px 0px;
+      --shadow-md: rgba(232,114,42,0.18) 0px 1px 2px 0px;
+      --shadow-nav: rgb(234,217,204) 0px 1px 0px 0px, rgba(0,0,0,0.10) 0px 10px 30px -18px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.6; min-height: 100vh;
+    }
+    h1, h2, h3, h4, nav .nav-logo span { font-family: 'Gabarito', system-ui, sans-serif; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 80px; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 80px;
+      background: rgba(253,248,244,0.92);
+      backdrop-filter: saturate(180%) blur(20px);
+      box-shadow: var(--shadow-nav);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+    .nav-logo img { width: 36px; height: 36px; border-radius: 9px; }
+    .nav-logo span { font-family: 'Gabarito', sans-serif; font-size: 18px; font-weight: 700; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 17px; color: var(--text); text-decoration: none; transition: color .15s; }
+    .nav-links a:hover { color: var(--accent); text-decoration: underline; }
+    .btn-nav {
+      font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 700;
+      background: var(--accent); color: white; padding: 8px 20px; border-radius: 999px;
+      border: none; text-decoration: none; box-shadow: var(--shadow-md); transition: background .15s;
+    }
+    .btn-nav:hover { background: var(--accent-h); }
+    .nav-lang { display: flex; gap: 6px; align-items: center; }
+    .nav-lang a {
+      font-family: 'Gabarito', sans-serif; font-size: 13px; font-weight: 700;
+      padding: 5px 12px; border-radius: 999px; text-decoration: none;
+      border: 1.5px solid var(--border); color: var(--text-2); background: transparent;
+      transition: all .15s;
+    }
+    .nav-lang a.active, .nav-lang a:hover { background: var(--text); color: white; border-color: var(--text); }
+
+    /* PAGE HEADER */
+    .page-header { padding: 140px 24px 56px; text-align: center; border-bottom: 1px solid var(--border); }
+    .back {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 15px; color: var(--text-2); text-decoration: none;
+      margin-bottom: 28px; transition: color .15s;
+    }
+    .back:hover { color: var(--accent); }
+    .page-header h1 {
+      font-size: clamp(36px, 5vw, 56px); font-weight: 700;
+      letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 10px;
+    }
+    .meta { font-size: 15px; color: var(--text-3); margin-top: 10px; }
+    .lang-switch { display: flex; gap: 8px; justify-content: center; margin-top: 24px; }
+    .lang-pill {
+      font-family: 'Gabarito', sans-serif; font-size: 13px; font-weight: 700;
+      padding: 7px 16px; border-radius: 999px; text-decoration: none;
+      border: 1.5px solid var(--border); color: var(--text-2); background: var(--bg-card);
+      transition: all .15s;
+    }
+    .lang-pill.active, .lang-pill:hover { background: var(--text); color: white; border-color: var(--text); }
+
+    /* DOCUMENT */
+    .doc-wrap { max-width: 700px; margin: 0 auto; padding: 64px 24px 120px; }
+    .doc-wrap h2 {
+      font-size: 20px; font-weight: 700; letter-spacing: -0.3px;
+      margin: 52px 0 14px; padding-top: 52px;
+      border-top: 1px solid var(--border); color: var(--text);
+    }
+    .doc-wrap h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+    .doc-wrap p { font-size: 17px; color: var(--text-2); line-height: 1.75; margin-bottom: 14px; }
+    .doc-wrap ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+    .doc-wrap ul li { font-size: 17px; color: var(--text-2); display: flex; gap: 12px; line-height: 1.65; }
+    .doc-wrap ul li::before { content: '–'; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+    .doc-wrap strong { color: var(--text); font-weight: 700; }
+    .doc-wrap a { color: var(--accent); text-decoration: none; }
+    .doc-wrap a:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: var(--bg-cream); border: 1.5px solid var(--border);
+      border-radius: 16px; padding: 22px 28px; margin: 24px 0;
+    }
+    .highlight-box p { margin: 0; }
+
+    .contact-box {
+      background: var(--bg-card); border: 1.5px solid var(--border);
+      border-radius: 24px; padding: 32px 36px; margin-top: 56px;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-box h2 { border-top: none !important; padding-top: 0 !important; margin-top: 0 !important; margin-bottom: 24px !important; }
+    .c-row { display: flex; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 17px; }
+    .c-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .c-label { font-family: 'Gabarito', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: var(--text-3); width: 96px; flex-shrink: 0; }
+    .c-row a { color: var(--accent); text-decoration: none; }
+    .c-row a:hover { text-decoration: underline; }
+    .c-row span { color: var(--text-2); }
+
+    /* FOOTER */
+    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 64px 80px 40px; }
+    .ft { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 48px; }
+    .fb { max-width: 280px; }
+    .fb .nav-logo { margin-bottom: 12px; }
+    .fb p { font-size: 17px; color: var(--text-2); line-height: 1.6; }
+    .fcol h4 { font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-3); margin-bottom: 16px; }
+    .fcol a { display: block; font-size: 17px; color: var(--text-2); text-decoration: none; margin-bottom: 10px; transition: color .15s; }
+    .fcol a:hover { color: var(--accent); text-decoration: underline; }
+    .fbot { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .fbot p { font-size: 14px; color: var(--text-3); }
+
+    @media (max-width: 960px) { nav { padding: 0 32px; } footer { padding: 48px 32px 32px; } .ft { flex-direction: column; } }
+    @media (max-width: 600px) { nav { padding: 0 20px; height: 64px; } .nav-links { display: none; } .page-header { padding: 110px 20px 40px; } footer { padding: 40px 20px 28px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
+    <span>FitData</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="support-en.html">Support</a>
+    <a href="privacy-en.html">Privacy</a>
+    <div class="nav-lang"><a class="active" href="terms-en.html">EN</a><a href="terms-de.html">DE</a></div>
+    <a class="btn-nav" href="#">Download</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <a class="back" href="index.html">← Back to FitData</a>
+  <h1>Terms of Service</h1>
+  <p class="meta">Last updated: August 2025</p>
+  <div class="lang-switch">
+    <a class="lang-pill active" href="terms-en.html">🇺🇸 English</a>
+    <a class="lang-pill" href="terms-de.html">🇩🇪 Deutsch</a>
+  </div>
+</div>
+
+<div class="doc-wrap">
+
+  <h2>1. Introduction</h2>
+  <p>These Terms of Service govern your use of the FitData app. By downloading or using the app, you agree to be bound by these terms. If you do not agree, please do not use FitData.</p>
+
+  <h2>2. Services</h2>
+  <p>FitData provides fitness tracking, AI-based coaching, workout plans, running tracking, and performance analytics. Available features may vary depending on your subscription plan.</p>
+
+  <h2>3. Subscriptions</h2>
+  <ul>
+    <li><strong>FitData Pro (Monthly):</strong> 1-week free trial, then €3.99/month</li>
+    <li><strong>FitData Pro (Yearly):</strong> 1-week free trial, then €29.99/year</li>
+  </ul>
+  <p>Subscriptions renew automatically unless canceled at least 24 hours before the end of the current billing period via the App Store. Your account will be charged for renewal within 24 hours prior to the end of the current period.</p>
+
+  <h2>4. Cancellation</h2>
+  <p>You may cancel your subscription at any time through the Apple App Store: <strong>Settings → Apple ID → Subscriptions</strong>. Cancellation takes effect at the end of the current billing period. Payments already made are non-refundable.</p>
+
+  <h2>5. Disclaimer</h2>
+  <div class="highlight-box">
+    <p>FitData does not provide medical advice. Always consult a qualified physician before starting any new workout or fitness program. Use of the app is entirely at your own risk. FitData is not liable for any injuries or health issues that arise from use of the app.</p>
+  </div>
+
+  <h2>6. User Obligations</h2>
+  <p>By using FitData, you agree to:</p>
+  <ul>
+    <li>Use the app lawfully and in accordance with these terms</li>
+    <li>Provide accurate and complete information</li>
+    <li>Not upload content that infringes the intellectual property rights of others</li>
+    <li>Not attempt to reverse engineer, decompile, or misuse the app</li>
+    <li>Not use the app to transmit harmful, offensive, or illegal content</li>
+  </ul>
+
+  <h2>7. Intellectual Property</h2>
+  <p>All content, design, code, and trademarks within FitData are the exclusive property of FitData. You may not reproduce, distribute, or create derivative works without explicit written permission.</p>
+
+  <h2>8. Limitation of Liability</h2>
+  <p>To the fullest extent permitted by law, FitData shall not be liable for any indirect, incidental, special, or consequential damages arising out of your use of or inability to use the app.</p>
+
+  <h2>9. Changes to These Terms</h2>
+  <p>We may update these Terms of Service from time to time. You will be notified of significant changes through the app or by email. Continued use of the app after changes have been posted constitutes acceptance of the updated terms.</p>
+
+  <div class="contact-box">
+    <h2>Contact</h2>
+    <div class="c-row"><span class="c-label">Email</span><a href="mailto:fit.data1@gmail.com">fit.data1@gmail.com</a></div>
+    <div class="c-row"><span class="c-label">Instagram</span><a href="https://www.instagram.com/fitdataapp/" target="_blank">@fitdataapp</a></div>
+    <div class="c-row"><span class="c-label">Response</span><span>Within 24–48 hours</span></div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="ft">
+    <div class="fb">
+      <a class="nav-logo" href="index.html">
+        <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
+        <span>FitData</span>
+      </a>
+      <p>Your AI-powered fitness companion for iPhone and Apple Watch.</p>
+    </div>
+    <div class="fcol"><h4>App</h4><a href="index.html">Home</a><a href="index.html#features">Features</a><a href="index.html#faq">FAQ</a></div>
+    <div class="fcol"><h4>Legal</h4><a href="privacy-en.html">Privacy Policy</a><a href="privacy-de.html">Datenschutz</a><a href="terms-en.html">Terms of Use</a><a href="terms-de.html">Nutzungsbedingungen</a></div>
+    <div class="fcol"><h4>Support</h4><a href="support-en.html">Help Center</a><a href="support.html">Hilfe (DE)</a><a href="mailto:fit.data1@gmail.com">Contact</a><a href="https://www.instagram.com/fitdataapp/" target="_blank">Instagram</a></div>
+  </div>
+  <div class="fbot">
+    <p>© 2025 FitData. All rights reserved.</p>
+    <p>Made for athletes everywhere.</p>
+  </div>
+</footer>
+
+</body>
+</html>

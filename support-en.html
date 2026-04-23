@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitData — Help & Support</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text:     #111111;
+      --text-2:   #555550;
+      --text-3:   #999990;
+      --accent:   #E8722A;
+      --accent-h: #D4621A;
+      --bg:       #FDFAF7;
+      --bg-cream: #F7EFE5;
+      --bg-card:  #FFFFFF;
+      --border:   #EAD9CC;
+      --shadow-sm: rgba(232,114,42,0.08) 0px 1px 2px 0px, rgba(232,114,42,0.12) 0px 14px 30px 0px;
+      --shadow-md: rgba(232,114,42,0.18) 0px 1px 2px 0px;
+      --shadow-nav: rgb(234,217,204) 0px 1px 0px 0px, rgba(0,0,0,0.10) 0px 10px 30px -18px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.6; min-height: 100vh;
+    }
+    h1, h2, h3, h4, nav .nav-logo span { font-family: 'Gabarito', system-ui, sans-serif; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 80px; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 80px;
+      background: rgba(253,248,244,0.92);
+      backdrop-filter: saturate(180%) blur(20px);
+      box-shadow: var(--shadow-nav);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+    .nav-logo img { width: 36px; height: 36px; border-radius: 9px; }
+    .nav-logo span { font-family: 'Gabarito', sans-serif; font-size: 18px; font-weight: 700; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 17px; color: var(--text); text-decoration: none; transition: color .15s; }
+    .nav-links a:hover { color: var(--accent); text-decoration: underline; }
+    .btn-nav {
+      font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 700;
+      background: var(--accent); color: white; padding: 8px 20px; border-radius: 999px;
+      border: none; text-decoration: none; box-shadow: var(--shadow-md); transition: background .15s;
+    }
+    .btn-nav:hover { background: var(--accent-h); }
+    .nav-lang { display: flex; gap: 6px; align-items: center; }
+    .nav-lang a {
+      font-family: 'Gabarito', sans-serif; font-size: 13px; font-weight: 700;
+      padding: 5px 12px; border-radius: 999px; text-decoration: none;
+      border: 1.5px solid var(--border); color: var(--text-2); background: transparent;
+      transition: all .15s;
+    }
+    .nav-lang a.active, .nav-lang a:hover { background: var(--text); color: white; border-color: var(--text); }
+
+    /* PAGE HEADER */
+    .page-header { padding: 140px 24px 56px; text-align: center; border-bottom: 1px solid var(--border); }
+    .back {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 15px; color: var(--text-2); text-decoration: none;
+      margin-bottom: 28px; transition: color .15s;
+    }
+    .back:hover { color: var(--accent); }
+    .page-header h1 {
+      font-size: clamp(36px, 5vw, 56px); font-weight: 700;
+      letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 10px;
+    }
+    .page-header > p { font-size: 17px; color: var(--text-2); margin-top: 12px; }
+    .lang-switch { display: flex; gap: 8px; justify-content: center; margin-top: 24px; }
+    .lang-pill {
+      font-family: 'Gabarito', sans-serif; font-size: 13px; font-weight: 700;
+      padding: 7px 16px; border-radius: 999px; text-decoration: none;
+      border: 1.5px solid var(--border); color: var(--text-2); background: var(--bg-card);
+      transition: all .15s;
+    }
+    .lang-pill.active, .lang-pill:hover { background: var(--text); color: white; border-color: var(--text); }
+
+    /* CONTENT WRAP */
+    .content-wrap { max-width: 720px; margin: 0 auto; padding: 64px 24px 0; }
+
+    /* FEATURE CHIPS */
+    .intro-section { margin-bottom: 64px; }
+    .section-label {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 14.64px; font-weight: 700; color: var(--accent);
+      text-transform: uppercase; letter-spacing: 0.6px;
+      display: block; margin-bottom: 16px;
+    }
+    .intro-section h2 { font-size: 24px; font-weight: 700; letter-spacing: -0.4px; margin-bottom: 20px; }
+    .chips { display: flex; flex-wrap: wrap; gap: 8px; }
+    .chip {
+      font-family: 'Atkinson Hyperlegible', sans-serif;
+      background: var(--bg-card); border: 1.5px solid var(--border); border-radius: 999px;
+      padding: 8px 16px; font-size: 15px; color: var(--text-2);
+      transition: border-color .15s;
+    }
+    .chip:hover { border-color: var(--accent); }
+
+    /* FAQ */
+    .faq-section { margin-bottom: 64px; }
+    .faq-section h2 { font-size: 24px; font-weight: 700; letter-spacing: -0.4px; margin-bottom: 6px; }
+    .faq-sub { font-size: 17px; color: var(--text-2); margin-bottom: 28px; }
+    details.fq { border-bottom: 1px solid var(--border); }
+    details.fq summary {
+      padding: 22px 0; font-family: 'Gabarito', sans-serif; font-size: 18px; font-weight: 700;
+      cursor: pointer; display: flex; justify-content: space-between; align-items: center;
+      list-style: none; user-select: none; color: var(--text);
+    }
+    details.fq summary::-webkit-details-marker { display: none; }
+    details.fq summary::after { content: '+'; font-size: 22px; color: var(--text-3); flex-shrink: 0; transition: transform .2s; font-family: system-ui; }
+    details.fq[open] summary::after { transform: rotate(45deg); }
+    details.fq[open] summary { color: var(--accent); }
+    details.fq .fqb { padding-bottom: 20px; font-size: 17px; color: var(--text-2); line-height: 1.7; }
+
+    /* TROUBLESHOOTING */
+    .ts-section { margin-bottom: 64px; }
+    .ts-section h2 { font-size: 24px; font-weight: 700; letter-spacing: -0.4px; margin-bottom: 20px; }
+    .ts-cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+    .ts-card {
+      background: var(--bg-card); border: 1.5px solid var(--border);
+      border-radius: 20px; padding: 24px 28px;
+      transition: border-color .2s, box-shadow .2s;
+    }
+    .ts-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+    .ts-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 14px; color: var(--text); }
+    .ts-card ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
+    .ts-card ul li { font-size: 15px; color: var(--text-2); display: flex; gap: 10px; line-height: 1.55; }
+    .ts-card ul li::before { content: '→'; color: var(--accent); flex-shrink: 0; }
+
+    /* CONTACT */
+    .contact-section { padding-bottom: 120px; }
+    .contact-box {
+      background: var(--bg-card); border: 1.5px solid var(--border);
+      border-radius: 24px; padding: 32px 36px;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-box h2 { font-size: 24px; font-weight: 700; letter-spacing: -0.4px; margin-bottom: 24px; }
+    .c-row { display: flex; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 17px; }
+    .c-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .c-label { font-family: 'Gabarito', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: var(--text-3); width: 96px; flex-shrink: 0; }
+    .c-row a { color: var(--accent); text-decoration: none; }
+    .c-row a:hover { text-decoration: underline; }
+    .c-row span { color: var(--text-2); }
+    .bug-list { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
+    .bug-list-label {
+      font-family: 'Gabarito', sans-serif;
+      font-size: 11px; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.7px; color: var(--text-3); margin-bottom: 14px;
+      display: block;
+    }
+    .bug-list ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
+    .bug-list ul li { font-size: 17px; color: var(--text-2); display: flex; gap: 10px; }
+    .bug-list ul li::before { content: '–'; color: var(--accent); }
+
+    /* FOOTER */
+    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 64px 80px 40px; }
+    .ft { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 48px; }
+    .fb { max-width: 280px; }
+    .fb .nav-logo { margin-bottom: 12px; }
+    .fb p { font-size: 17px; color: var(--text-2); line-height: 1.6; }
+    .fcol h4 { font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-3); margin-bottom: 16px; }
+    .fcol a { display: block; font-size: 17px; color: var(--text-2); text-decoration: none; margin-bottom: 10px; transition: color .15s; }
+    .fcol a:hover { color: var(--accent); text-decoration: underline; }
+    .fbot { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .fbot p { font-size: 14px; color: var(--text-3); }
+
+    @media (max-width: 640px) { .ts-cards { grid-template-columns: 1fr; } }
+    @media (max-width: 960px) { nav { padding: 0 32px; } footer { padding: 48px 32px 32px; } .ft { flex-direction: column; } }
+    @media (max-width: 600px) { nav { padding: 0 20px; height: 64px; } .nav-links { display: none; } .page-header { padding: 110px 20px 40px; } footer { padding: 40px 20px 28px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index.html">
+    <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
+    <span>FitData</span>
+  </a>
+  <div class="nav-links">
+    <a href="index.html#features">Features</a>
+    <a href="index.html#faq">FAQ</a>
+    <a href="support-en.html">Support</a>
+    <a href="privacy-en.html">Privacy</a>
+    <div class="nav-lang"><a class="active" href="support-en.html">EN</a><a href="support.html">DE</a></div>
+    <a class="btn-nav" href="#">Download</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <a class="back" href="index.html">← Back to FitData</a>
+  <h1>Help &amp; Support</h1>
+  <p>Everything you need to get the most out of FitData.</p>
+  <div class="lang-switch">
+    <a class="lang-pill active" href="support-en.html">🇺🇸 English</a>
+    <a class="lang-pill" href="support.html">🇩🇪 Deutsch</a>
+  </div>
+</div>
+
+<div class="content-wrap">
+
+  <!-- Feature chips -->
+  <div class="intro-section">
+    <span class="section-label">What's inside</span>
+    <h2>What is FitData?</h2>
+    <div class="chips">
+      <span class="chip">🏋️ Workout Tracking</span>
+      <span class="chip">✦ AI Personal Trainer</span>
+      <span class="chip">🏃 Running &amp; Cardio</span>
+      <span class="chip">❤️ Apple Health Sync</span>
+      <span class="chip">⌚ Apple Watch App</span>
+      <span class="chip">📊 Performance Analytics</span>
+      <span class="chip">📱 Works Offline</span>
+    </div>
+  </div>
+
+  <!-- FAQ -->
+  <div class="faq-section">
+    <span class="section-label">FAQ</span>
+    <h2>Frequently Asked Questions</h2>
+    <p class="faq-sub">Quick answers to the most common questions.</p>
+
+    <details class="fq"><summary>Does FitData work offline?</summary><div class="fqb">Yes — FitData is offline-first. You can log workouts, view your plans, and track sets without any internet connection. Data syncs automatically when you're back online. Only AI Chat requires a connection.</div></details>
+    <details class="fq"><summary>Does my data sync across devices?</summary><div class="fqb">Yes. Log in with the same account on any device and your workouts, plans, and progress sync automatically. Offline changes sync as soon as you're back online.</div></details>
+    <details class="fq"><summary>What's included in FitData Pro?</summary><div class="fqb">FitData Pro includes: AI Personal Trainer with 80+ monthly conversations, unlimited training plans, advanced performance analytics, full workout history, calendar view, and priority support.</div></details>
+    <details class="fq"><summary>How do I manage my subscription?</summary><div class="fqb">Manage your profile under Settings → Account. For Pro subscriptions, go to Settings → Subscription or use your device's App Store settings. You can upgrade, downgrade, or cancel anytime through the App Store.</div></details>
+    <details class="fq"><summary>How does Apple Health integration work?</summary><div class="fqb">FitData integrates seamlessly with Apple Health to sync your workouts, close activity rings, and provide a complete fitness picture. Grant permissions under Settings → Permissions for full integration.</div></details>
+    <details class="fq"><summary>How does workout tracking work?</summary><div class="fqb">Start workouts from your plans or create custom sessions. Log sets with weight, reps, or duration in real time. Built-in rest timers keep you on track. All data is saved automatically.</div></details>
+    <details class="fq"><summary>How can I track my progress?</summary><div class="fqb">FitData offers detailed analytics: exercise progress charts, strength trends over time, workout consistency metrics, and personal record tracking. AI chat can analyze your progress and suggest improvements.</div></details>
+    <details class="fq"><summary>How is my health data protected?</summary><div class="fqb">We use industry-standard encryption, never share personal health data with third parties without your consent, and securely store AI conversations. Review our full Privacy Policy for details.</div></details>
+    <details class="fq"><summary>What is AI Chat and how does it work?</summary><div class="fqb">AI Chat is your personal fitness coach powered by advanced AI. It analyzes your workout data, creates personalized training plans, and provides expert guidance. Pro users get 80–100 conversations per month, free users receive around 5.</div></details>
+    <details class="fq"><summary>Why are there AI Chat limits?</summary><div class="fqb">AI processing requires significant computing resources. Limits ensure sustainable service for all users — Pro users receive enough conversations for daily coaching and plan building.</div></details>
+  </div>
+
+  <!-- Troubleshooting -->
+  <div class="ts-section">
+    <span class="section-label">Troubleshooting</span>
+    <h2>Common fixes</h2>
+    <div class="ts-cards">
+      <div class="ts-card">
+        <h3>Sync Issues</h3>
+        <ul>
+          <li>Check your internet connection</li>
+          <li>Make sure you're logged in with the same account</li>
+          <li>Log out and back into the app</li>
+        </ul>
+      </div>
+      <div class="ts-card">
+        <h3>AI Chat Issues</h3>
+        <ul>
+          <li>Internet connection required for AI features</li>
+          <li>Link relevant training plans for better answers</li>
+          <li>Check your monthly conversation limit</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Contact -->
+  <div class="contact-section">
+    <div class="contact-box">
+      <h2>Direct Support</h2>
+      <div class="c-row"><span class="c-label">Email</span><a href="mailto:fit.data1@gmail.com">fit.data1@gmail.com</a></div>
+      <div class="c-row"><span class="c-label">Instagram</span><a href="https://www.instagram.com/fitdataapp/" target="_blank">@fitdataapp</a></div>
+      <div class="c-row"><span class="c-label">Response</span><span>Within 24–48 hours</span></div>
+      <div class="c-row"><span class="c-label">Languages</span><span>English, Deutsch</span></div>
+      <div class="bug-list">
+        <span class="bug-list-label">When reporting a bug, please include</span>
+        <ul>
+          <li>iOS version (e.g. iOS 17.1)</li>
+          <li>iPhone model</li>
+          <li>App version (found in Settings → About)</li>
+          <li>Description of the issue</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="ft">
+    <div class="fb">
+      <a class="nav-logo" href="index.html">
+        <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
+        <span>FitData</span>
+      </a>
+      <p>Your AI-powered fitness companion for iPhone and Apple Watch.</p>
+    </div>
+    <div class="fcol"><h4>App</h4><a href="index.html">Home</a><a href="index.html#features">Features</a><a href="index.html#faq">FAQ</a></div>
+    <div class="fcol"><h4>Legal</h4><a href="privacy-en.html">Privacy Policy</a><a href="privacy-de.html">Datenschutz</a><a href="terms-en.html">Terms of Use</a><a href="terms-de.html">Nutzungsbedingungen</a></div>
+    <div class="fcol"><h4>Support</h4><a href="support-en.html">Help Center</a><a href="support.html">Hilfe (DE)</a><a href="mailto:fit.data1@gmail.com">Contact</a><a href="https://www.instagram.com/fitdataapp/" target="_blank">Instagram</a></div>
+  </div>
+  <div class="fbot">
+    <p>© 2025 FitData. All rights reserved.</p>
+    <p>Made for athletes everywhere.</p>
+  </div>
+</footer>
+
+</body>
+</html>

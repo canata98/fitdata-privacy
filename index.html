@@ -426,14 +426,14 @@
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-left">
-    <span class="eyebrow">For iPhone &amp; Apple Watch</span>
-    <h1>Train smarter.<br>Not just harder.</h1>
-    <p>Build custom workouts and training plans, track every run and lift, then analyze your performance — all in one app.</p>
+    <span class="eyebrow">Workouts &amp; Running — For iPhone &amp; Apple Watch</span>
+    <h1>Build your custom<br>run and workout plans.</h1>
+    <p>Plan workouts, track every run, log every lift — then analyze your performance. All in one app, fully offline.</p>
     <div class="hero-btns">
       <a class="btn-primary" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank">
         <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" />
       </a>
-      <a class="btn-ghost" href="#zoom-section">See what's inside ↓</a>
+      <a class="btn-ghost" href="#features">Explore features ↓</a>
     </div>
     <div class="hero-trust">
       <span>Free to download</span>
@@ -505,14 +505,13 @@
 </div>
 
 <div style="height:1px; background: var(--border); margin: 0 80px;"></div>
-
 <!-- ── FEATURES ── -->
 <div class="features-section" id="features">
   <div class="features-inner">
 
     <div class="feat-header">
       <span class="label-tag">Features</span>
-      <h2>Everything your training needs</h2>
+      <h2>Everything your run and workout needs.</h2>
       <p>From your first set to your personal record — all in one place.</p>
     </div>
 
@@ -596,7 +595,7 @@
     <div class="feat-row flip">
       <div class="feat-text">
         <span class="tag">Live Running</span>
-        <h3>Start your run.<br>Every metric, live.</h3>
+        <h3>Track runs live.<br>Every metric.</h3>
         <p>Track pace, distance, and heart rate in real time — with full Apple Watch support so you can leave your phone behind.</p>
         <ul class="feat-bullets">
           <li>Live pace, distance, and duration</li>
@@ -626,9 +625,9 @@
 <div class="detail-section">
   <div class="detail-inner">
     <div class="detail-header">
-      <span class="label-tag">Run Detail</span>
+      <span class="label-tag">Run Analytics</span>
       <h3>Every split.<br>Every metric.</h3>
-      <p>Drill into any run — see your pace splits, heart rate, and performance vs. your goals. Your complete run history at a glance.</p>
+      <p>Drill into any run — pace splits, heart rate zones, and performance trends over time. Your complete run history, always at a glance.</p>
     </div>
     <div class="detail-phones">
       <div class="dp-side">
@@ -664,10 +663,10 @@
     <div class="feat-row" style="margin-bottom: 0;">
       <div class="feat-text">
         <span class="tag">AI Coach</span>
-        <h3>Advice backed by<br>your own numbers.</h3>
-        <p>FitData's AI knows your training history and gives specific answers — not generic tips. Ask about your progress, next steps, or recovery.</p>
+        <h3>AI for your fitness.<br>Backed by your data.</h3>
+        <p>FitData's AI knows your workout and run history — and gives specific, actionable answers.</p>
         <ul class="feat-bullets">
-          <li>Linked to your plans and exercise history</li>
+          <li>Linked to your workout plans, runs &amp; exercise history</li>
           <li>Creates and adjusts training plans for you</li>
           <li>80+ conversations per month (Pro)</li>
           <li>Encrypted — your data stays private</li>
@@ -703,7 +702,7 @@
 <div class="cta-sec">
   <span class="label-tag">Get Started</span>
   <h2>Start training<br>smarter today.</h2>
-  <p>Free to download. Pro when you're ready.</p>
+  <p>Workouts, runs, AI coaching — free to download. Pro when you're ready.</p>
   <div class="cta-btns">
     <a class="btn-cta-primary" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank">
       <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store" />
@@ -726,31 +725,11 @@
     <div class="fcol"><h4>Support</h4><a href="support-en.html">Help Center</a><a href="support.html">Hilfe (DE)</a><a href="mailto:fit.data1@gmail.com">Contact</a><a href="https://www.instagram.com/fitdataapp/" target="_blank">Instagram</a></div>
   </div>
   <div class="fbot">
-    <p>© 2025 FitData. All rights reserved.</p>
+    <p>© 2026 FitData. All rights reserved.</p>
     <p>Made for athletes everywhere.</p>
   </div>
 </footer>
 
-<!-- ── SCROLL JS ── -->
-<script>
-  const section  = document.getElementById('zoom-section');
-  const phones   = document.getElementById('zoom-phones');
-  const headline = document.getElementById('zoom-headline');
-
-  function clamp(v, lo, hi) { return Math.max(lo, Math.min(hi, v)); }
-  function ease(t) { return t < 0.5 ? 2*t*t : -1+(4-2*t)*t; }
-
-  window.addEventListener('scroll', () => {
-    const rect     = section.getBoundingClientRect();
-    const total    = section.offsetHeight - window.innerHeight;
-    const scrolled = clamp(-rect.top, 0, total);
-    const p        = scrolled / total;
-
-    const scale = 0.84 + ease(p) * 0.16;
-    phones.style.transform = `scale(${scale})`;
-    headline.style.opacity = clamp(1 - (p - 0.45) / 0.3, 0, 1);
-  }, { passive: true });
-</script>
 
 </body>
 </html>

@@ -613,7 +613,6 @@
             </div>
           </div>
           <img class="watch-mockup" src="assets/en/Watch_Run_Active_EN-portrait.png" alt="Apple Watch" />
-          </div>
         </div>
       </div>
     </div>
@@ -721,8 +720,8 @@
       <p>Your run & workout app for iPhone and Apple Watch.</p>
     </div>
     <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank">Download</a><a href="#features">Features</a><a href="#faq">FAQ</a></div>
-    <div class="fcol"><h4>Legal</h4><a href="privacy-en.html">Privacy Policy</a><a href="privacy-de.html">Datenschutz</a><a href="terms-en.html">Terms of Use</a><a href="terms-de.html">Nutzungsbedingungen</a></div>
-    <div class="fcol"><h4>Support</h4><a href="support-en.html">Help Center</a><a href="support.html">Hilfe (DE)</a><a href="mailto:fit.data1@gmail.com">Contact</a><a href="https://www.instagram.com/fitdataapp/" target="_blank">Instagram</a></div>
+    <div class="fcol"><h4>Legal</h4><a href="privacy-en.html">Privacy Policy</a><a href="terms-en.html">Terms of Use</a></div>
+    <div class="fcol"><h4>Support</h4><a href="support-en.html">Help Center</a><a href="mailto:fit.data1@gmail.com">Contact</a><a href="https://www.instagram.com/fitdataapp/" target="_blank">Instagram</a></div>
   </div>
   <div class="fbot">
     <p>© 2026 FitData. All rights reserved.</p>
@@ -731,5 +730,28 @@
 </footer>
 
 
+<script>
+  (function () {
+    var section = document.getElementById('zoom-section');
+    var phones  = document.getElementById('zoom-phones');
+    var headline = document.getElementById('zoom-headline');
+    if (!section || !phones) return;
+
+    function update() {
+      var rect     = section.getBoundingClientRect();
+      var scrolled = -rect.top;
+      var range    = section.offsetHeight - window.innerHeight;
+      var p        = Math.max(0, Math.min(1, scrolled / range));
+
+      // phones scale from 0.72 → 1.0
+      phones.style.transform = 'scale(' + (0.72 + p * 0.28) + ')';
+      // headline fades out in first half of scroll
+      headline.style.opacity = Math.max(0, 1 - p * 2.5);
+    }
+
+    window.addEventListener('scroll', update, { passive: true });
+    update();
+  })();
+</script>
 </body>
 </html>

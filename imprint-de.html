@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FitData — Impressum</title>
+  <link rel="icon" type="image/png" href="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --text:     #111111;
+      --text-2:   #555550;
+      --text-3:   #999990;
+      --accent:   #E8722A;
+      --accent-h: #D4621A;
+      --bg:       #FDFAF7;
+      --bg-cream: #F7EFE5;
+      --bg-card:  #FFFFFF;
+      --border:   #EAD9CC;
+      --shadow-sm: rgba(232,114,42,0.08) 0px 1px 2px 0px, rgba(232,114,42,0.12) 0px 14px 30px 0px;
+      --shadow-md: rgba(232,114,42,0.18) 0px 1px 2px 0px;
+      --shadow-nav: rgb(234,217,204) 0px 1px 0px 0px, rgba(0,0,0,0.10) 0px 10px 30px -18px;
+    }
+
+    html { scroll-behavior: smooth; }
+    body {
+      font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
+      background: var(--bg); color: var(--text);
+      line-height: 1.6; min-height: 100vh;
+    }
+    h1, h2, h3, h4, nav .nav-logo span { font-family: 'Gabarito', system-ui, sans-serif; }
+
+    /* NAV */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
+      height: 80px; display: flex; align-items: center; justify-content: space-between;
+      padding: 0 80px;
+      background: rgba(253,248,244,0.92);
+      backdrop-filter: saturate(180%) blur(20px);
+      box-shadow: var(--shadow-nav);
+    }
+    .nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; color: var(--text); }
+    .nav-logo img { width: 36px; height: 36px; border-radius: 9px; }
+    .nav-logo span { font-family: 'Gabarito', sans-serif; font-size: 18px; font-weight: 700; }
+    .nav-links { display: flex; align-items: center; gap: 32px; }
+    .nav-links a { font-size: 17px; color: var(--text); text-decoration: none; transition: color .15s; }
+    .nav-links a:hover { color: var(--accent); text-decoration: underline; }
+    .btn-nav {
+      font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 700;
+      background: var(--accent); color: white; padding: 8px 20px; border-radius: 999px;
+      border: none; text-decoration: none; box-shadow: var(--shadow-md); transition: background .15s;
+    }
+    .btn-nav:hover { background: var(--accent-h); }
+    .nav-lang { display: flex; gap: 6px; align-items: center; }
+    .nav-lang a {
+      font-family: 'Gabarito', sans-serif; font-size: 13px; font-weight: 700;
+      padding: 5px 12px; border-radius: 999px; text-decoration: none;
+      border: 1.5px solid var(--border); color: var(--text-2); background: transparent;
+      transition: all .15s;
+    }
+    .nav-lang a.active, .nav-lang a:hover { background: var(--text); color: white; border-color: var(--text); }
+
+    /* PAGE HEADER */
+    .page-header { padding: 140px 24px 56px; text-align: center; border-bottom: 1px solid var(--border); }
+    .back {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 15px; color: var(--text-2); text-decoration: none;
+      margin-bottom: 28px; transition: color .15s;
+    }
+    .back:hover { color: var(--accent); }
+    .page-header h1 {
+      font-size: clamp(36px, 5vw, 56px); font-weight: 700;
+      letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 10px;
+    }
+    .meta { font-size: 15px; color: var(--text-3); margin-top: 10px; }
+
+    /* DOCUMENT */
+    .doc-wrap { max-width: 700px; margin: 0 auto; padding: 64px 24px 120px; }
+    .doc-wrap h2 {
+      font-size: 20px; font-weight: 700; letter-spacing: -0.3px;
+      margin: 52px 0 14px; padding-top: 52px;
+      border-top: 1px solid var(--border); color: var(--text);
+    }
+    .doc-wrap h2:first-of-type { margin-top: 0; padding-top: 0; border-top: none; }
+    .doc-wrap p { font-size: 17px; color: var(--text-2); line-height: 1.75; margin-bottom: 14px; }
+    .doc-wrap ul { list-style: none; display: flex; flex-direction: column; gap: 10px; margin-bottom: 16px; }
+    .doc-wrap ul li { font-size: 17px; color: var(--text-2); display: flex; gap: 12px; line-height: 1.65; }
+    .doc-wrap ul li::before { content: '–'; color: var(--accent); flex-shrink: 0; margin-top: 2px; }
+    .doc-wrap strong { color: var(--text); font-weight: 700; }
+    .doc-wrap a { color: var(--accent); text-decoration: none; }
+    .doc-wrap a:hover { text-decoration: underline; }
+
+    .highlight-box {
+      background: var(--bg-cream); border: 1.5px solid var(--border);
+      border-radius: 16px; padding: 22px 28px; margin: 24px 0;
+    }
+    .highlight-box p { margin: 0; }
+
+    .contact-box {
+      background: var(--bg-card); border: 1.5px solid var(--border);
+      border-radius: 24px; padding: 32px 36px; margin-top: 56px;
+      box-shadow: var(--shadow-sm);
+    }
+    .contact-box h2 { border-top: none !important; padding-top: 0 !important; margin-top: 0 !important; margin-bottom: 24px !important; }
+    .c-row { display: flex; align-items: baseline; gap: 16px; padding: 14px 0; border-bottom: 1px solid var(--border); font-size: 17px; }
+    .c-row:last-child { border-bottom: none; padding-bottom: 0; }
+    .c-label { font-family: 'Gabarito', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: var(--text-3); width: 96px; flex-shrink: 0; }
+    .c-row a { color: var(--accent); text-decoration: none; }
+    .c-row a:hover { text-decoration: underline; }
+    .c-row span { color: var(--text-2); }
+
+    /* FOOTER */
+    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 64px 80px 40px; }
+    .ft { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 48px; }
+    .fb { max-width: 280px; }
+    .fb .nav-logo { margin-bottom: 12px; }
+    .fb p { font-size: 17px; color: var(--text-2); line-height: 1.6; }
+    .fcol h4 { font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-3); margin-bottom: 16px; }
+    .fcol a { display: block; font-size: 17px; color: var(--text-2); text-decoration: none; margin-bottom: 10px; transition: color .15s; }
+    .fcol a:hover { color: var(--accent); text-decoration: underline; }
+    .fbot { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+    .fbot p { font-size: 14px; color: var(--text-3); }
+
+    @media (max-width: 960px) { nav { padding: 0 32px; } footer { padding: 48px 32px 32px; } .ft { flex-direction: column; } }
+    @media (max-width: 600px) { nav { padding: 0 20px; height: 64px; } .nav-links { display: none; } .page-header { padding: 110px 20px 40px; } footer { padding: 40px 20px 28px; } }
+  </style>
+</head>
+<body>
+
+<nav>
+  <a class="nav-logo" href="index-de.html">
+    <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
+    <span>FitData</span>
+  </a>
+  <div class="nav-links">
+    <a href="index-de.html#features">Funktionen</a>
+    <a href="index-de.html#faq">Fragen</a>
+    <a href="support.html">Hilfe</a>
+    <a href="privacy-de.html">Datenschutz</a>
+    <a href="terms-de.html">Nutzungsbedingungen</a>
+    <a href="impressum-de.html">Impressum</a>
+    <div class="nav-lang"><a href="imprint-en.html">EN</a><a class="active" href="impressum-de.html">DE</a></div>
+    <a class="btn-nav" href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a>
+  </div>
+</nav>
+
+<div class="page-header">
+  <a class="back" href="index-de.html">← Zurück zu FitData</a>
+  <h1>Impressum</h1>
+  <p class="meta">Angaben gemäß § 5 Digitale-Dienste-Gesetz (DDG)</p>
+</div>
+
+<div class="doc-wrap">
+
+  <h2>Anbieter</h2>
+  <p><strong>Can Ata</strong><br>Hans-Böckler-Str. 176A<br>46242 Bottrop<br>Deutschland</p>
+
+  <h2>Kontakt</h2>
+  <p>E-Mail: <a href="mailto:fit.data1@gmail.com">fit.data1@gmail.com</a></p>
+
+  <h2>Umsatzsteuer</h2>
+  <p>Umsatzsteuer-Identifikationsnummer gemäß § 27a Umsatzsteuergesetz:<br><strong>DE366902846</strong></p>
+
+  <h2>Verantwortlich für den Inhalt</h2>
+  <p>Verantwortlich im Sinne von § 18 Abs. 2 MStV:<br>Can Ata, Hans-Böckler-Str. 176A, 46242 Bottrop</p>
+
+  <h2>Verbraucherstreitbeilegung</h2>
+  <p>Wir sind nicht verpflichtet und nicht bereit, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
+
+  <div class="contact-box">
+    <h2>Kontakt</h2>
+    <div class="c-row"><span class="c-label">E-Mail</span><a href="mailto:fit.data1@gmail.com">fit.data1@gmail.com</a></div>
+    <div class="c-row"><span class="c-label">Adresse</span><span>Hans-Böckler-Str. 176A, 46242 Bottrop</span></div>
+    <div class="c-row"><span class="c-label">USt-IdNr.</span><span>DE366902846</span></div>
+  </div>
+
+</div>
+
+<footer>
+  <div class="ft">
+    <div class="fb">
+      <a class="nav-logo" href="index-de.html">
+        <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
+        <span>FitData</span>
+      </a>
+      <p>Dein KI-gestützter Trainingsbegleiter für iPhone und Apple Watch.</p>
+    </div>
+    <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a><a href="index-de.html#features">Funktionen</a><a href="index-de.html#faq">Fragen</a></div>
+    <div class="fcol"><h4>Rechtliches</h4><a href="privacy-de.html">Datenschutz</a><a href="terms-de.html">Nutzungsbedingungen</a><a href="impressum-de.html">Impressum</a></div>
+    <div class="fcol"><h4>Hilfe</h4><a href="support.html">Hilfe</a></div>
+  </div>
+  <div class="fbot">
+    <p>© 2026 FitData. Alle Rechte vorbehalten.</p>
+    <p>Gemacht für Athleten überall.</p>
+  </div>
+</footer>
+
+</body>
+</html>

@@ -77,14 +77,6 @@
       letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 10px;
     }
     .meta { font-size: 15px; color: var(--text-3); margin-top: 10px; }
-    .lang-switch { display: flex; gap: 8px; justify-content: center; margin-top: 24px; }
-    .lang-pill {
-      font-family: 'Gabarito', sans-serif; font-size: 13px; font-weight: 700;
-      padding: 7px 16px; border-radius: 999px; text-decoration: none;
-      border: 1.5px solid var(--border); color: var(--text-2); background: var(--bg-card);
-      transition: all .15s;
-    }
-    .lang-pill.active, .lang-pill:hover { background: var(--text); color: white; border-color: var(--text); }
 
     /* DOCUMENT */
     .doc-wrap { max-width: 700px; margin: 0 auto; padding: 64px 24px 120px; }
@@ -101,6 +93,14 @@
     .doc-wrap strong { color: var(--text); font-weight: 700; }
     .doc-wrap a { color: var(--accent); text-decoration: none; }
     .doc-wrap a:hover { text-decoration: underline; }
+
+    .info-card-list { display: grid; gap: 12px; margin: 20px 0 18px; }
+    .info-card {
+      background: var(--bg-card); border: 1.5px solid var(--border);
+      border-radius: 16px; padding: 16px 18px; box-shadow: rgba(232,114,42,0.06) 0px 8px 22px 0px;
+    }
+    .info-card strong { display: block; margin-bottom: 4px; }
+    .info-card p { margin: 0; font-size: 16px; line-height: 1.55; }
 
     .highlight-box {
       background: var(--bg-cream); border: 1.5px solid var(--border);
@@ -145,12 +145,14 @@
     <span>FitData</span>
   </a>
   <div class="nav-links">
-    <a href="index-de.html#features">Features</a>
-    <a href="index-de.html#faq">FAQ</a>
-    <a href="support.html">Support</a>
+    <a href="index-de.html#features">Funktionen</a>
+    <a href="index-de.html#faq">Fragen</a>
+    <a href="support.html">Hilfe</a>
     <a href="privacy-de.html">Datenschutz</a>
+    <a href="terms-de.html">Nutzungsbedingungen</a>
+    <a href="impressum-de.html">Impressum</a>
     <div class="nav-lang"><a href="terms-en.html">EN</a><a class="active" href="terms-de.html">DE</a></div>
-    <a class="btn-nav" href="#">Download</a>
+    <a class="btn-nav" href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a>
   </div>
 </nav>
 
@@ -158,10 +160,6 @@
   <a class="back" href="index-de.html">← Zurück zu FitData</a>
   <h1>Nutzungsbedingungen</h1>
   <p class="meta">Letzte Aktualisierung: August 2025</p>
-  <div class="lang-switch">
-    <a class="lang-pill" href="terms-en.html">🇺🇸 English</a>
-    <a class="lang-pill active" href="terms-de.html">🇩🇪 Deutsch</a>
-  </div>
 </div>
 
 <div class="doc-wrap">
@@ -169,47 +167,49 @@
   <h2>1. Einleitung</h2>
   <p>Diese Nutzungsbedingungen regeln die Nutzung der FitData App. Mit dem Herunterladen oder der Nutzung der App erklärst du dich mit diesen Bedingungen einverstanden. Falls du nicht einverstanden bist, nutze FitData bitte nicht.</p>
 
-  <h2>2. Dienste</h2>
-  <p>FitData bietet Fitness-Tracking, KI-gestütztes Coaching, Trainingspläne, Lauftracking und Performance-Analytics. Der Funktionsumfang kann je nach Abo-Status variieren.</p>
+  <h2>2. Nutzungsvoraussetzungen</h2>
+  <p>Du musst mindestens 14 Jahre alt sein, um FitData zu nutzen. Wenn du unter 16 Jahre alt bist, darfst du FitData nur mit Zustimmung eines Elternteils oder gesetzlichen Vertreters nutzen, soweit diese Zustimmung gesetzlich erforderlich ist.</p>
 
-  <h2>3. Abonnements</h2>
-  <ul>
-    <li><strong>FitData Pro (Monatlich):</strong> 1 Woche kostenlos, danach 3,99 €/Monat</li>
-    <li><strong>FitData Pro (Jährlich):</strong> 1 Woche kostenlos, danach 29,99 €/Jahr</li>
-  </ul>
+  <h2>3. Dienste</h2>
+  <p>FitData bietet Trainingsverfolgung, KI-gestützte Unterstützung, Trainingspläne, Laufaufzeichnung und Leistungsanalysen. Der Funktionsumfang kann je nach Abo-Status variieren.</p>
+
+  <h2>4. Abonnements</h2>
+  <div class="info-card-list">
+    <div class="info-card"><strong>FitData Pro (Monatlich)</strong><p>1 Woche kostenlos, danach 3,99 EUR pro Monat.</p></div>
+    <div class="info-card"><strong>FitData Pro (Jährlich)</strong><p>1 Woche kostenlos, danach 29,99 EUR pro Jahr.</p></div>
+  </div>
   <p>Abonnements verlängern sich automatisch, es sei denn, sie werden mindestens 24 Stunden vor Ablauf der aktuellen Laufzeit über den App Store gekündigt. Die Abbuchung erfolgt innerhalb von 24 Stunden vor Ablauf der aktuellen Laufzeit.</p>
 
-  <h2>4. Kündigung</h2>
+  <h2>5. Kündigung</h2>
   <p>Du kannst dein Abonnement jederzeit über den Apple App Store kündigen: <strong>Einstellungen → Apple ID → Abonnements</strong>. Die Kündigung tritt am Ende der aktuellen Laufzeit in Kraft. Bereits geleistete Zahlungen werden nicht erstattet.</p>
 
-  <h2>5. Haftungsausschluss</h2>
+  <h2>6. Haftungsausschluss</h2>
   <div class="highlight-box">
     <p>FitData ersetzt keine medizinische Beratung. Konsultiere stets einen qualifizierten Arzt, bevor du mit einem neuen Trainings- oder Fitnessprogramm beginnst. Die Nutzung der App erfolgt ausschließlich auf eigenes Risiko. FitData haftet nicht für Verletzungen oder gesundheitliche Schäden, die durch die Nutzung der App entstehen.</p>
   </div>
 
-  <h2>6. Benutzerpflichten</h2>
+  <h2>7. Benutzerpflichten</h2>
   <p>Mit der Nutzung von FitData verpflichtest du dich:</p>
-  <ul>
-    <li>Die App nur rechtmäßig und gemäß diesen Bedingungen zu nutzen</li>
-    <li>Genaue und vollständige Informationen anzugeben</li>
-    <li>Keine Inhalte hochzuladen, die geistige Eigentumsrechte Dritter verletzen</li>
-    <li>Nicht zu versuchen, die App zu dekompilieren, zu manipulieren oder missbräuchlich zu nutzen</li>
-    <li>Die App nicht zur Übertragung schädlicher, beleidigender oder illegaler Inhalte zu verwenden</li>
-  </ul>
+  <div class="info-card-list">
+    <div class="info-card"><strong>Rechtmäßige Nutzung</strong><p>Du nutzt die App nur rechtmäßig und gemäß diesen Bedingungen.</p></div>
+    <div class="info-card"><strong>Korrekte Angaben</strong><p>Du gibst genaue und vollständige Informationen an.</p></div>
+    <div class="info-card"><strong>Rechte Dritter</strong><p>Du lädst keine Inhalte hoch, die geistige Eigentumsrechte Dritter verletzen.</p></div>
+    <div class="info-card"><strong>Kein Missbrauch</strong><p>Du versuchst nicht, die App zu dekompilieren, zu manipulieren oder missbräuchlich zu nutzen.</p></div>
+    <div class="info-card"><strong>Keine schädlichen Inhalte</strong><p>Du verwendest die App nicht zur Übertragung schädlicher, beleidigender oder illegaler Inhalte.</p></div>
+  </div>
 
-  <h2>7. Geistiges Eigentum</h2>
+  <h2>8. Geistiges Eigentum</h2>
   <p>Alle Inhalte, das Design, der Code und die Markenzeichen innerhalb von FitData sind ausschließliches Eigentum von FitData. Eine Vervielfältigung, Verbreitung oder Erstellung abgeleiteter Werke ist ohne ausdrückliche schriftliche Genehmigung nicht gestattet.</p>
 
-  <h2>8. Haftungsbeschränkung</h2>
+  <h2>9. Haftungsbeschränkung</h2>
   <p>Soweit gesetzlich zulässig, haftet FitData nicht für indirekte, zufällige, besondere oder Folgeschäden, die aus der Nutzung oder der Unmöglichkeit der Nutzung der App entstehen.</p>
 
-  <h2>9. Änderungen dieser Bedingungen</h2>
+  <h2>10. Änderungen dieser Bedingungen</h2>
   <p>Wir können diese Nutzungsbedingungen jederzeit aktualisieren. Über wesentliche Änderungen wirst du über die App oder per E-Mail informiert. Die weitere Nutzung der App nach Veröffentlichung von Änderungen gilt als Zustimmung zu den aktualisierten Bedingungen.</p>
 
   <div class="contact-box">
     <h2>Kontakt</h2>
     <div class="c-row"><span class="c-label">E-Mail</span><a href="mailto:fit.data1@gmail.com">fit.data1@gmail.com</a></div>
-    <div class="c-row"><span class="c-label">Instagram</span><a href="https://www.instagram.com/fitdataapp/" target="_blank">@fitdataapp</a></div>
     <div class="c-row"><span class="c-label">Antwortzeit</span><span>Innerhalb von 24–48 Stunden</span></div>
   </div>
 
@@ -222,15 +222,14 @@
         <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
         <span>FitData</span>
       </a>
-      <p>Dein KI-gestützter Fitness-Begleiter für iPhone und Apple Watch.</p>
+      <p>Dein KI-gestützter Trainingsbegleiter für iPhone und Apple Watch.</p>
     </div>
-    <div class="fcol"><h4>App</h4><a href="index-de.html">Startseite</a><a href="index-de.html#features">Features</a><a href="index-de.html#faq">FAQ</a></div>
-    <div class="fcol"><h4>Rechtliches</h4><a href="privacy-en.html">Privacy Policy</a><a href="privacy-de.html">Datenschutz</a>
-    <a href="terms-en.html">Terms of Use</a><a href="terms-de.html">Nutzungsbedingungen</a></div>
-    <div class="fcol"><h4>Support</h4><a href="support-en.html">Help Center</a><a href="support.html">Hilfe (DE)</a><a href="mailto:fit.data1@gmail.com">Kontakt</a><a href="https://www.instagram.com/fitdataapp/" target="_blank">Instagram</a></div>
+    <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a><a href="index-de.html#features">Funktionen</a><a href="index-de.html#faq">Fragen</a></div>
+    <div class="fcol"><h4>Rechtliches</h4><a href="privacy-de.html">Datenschutz</a><a href="terms-de.html">Nutzungsbedingungen</a><a href="impressum-de.html">Impressum</a></div>
+    <div class="fcol"><h4>Hilfe</h4><a href="support.html">Hilfe</a></div>
   </div>
   <div class="fbot">
-    <p>© 2025 FitData. Alle Rechte vorbehalten.</p>
+    <p>© 2026 FitData. Alle Rechte vorbehalten.</p>
     <p>Gemacht für Athleten überall.</p>
   </div>
 </footer>

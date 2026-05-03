@@ -109,7 +109,7 @@
       font-size: 17px; color: var(--text-2); line-height: 1.6;
       max-width: 420px; margin-bottom: 36px;
     }
-    .hero-btns { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
+    .hero-btns { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 0; width: fit-content; }
     .btn-primary {
       display: inline-flex; align-items: center;
       text-decoration: none;
@@ -126,6 +126,23 @@
       transition: background .15s, border-color .15s;
     }
     .btn-ghost:hover { background: var(--bg-cream); border-color: var(--accent); }
+
+    .hero-social {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      width: 336px; max-width: 100%; margin: 24px 0;
+    }
+    .hero-social-link {
+      width: 42px; height: 42px; border-radius: 14px;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--text); background: var(--bg-card); border: 1.5px solid var(--border);
+      box-shadow: var(--shadow-sm); text-decoration: none;
+      transition: transform .15s, color .15s, border-color .15s, box-shadow .15s;
+    }
+    .hero-social-link:hover {
+      color: var(--accent); border-color: var(--accent); transform: translateY(-1px);
+      box-shadow: rgba(232,114,42,0.18) 0px 8px 22px 0px; text-decoration: none;
+    }
+    .hero-social-link svg { width: 20px; height: 20px; display: block; fill: currentColor; }
     .hero-trust {
       font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 14px; color: var(--text-3);
@@ -415,11 +432,13 @@
     <a href="#faq">FAQ</a>
     <a href="support-en.html">Support</a>
     <a href="privacy-en.html">Privacy</a>
+    <a href="terms-en.html">Terms</a>
+    <a href="imprint-en.html">Imprint</a>
     <div class="nav-lang">
       <a class="active" href="index.html">EN</a>
       <a href="index-de.html">DE</a>
     </div>
-    <a class="btn-nav" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank">Download</a>
+    <a class="btn-nav" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">Download</a>
   </div>
 </nav>
 
@@ -430,10 +449,21 @@
     <h1>Build your custom<br>run and workout plans.</h1>
     <p>Plan workouts, track every run, log every lift — then analyze your performance. All in one app, fully offline.</p>
     <div class="hero-btns">
-      <a class="btn-primary" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank">
+      <a class="btn-primary" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">
         <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" />
       </a>
       <a class="btn-ghost" href="#features">Explore features ↓</a>
+    </div>
+    <div class="hero-social" aria-label="Social Media">
+      <a class="hero-social-link" href="https://www.instagram.com/fitdata.app/" target="_blank" rel="noopener" aria-label="FitData on Instagram">
+        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9S352.4 35 316.5 33.3c-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1S3.1 127.5 1.4 163.4c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.5 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2s34.5-58 36.2-93.9c2.1-37 2.1-147.8.1-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+      <a class="hero-social-link" href="https://www.tiktok.com/@fitdataapp" target="_blank" rel="noopener" aria-label="FitData on TikTok">
+        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M448 209.9c-44 .1-86.8-13.9-122.2-39.9v178.7c0 90.1-73.1 163.2-163.2 163.2S-.6 438.8-.6 348.7s73.1-163.2 163.2-163.2c13.5 0 26.6 1.6 39.2 4.8v89.6c-12-6.4-25.7-10-40.2-10-43.7 0-79.1 35.4-79.1 79.1s35.4 79.1 79.1 79.1 79.1-35.4 79.1-79.1V0h85.1c8 76.3 69.7 136.5 122.2 142.2v67.7z"/></svg>
+      </a>
+      <a class="hero-social-link" href="https://x.com/FitDataApp" target="_blank" rel="noopener" aria-label="FitData on X">
+        <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+      </a>
     </div>
     <div class="hero-trust">
       <span>Free to download</span>
@@ -520,7 +550,7 @@
       <div class="feat-text">
         <span class="tag">Workout Tracking</span>
         <h3>Build plans.<br>Log sets.<br>Break records.</h3>
-        <p>Create structured training plans with exercises, sets, reps, and weights. Track your performance in real time with built-in rest timers.</p>
+        <p>Create structured workout plans with exercises, sets, reps, and weights. Track your performance in real time with built-in rest timers.</p>
         <ul class="feat-bullets">
           <li>Exercise database with performance charts</li>
           <li>Real-time set logging with rest timer</li>
@@ -666,7 +696,7 @@
         <p>FitData's AI knows your workout and run history — and gives specific, actionable answers.</p>
         <ul class="feat-bullets">
           <li>Linked to your workout plans, runs &amp; exercise history</li>
-          <li>Creates and adjusts training plans for you</li>
+          <li>Creates and adjusts workout plans for you</li>
           <li>80+ conversations per month (Pro)</li>
           <li>Encrypted — your data stays private</li>
         </ul>
@@ -689,7 +719,7 @@
   <span class="label-tag">FAQ</span>
   <h2>Common questions</h2>
   <details class="fq"><summary>Does FitData work offline?</summary><div class="fqb">Yes — FitData is offline-first. You can log workouts, view plans, and track sets without any internet connection. Data syncs automatically when you're back online. Only AI Chat requires a connection.</div></details>
-  <details class="fq"><summary>What's included in FitData Pro?</summary><div class="fqb">Pro unlocks: AI Personal Trainer with 80+ monthly conversations, unlimited training plans, advanced performance analytics, full workout history, calendar view, and priority support.</div></details>
+  <details class="fq"><summary>What's included in FitData Pro?</summary><div class="fqb">Pro unlocks: AI Workout Coach with 80+ monthly conversations, unlimited workout plans, advanced performance analytics, full workout history, calendar view, and priority support.</div></details>
   <details class="fq"><summary>How does Apple Health integration work?</summary><div class="fqb">FitData reads and writes to Apple Health with your permission. Completed workouts automatically close your activity rings, and HealthKit data enriches your analytics inside FitData.</div></details>
   <details class="fq"><summary>Is my AI chat data private?</summary><div class="fqb">Yes. AI conversations are encrypted and processed by trusted providers under strict privacy agreements. You control which plans the AI can see, and you can delete your history anytime.</div></details>
   <details class="fq"><summary>Does FitData sync across devices?</summary><div class="fqb">Yes. Log in with the same account on any device and your workouts, plans, and progress sync automatically. Offline changes sync as soon as you're back online.</div></details>
@@ -700,10 +730,10 @@
 <!-- ── CTA ── -->
 <div class="cta-sec">
   <span class="label-tag">Get Started</span>
-  <h2>Start training<br>smarter today.</h2>
+  <h2>Start workouts<br>smarter today.</h2>
   <p>Workouts, runs, AI coaching — free to download. Pro when you're ready.</p>
   <div class="cta-btns">
-    <a class="btn-cta-primary" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank">
+    <a class="btn-cta-primary" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">
       <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store" />
     </a>
   </div>
@@ -719,9 +749,9 @@
       </a>
       <p>Your run & workout app for iPhone and Apple Watch.</p>
     </div>
-    <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank">Download</a><a href="#features">Features</a><a href="#faq">FAQ</a></div>
-    <div class="fcol"><h4>Legal</h4><a href="privacy-en.html">Privacy Policy</a><a href="terms-en.html">Terms of Use</a></div>
-    <div class="fcol"><h4>Support</h4><a href="support-en.html">Help Center</a><a href="mailto:fit.data1@gmail.com">Contact</a><a href="https://www.instagram.com/fitdataapp/" target="_blank">Instagram</a></div>
+    <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">Download</a><a href="index.html#features">Features</a><a href="index.html#faq">FAQ</a></div>
+    <div class="fcol"><h4>Legal</h4><a href="privacy-en.html">Privacy Policy</a><a href="terms-en.html">Terms of Use</a><a href="imprint-en.html">Imprint</a></div>
+    <div class="fcol"><h4>Support</h4><a href="support-en.html">Support</a></div>
   </div>
   <div class="fbot">
     <p>© 2026 FitData. All rights reserved.</p>

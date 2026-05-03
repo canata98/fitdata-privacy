@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FitData — Deine Lauf- & Workout-App</title>
+  <title>FitData — Deine Lauf- und Trainings-App</title>
   <link rel="icon" type="image/png" href="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -109,7 +109,7 @@
       font-size: 17px; color: var(--text-2); line-height: 1.6;
       max-width: 420px; margin-bottom: 36px;
     }
-    .hero-btns { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 24px; }
+    .hero-btns { display: flex; gap: 20px; align-items: center; flex-wrap: wrap; margin-bottom: 0; width: fit-content; }
     .btn-primary {
       display: inline-flex; align-items: center;
       text-decoration: none;
@@ -126,6 +126,23 @@
       transition: background .15s, border-color .15s;
     }
     .btn-ghost:hover { background: var(--bg-cream); border-color: var(--accent); }
+
+    .hero-social {
+      display: flex; align-items: center; justify-content: center; gap: 12px;
+      width: 336px; max-width: 100%; margin: 24px 0;
+    }
+    .hero-social-link {
+      width: 42px; height: 42px; border-radius: 14px;
+      display: inline-flex; align-items: center; justify-content: center;
+      color: var(--text); background: var(--bg-card); border: 1.5px solid var(--border);
+      box-shadow: var(--shadow-sm); text-decoration: none;
+      transition: transform .15s, color .15s, border-color .15s, box-shadow .15s;
+    }
+    .hero-social-link:hover {
+      color: var(--accent); border-color: var(--accent); transform: translateY(-1px);
+      box-shadow: rgba(232,114,42,0.18) 0px 8px 22px 0px; text-decoration: none;
+    }
+    .hero-social-link svg { width: 20px; height: 20px; display: block; fill: currentColor; }
     .hero-trust {
       font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 14px; color: var(--text-3);
@@ -294,7 +311,7 @@
       display: block;
     }
 
-    /* ── FAQ ── */
+    /* ── Fragen ── */
     .faq-outer { background: var(--bg-cream); }
     .faq-wrap { max-width: 720px; margin: 0 auto; padding: 96px 24px; }
     .faq-wrap .label-tag { display: block; margin-bottom: 12px; }
@@ -379,29 +396,42 @@
     <span>FitData</span>
   </a>
   <div class="nav-links">
-    <a href="#features">Features</a>
-    <a href="#faq">FAQ</a>
-    <a href="support.html">Support</a>
+    <a href="#features">Funktionen</a>
+    <a href="#faq">Fragen</a>
+    <a href="support.html">Hilfe</a>
     <a href="privacy-de.html">Datenschutz</a>
+    <a href="terms-de.html">Nutzungsbedingungen</a>
+    <a href="impressum-de.html">Impressum</a>
     <div class="nav-lang">
       <a href="index.html">EN</a>
       <a class="active" href="index-de.html">DE</a>
     </div>
-    <a class="btn-nav" href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank">Download</a>
+    <a class="btn-nav" href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a>
   </div>
 </nav>
 
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-left">
-    <span class="eyebrow">Workouts &amp; Laufen — Für iPhone &amp; Apple Watch</span>
+    <span class="eyebrow">Training &amp; Laufen — Für iPhone &amp; Apple Watch</span>
     <h1>Erstelle deine eigenen<br>Lauf- und Trainingspläne.</h1>
-    <p>Plane Workouts, tracke jeden Lauf, logge jeden Satz – dann analysiere deine Performance. Alles in einer App, vollständig offline.</p>
+    <p>Plane Trainings, verfolge jeden Lauf, protokolliere jeden Satz – dann analysiere deine Leistung. Alles in einer App, vollständig offline.</p>
     <div class="hero-btns">
-      <a class="btn-primary" href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank">
+      <a class="btn-primary" href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">
         <img src="assets/Download_on_the_App_Store_Badge_DE_RGB_blk_092917.svg" alt="Herunterladen im App Store" />
       </a>
-      <a class="btn-ghost" href="#features">Features entdecken ↓</a>
+      <a class="btn-ghost" href="#features">Funktionen entdecken ↓</a>
+    </div>
+    <div class="hero-social" aria-label="Social Media">
+      <a class="hero-social-link" href="https://www.instagram.com/fitdata.app/" target="_blank" rel="noopener" aria-label="FitData auf Instagram">
+        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M224.1 141c-63.6 0-114.9 51.3-114.9 114.9s51.3 114.9 114.9 114.9S339 319.5 339 255.9 287.7 141 224.1 141zm0 189.6c-41.1 0-74.7-33.5-74.7-74.7s33.5-74.7 74.7-74.7 74.7 33.5 74.7 74.7-33.6 74.7-74.7 74.7zm146.4-194.3c0 14.9-12 26.8-26.8 26.8-14.9 0-26.8-12-26.8-26.8s12-26.8 26.8-26.8 26.8 12 26.8 26.8zm76.1 27.2c-1.7-35.9-9.9-67.7-36.2-93.9S352.4 35 316.5 33.3c-37-2.1-147.9-2.1-184.9 0-35.8 1.7-67.6 9.9-93.9 36.1S3.1 127.5 1.4 163.4c-2.1 37-2.1 147.9 0 184.9 1.7 35.9 9.9 67.7 36.2 93.9s58 34.5 93.9 36.2c37 2.1 147.9 2.1 184.9 0 35.9-1.7 67.7-9.9 93.9-36.2s34.5-58 36.2-93.9c2.1-37 2.1-147.8.1-184.8zM398.8 388c-7.8 19.6-22.9 34.7-42.6 42.6-29.5 11.7-99.5 9-132.1 9s-102.7 2.6-132.1-9c-19.6-7.8-34.7-22.9-42.6-42.6-11.7-29.5-9-99.5-9-132.1s-2.6-102.7 9-132.1c7.8-19.6 22.9-34.7 42.6-42.6 29.5-11.7 99.5-9 132.1-9s102.7-2.6 132.1 9c19.6 7.8 34.7 22.9 42.6 42.6 11.7 29.5 9 99.5 9 132.1s2.7 102.7-9 132.1z"/></svg>
+      </a>
+      <a class="hero-social-link" href="https://www.tiktok.com/@fitdataapp" target="_blank" rel="noopener" aria-label="FitData auf TikTok">
+        <svg viewBox="0 0 448 512" aria-hidden="true"><path d="M448 209.9c-44 .1-86.8-13.9-122.2-39.9v178.7c0 90.1-73.1 163.2-163.2 163.2S-.6 438.8-.6 348.7s73.1-163.2 163.2-163.2c13.5 0 26.6 1.6 39.2 4.8v89.6c-12-6.4-25.7-10-40.2-10-43.7 0-79.1 35.4-79.1 79.1s35.4 79.1 79.1 79.1 79.1-35.4 79.1-79.1V0h85.1c8 76.3 69.7 136.5 122.2 142.2v67.7z"/></svg>
+      </a>
+      <a class="hero-social-link" href="https://x.com/FitDataApp" target="_blank" rel="noopener" aria-label="FitData auf X">
+        <svg viewBox="0 0 512 512" aria-hidden="true"><path d="M389.2 48h70.6L305.6 224.2 487 464H345L233.7 318.6 106.5 464H35.8l164.9-188.5L26.8 48h145.6l100.5 132.9L389.2 48zm-24.8 373.8h39.1L151.1 88h-42l255.3 333.8z"/></svg>
+      </a>
     </div>
     <div class="hero-trust">
       <span>Kostenlos herunterladen</span>
@@ -421,12 +451,12 @@
           </div>
         </div>
       </div>
-      <!-- Front phone (Workout start) -->
+      <!-- Front phone (Training start) -->
       <div class="hero-phone-front">
         <div class="iphone lg">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Workout_Start.PNG" alt="Workout starten" />
+            <img src="assets/de/Workout_Start.PNG" alt="Training starten" />
           </div>
         </div>
       </div>
@@ -440,30 +470,30 @@
     <p class="zoom-headline" id="zoom-headline">Entdecke FitData</p>
     <div class="zoom-phones" id="zoom-phones">
 
-      <!-- Links: Exercise Performance — md size -->
+      <!-- Links: Übungsleistung — mittlere Größe -->
       <div class="side-wrap">
         <div class="iphone md">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Workout_ExercisePerformance.PNG" alt="Übungs-Performance" />
+            <img src="assets/de/Workout_ExercisePerformance.PNG" alt="Übungsleistung" />
           </div>
         </div>
       </div>
 
-      <!-- Mitte: Workout Home — lg (gleich groß wie Feature-Phones) -->
+      <!-- Mitte: Training Home — lg (gleich groß wie Feature-Phones) -->
       <div class="iphone lg">
         <div class="iphone-di"></div>
         <div class="iphone-inner">
-          <img src="assets/de/Workout_Home.PNG" alt="Workout" />
+          <img src="assets/de/Workout_Home.PNG" alt="Training" />
         </div>
       </div>
 
-      <!-- Rechts: Workout Detail — md size -->
+      <!-- Rechts: Trainingsdetails — md size -->
       <div class="side-wrap">
         <div class="iphone md">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Home_WorkoutDetail1.png" alt="Workout Detail" />
+            <img src="assets/de/Home_WorkoutDetail1.png" alt="Trainingsdetails" />
           </div>
         </div>
       </div>
@@ -479,7 +509,7 @@
   <div class="features-inner">
 
     <div class="feat-header">
-      <span class="label-tag">Features</span>
+      <span class="label-tag">Funktionen</span>
       <h2>Alles, was dein Training und deine Läufe brauchen.</h2>
       <p>Von deinem ersten Satz bis zu deinem Rekord – alles an einem Ort.</p>
     </div>
@@ -487,11 +517,11 @@
     <!-- 1: Pläne erstellen (Video) -->
     <div class="feat-row">
       <div class="feat-text">
-        <span class="tag">Workout-Tracking</span>
-        <h3>Pläne erstellen.<br>Sets loggen.<br>Rekorde brechen.</h3>
-        <p>Erstelle strukturierte Trainingspläne mit Übungen, Sätzen, Wiederholungen und Gewichten. Verfolge deine Performance in Echtzeit mit integriertem Pause-Timer.</p>
+        <span class="tag">Trainings-Tracking</span>
+        <h3>Pläne erstellen.<br>Sätze protokollieren.<br>Rekorde brechen.</h3>
+        <p>Erstelle strukturierte Trainingspläne mit Übungen, Sätzen, Wiederholungen und Gewichten. Verfolge deine Leistung in Echtzeit mit integriertem Pause-Timer.</p>
         <ul class="feat-bullets">
-          <li>Übungsdatenbank mit Performance-Charts</li>
+          <li>Übungsdatenbank mit Leistungsdiagrammen</li>
           <li>Echtzeit-Satzerfassung mit Pause-Timer</li>
           <li>Persönliche Rekorde werden automatisch erfasst</li>
           <li>Wöchentliche Volumen- und Krafttrends</li>
@@ -509,11 +539,11 @@
       </div>
     </div>
 
-    <!-- 2: Workout Aktiv (iPhone + Apple Watch) -->
+    <!-- 2: Training Aktiv (iPhone + Apple Watch) -->
     <div class="feat-row flip">
       <div class="feat-text">
-        <span class="tag">Aktives Workout</span>
-        <h3>Workout starten.<br>Jeden Satz dominieren.</h3>
+        <span class="tag">Aktives Training</span>
+        <h3>Training starten.<br>Jeden Satz dominieren.</h3>
         <p>Starte einen Plan und FitData führt dich durch – Satz für Satz, mit automatischen Pause-Timern und Echtzeit-Feedback. Alles steuerbar vom Handgelenk.</p>
         <ul class="feat-bullets">
           <li>Schritt-für-Schritt Plan-Führung</li>
@@ -527,7 +557,7 @@
           <div class="iphone lg">
             <div class="iphone-di"></div>
             <div class="iphone-inner">
-              <img src="assets/de/Workout_Active.png" alt="Workout Aktiv" />
+              <img src="assets/de/Workout_Active.png" alt="Training Aktiv" />
             </div>
           </div>
           <img class="watch-mockup" src="assets/de/Watch_Workout_Active_DE-portrait.png" alt="Apple Watch" />
@@ -535,15 +565,15 @@
       </div>
     </div>
 
-    <!-- 3: Performance & Analyse (Video) -->
+    <!-- 3: Leistung & Analyse (Video) -->
     <div class="feat-row">
       <div class="feat-text">
-        <span class="tag">Performance &amp; Analyse</span>
+        <span class="tag">Leistung &amp; Analyse</span>
         <h3>Sieh deinen Fortschritt.<br>In Zahlen.</h3>
         <p>FitData erfasst jeden Satz und jede Session – und macht daraus klare Charts und Einblicke, damit du immer weißt, wie du dich verbesserst.</p>
         <ul class="feat-bullets">
           <li>Volumen-, Kraft- und Häufigkeitstrends</li>
-          <li>Performance-Verlauf pro Übung</li>
+          <li>Leistungsverlauf pro Übung</li>
           <li>Persönliche Rekorde werden automatisch markiert</li>
           <li>Vollständige Trainingshistorie mit Session-Details</li>
         </ul>
@@ -595,28 +625,28 @@
     <div class="detail-header">
       <span class="label-tag">Lauf-Analyse</span>
       <h3>Jeder Split.<br>Jede Kennzahl.</h3>
-      <p>Tauche in jeden Lauf ein – Pace-Splits, Herzfrequenz-Zonen und Performance-Trends über Zeit. Deine vollständige Laufhistorie, immer auf einen Blick.</p>
+      <p>Tauche in jeden Lauf ein – Pace-Splits, Herzfrequenz-Zonen und Leistungstrends über Zeit. Deine vollständige Laufhistorie, immer auf einen Blick.</p>
     </div>
     <div class="detail-phones">
       <div class="dp-side">
         <div class="iphone sm">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Home_WorkoutDetail1.png" alt="Workout Detail" />
+            <img src="assets/de/Home_WorkoutDetail1.png" alt="Trainingsdetails" />
           </div>
         </div>
       </div>
       <div class="iphone md">
         <div class="iphone-di"></div>
         <div class="iphone-inner">
-          <img src="assets/de/Home_WorkoutDetail2.png" alt="Workout Detail 2" />
+          <img src="assets/de/Home_WorkoutDetail2.png" alt="Trainingsdetails 2" />
         </div>
       </div>
       <div class="dp-side">
         <div class="iphone sm">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Home_WorkoutDetail3.png" alt="Workout Detail 3" />
+            <img src="assets/de/Home_WorkoutDetail3.png" alt="Trainingsdetails 3" />
           </div>
         </div>
       </div>
@@ -629,9 +659,9 @@
   <div class="features-inner" style="padding-top: 96px; padding-bottom: 96px;">
     <div class="feat-row" style="margin-bottom: 0;">
       <div class="feat-text">
-        <span class="tag">KI Coach</span>
-        <h3>KI für deine Fitness.<br>Basierend auf deinen Daten.</h3>
-        <p>FitData's KI kennt deine Workout- und Laufhistorie – und gibt konkrete, umsetzbare Antworten.</p>
+        <span class="tag">KI-Trainingsassistent</span>
+        <h3>KI für dein Training.<br>Basierend auf deinen Daten.</h3>
+        <p>FitDatas KI kennt deine Trainings- und Laufhistorie – und gibt konkrete, umsetzbare Antworten.</p>
         <ul class="feat-bullets">
           <li>Verknüpft mit Plänen, Läufen &amp; Übungshistorie</li>
           <li>Erstellt und passt Trainingspläne für dich an</li>
@@ -643,7 +673,7 @@
         <div class="iphone lg">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Workout_KI.png" alt="KI Coach" />
+            <img src="assets/de/Workout_KI.png" alt="KI-Trainingsassistent" />
           </div>
         </div>
       </div>
@@ -651,16 +681,16 @@
   </div>
 </div>
 
-<!-- ── FAQ ── -->
+<!-- ── Fragen ── -->
 <div class="faq-outer">
 <div class="faq-wrap" id="faq">
-  <span class="label-tag">FAQ</span>
+  <span class="label-tag">Fragen</span>
   <h2>Häufige Fragen</h2>
-  <details class="fq"><summary>Funktioniert FitData offline?</summary><div class="fqb">Ja – FitData ist offline-first. Du kannst Workouts loggen, Pläne ansehen und Sätze tracken ohne Internetverbindung. Daten synchronisieren automatisch, sobald du wieder online bist. Nur der KI-Chat benötigt eine Verbindung.</div></details>
-  <details class="fq"><summary>Was ist in FitData Pro enthalten?</summary><div class="fqb">Pro schaltet frei: KI Personal Trainer mit 80+ monatlichen Gesprächen, unbegrenzte Trainingspläne, erweiterte Performance-Analysen, vollständige Trainingshistorie, Kalenderansicht und Priority-Support.</div></details>
-  <details class="fq"><summary>Wie funktioniert die Apple Health-Integration?</summary><div class="fqb">FitData liest und schreibt in Apple Health mit deiner Erlaubnis. Abgeschlossene Workouts schließen automatisch deine Activity Rings, und HealthKit-Daten bereichern deine Analysen in FitData.</div></details>
+  <details class="fq"><summary>Funktioniert FitData offline?</summary><div class="fqb">Ja – FitData ist für Offline-Nutzung ausgelegt. Du kannst Trainings protokollieren, Pläne ansehen und Sätze verfolgen, auch ohne Internetverbindung. Daten synchronisieren automatisch, sobald du wieder online bist. Nur der KI-Chat benötigt eine Verbindung.</div></details>
+  <details class="fq"><summary>Was ist in FitData Pro enthalten?</summary><div class="fqb">Pro schaltet frei: KI-Trainingsassistent mit 80+ monatlichen Gesprächen, unbegrenzte Trainingspläne, erweiterte Leistungsanalysen, vollständige Trainingshistorie, Kalenderansicht und priorisierte Hilfe.</div></details>
+  <details class="fq"><summary>Wie funktioniert die Apple Health-Integration?</summary><div class="fqb">FitData liest und schreibt in Apple Health mit deiner Erlaubnis. Abgeschlossene Trainings schließen automatisch deine Activity Rings, und HealthKit-Daten bereichern deine Analysen in FitData.</div></details>
   <details class="fq"><summary>Sind meine KI-Chat-Daten privat?</summary><div class="fqb">Ja. KI-Gespräche sind verschlüsselt und werden von vertrauenswürdigen Anbietern unter strengen Datenschutzvereinbarungen verarbeitet. Du kannst kontrollieren, welche Pläne die KI sehen kann, und deine Historie jederzeit löschen.</div></details>
-  <details class="fq"><summary>Synchronisiert FitData geräteübergreifend?</summary><div class="fqb">Ja. Melde dich auf einem beliebigen Gerät mit demselben Account an und deine Workouts, Pläne und Fortschritte synchronisieren automatisch. Offline-Änderungen synchronisieren, sobald du wieder online bist.</div></details>
+  <details class="fq"><summary>Synchronisiert FitData geräteübergreifend?</summary><div class="fqb">Ja. Melde dich auf einem beliebigen Gerät mit demselben Account an und deine Trainings, Pläne und Fortschritte synchronisieren automatisch. Offline-Änderungen synchronisieren, sobald du wieder online bist.</div></details>
   <details class="fq"><summary>Wie kündige ich mein Abo?</summary><div class="fqb">Verwalte oder kündige dein Pro-Abo jederzeit über iOS Einstellungen → Apple ID → Abonnements. Ohne Umwege.</div></details>
 </div>
 </div>
@@ -669,9 +699,9 @@
 <div class="cta-sec">
   <span class="label-tag">Loslegen</span>
   <h2>Starte heute<br>smarter mit dem Training.</h2>
-  <p>Workouts, Laufen, KI-Coaching – kostenlos herunterladen. Pro wenn du bereit bist.</p>
+  <p>Training, Laufen, KI-Unterstützung – kostenlos herunterladen. Pro wenn du bereit bist.</p>
   <div class="cta-btns">
-    <a class="btn-cta-primary" href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank">
+    <a class="btn-cta-primary" href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">
       <img src="assets/Download_on_the_App_Store_Badge_DE_RGB_wht_092917.svg" alt="Herunterladen im App Store" />
     </a>
   </div>
@@ -685,11 +715,11 @@
         <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
         <span>FitData</span>
       </a>
-      <p>Deine Lauf- & Workout-App für iPhone und Apple Watch.</p>
+      <p>Deine Lauf- und Trainings-App für iPhone und Apple Watch.</p>
     </div>
-    <div class="fcol"><h4>App</h4><a href="index-de.html">Startseite</a><a href="#features">Features</a><a href="#faq">FAQ</a></div>
-    <div class="fcol"><h4>Rechtliches</h4><a href="privacy-de.html">Datenschutz</a><a href="terms-de.html">Nutzungsbedingungen</a></div>
-    <div class="fcol"><h4>Support</h4><a href="support.html">Hilfe</a><a href="mailto:fit.data1@gmail.com">Kontakt</a><a href="https://www.instagram.com/fitdataapp/" target="_blank">Instagram</a></div>
+    <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a><a href="index-de.html#features">Funktionen</a><a href="index-de.html#faq">Fragen</a></div>
+    <div class="fcol"><h4>Rechtliches</h4><a href="privacy-de.html">Datenschutz</a><a href="terms-de.html">Nutzungsbedingungen</a><a href="impressum-de.html">Impressum</a></div>
+    <div class="fcol"><h4>Hilfe</h4><a href="support.html">Hilfe</a></div>
   </div>
   <div class="fbot">
     <p>© 2026 FitData. Alle Rechte vorbehalten.</p>

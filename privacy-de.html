@@ -77,14 +77,6 @@
       letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 10px;
     }
     .meta { font-size: 15px; color: var(--text-3); margin-top: 10px; }
-    .lang-switch { display: flex; gap: 8px; justify-content: center; margin-top: 24px; }
-    .lang-pill {
-      font-family: 'Gabarito', sans-serif; font-size: 13px; font-weight: 700;
-      padding: 7px 16px; border-radius: 999px; text-decoration: none;
-      border: 1.5px solid var(--border); color: var(--text-2); background: var(--bg-card);
-      transition: all .15s;
-    }
-    .lang-pill.active, .lang-pill:hover { background: var(--text); color: white; border-color: var(--text); }
 
     /* DOCUMENT */
     .doc-wrap { max-width: 700px; margin: 0 auto; padding: 64px 24px 120px; }
@@ -101,6 +93,14 @@
     .doc-wrap strong { color: var(--text); font-weight: 700; }
     .doc-wrap a { color: var(--accent); text-decoration: none; }
     .doc-wrap a:hover { text-decoration: underline; }
+
+    .info-card-list { display: grid; gap: 12px; margin: 20px 0 18px; }
+    .info-card {
+      background: var(--bg-card); border: 1.5px solid var(--border);
+      border-radius: 16px; padding: 16px 18px; box-shadow: rgba(232,114,42,0.06) 0px 8px 22px 0px;
+    }
+    .info-card strong { display: block; margin-bottom: 4px; }
+    .info-card p { margin: 0; font-size: 16px; line-height: 1.55; }
 
     .highlight-box {
       background: var(--bg-cream); border: 1.5px solid var(--border);
@@ -145,23 +145,21 @@
     <span>FitData</span>
   </a>
   <div class="nav-links">
-    <a href="index-de.html#features">Features</a>
-    <a href="index-de.html#faq">FAQ</a>
-    <a href="support.html">Support</a>
+    <a href="index-de.html#features">Funktionen</a>
+    <a href="index-de.html#faq">Fragen</a>
+    <a href="support.html">Hilfe</a>
     <a href="privacy-de.html">Datenschutz</a>
+    <a href="terms-de.html">Nutzungsbedingungen</a>
+    <a href="impressum-de.html">Impressum</a>
     <div class="nav-lang"><a href="privacy-en.html">EN</a><a class="active" href="privacy-de.html">DE</a></div>
-    <a class="btn-nav" href="#">Download</a>
+    <a class="btn-nav" href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a>
   </div>
 </nav>
 
 <div class="page-header">
   <a class="back" href="index-de.html">← Zurück zu FitData</a>
   <h1>Datenschutzerklärung</h1>
-  <p class="meta">Letzte Aktualisierung: August 2025</p>
-  <div class="lang-switch">
-    <a class="lang-pill" href="privacy-en.html">🇺🇸 English</a>
-    <a class="lang-pill active" href="privacy-de.html">🇩🇪 Deutsch</a>
-  </div>
+  <p class="meta">Letzte Aktualisierung: April 2026</p>
 </div>
 
 <div class="doc-wrap">
@@ -172,38 +170,38 @@
 
   <h2>2. Erhobene Daten</h2>
   <p>Wir erheben nur die Daten, die zur Bereitstellung unserer Dienste erforderlich sind:</p>
-  <ul>
-    <li><strong>Kontodaten:</strong> E-Mail-Adresse und Anzeigename (über Firebase Authentication)</li>
-    <li><strong>Fitnessdaten:</strong> Trainingsprotokolle, Übungssätze, Wiederholungen, Gewichte und von dir erstellte Trainingspläne</li>
-    <li><strong>Gesundheitsdaten:</strong> Schritte, Herzfrequenz, aktive Kalorien – nur mit deiner HealthKit-Genehmigung</li>
-    <li><strong>Laufdaten:</strong> GPS-Koordinaten, Tempo, Distanz und Dauer während aufgezeichneter Läufe</li>
-    <li><strong>KI-Gespräche:</strong> Nachrichten, die du an den KI-Coach sendest – nur zur Generierung deiner Antwort verwendet</li>
-    <li><strong>Gerätedaten:</strong> App-Version, Gerätemodell und Betriebssystemversion für Diagnosen</li>
-  </ul>
+  <div class="info-card-list">
+    <div class="info-card"><strong>Kontodaten</strong><p>E-Mail-Adresse und Anzeigename über Firebase Authentication.</p></div>
+    <div class="info-card"><strong>Trainingsdaten</strong><p>Trainingsprotokolle, Übungssätze, Wiederholungen, Gewichte und von dir erstellte Trainingspläne.</p></div>
+    <div class="info-card"><strong>Gesundheitsdaten</strong><p>Schritte, Herzfrequenz und aktive Kalorien, nur mit deiner HealthKit-Genehmigung.</p></div>
+    <div class="info-card"><strong>Laufdaten</strong><p>GPS-Koordinaten, Tempo, Distanz und Dauer während aufgezeichneter Läufe.</p></div>
+    <div class="info-card"><strong>KI-Gespräche</strong><p>Nachrichten an den KI-Trainingsassistenten, ausschließlich zur Generierung deiner Antwort.</p></div>
+    <div class="info-card"><strong>Gerätedaten</strong><p>App-Version, Gerätemodell und Betriebssystemversion für Diagnosen.</p></div>
+  </div>
 
   <h2>3. Verwendung deiner Daten</h2>
   <ul>
     <li>Bereitstellung und Verbesserung der FitData-Funktionen</li>
     <li>Synchronisierung deiner Daten über deine Geräte</li>
-    <li>Generierung von KI-Coaching-Antworten basierend auf deinem Trainingskontext</li>
+    <li>Generierung von KI-Antworten basierend auf deinem Trainingskontext</li>
     <li>Diagnose von Abstürzen und technischen Problemen</li>
   </ul>
   <p>Wir verwenden deine Daten <strong>nicht</strong> für Werbezwecke und <strong>verkaufen</strong> deine Daten nicht an Dritte.</p>
 
   <h2>4. Drittanbieterdienste</h2>
   <p>FitData nutzt folgende vertrauenswürdige Dienste:</p>
-  <ul>
-    <li><strong>Firebase (Google LLC):</strong> Authentifizierung, Datenbank und Analysen</li>
-    <li><strong>Apple HealthKit:</strong> Lesen und Schreiben von Gesundheits- und Fitnessdaten mit deiner Zustimmung</li>
-    <li><strong>KI-Anbieter:</strong> Verarbeitet deine KI-Chat-Nachrichten zur Antwortgenerierung – Nachrichten werden nicht über die Sitzung hinaus gespeichert</li>
-  </ul>
+  <div class="info-card-list">
+    <div class="info-card"><strong>Firebase (Google LLC)</strong><p>Authentifizierung, Datenbank und Analysen.</p></div>
+    <div class="info-card"><strong>Apple HealthKit</strong><p>Lesen und Schreiben von Gesundheits- und Fitnessdaten mit deiner Zustimmung.</p></div>
+    <div class="info-card"><strong>KI-Anbieter</strong><p>Verarbeitet deine KI-Chat-Nachrichten zur Antwortgenerierung. Nachrichten werden nicht über die Sitzung hinaus gespeichert.</p></div>
+  </div>
 
   <h2>5. Datenspeicherung &amp; Sicherheit</h2>
   <p>Deine Daten werden in Firebase Cloud Firestore gespeichert und durch die Sicherheitsinfrastruktur von Google geschützt. Alle Daten sind während der Übertragung (TLS) und im Ruhezustand verschlüsselt. Der Zugriff ist auf authentifizierte Anfragen von deinem eigenen Konto beschränkt.</p>
 
   <h2>6. Gesundheitsdaten</h2>
   <div class="highlight-box">
-    <p>Über Apple HealthKit abgerufene Gesundheitsdaten werden ausschließlich innerhalb von FitData verwendet, um deine Aktivität anzuzeigen und Analysen zu bereichern. Sie werden niemals an Dritte weitergegeben oder für Werbezwecke genutzt.</p>
+    <p>Über Apple HealthKit abgerufene Gesundheitsdaten verwenden wir ausschließlich innerhalb von FitData, um deine Aktivität anzuzeigen und Analysen zu bereichern. Deine Gesundheitsdaten geben wir niemals an Dritte weiter und nutzen sie nicht für Werbezwecke.</p>
   </div>
 
   <h2>7. Deine Rechte</h2>
@@ -221,7 +219,7 @@
   <p>Wir speichern deine Daten, solange dein Konto aktiv ist. Bei Kontolöschung werden alle zugehörigen Daten innerhalb von 30 Tagen dauerhaft entfernt.</p>
 
   <h2>9. Datenschutz für Kinder</h2>
-  <p>FitData richtet sich nicht an Kinder unter 13 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern. Falls du glaubst, dass ein Kind uns Daten übermittelt hat, kontaktiere uns bitte umgehend.</p>
+  <p>FitData richtet sich nicht an Kinder unter 14 Jahren. Wir erheben wissentlich keine personenbezogenen Daten von Kindern unter 14 Jahren. Wenn du unter 16 Jahre alt bist, solltest du FitData nur mit Zustimmung eines Elternteils oder gesetzlichen Vertreters verwenden, soweit diese Zustimmung gesetzlich erforderlich ist. Falls du glaubst, dass ein Kind uns Daten übermittelt hat, kontaktiere uns bitte umgehend.</p>
 
   <h2>10. Änderungen dieser Erklärung</h2>
   <p>Wir können diese Datenschutzerklärung gelegentlich aktualisieren. Über wesentliche Änderungen wirst du über die App oder per E-Mail informiert. Die weitere Nutzung der App nach Änderungen gilt als Zustimmung.</p>
@@ -229,7 +227,6 @@
   <div class="contact-box">
     <h2>Kontakt</h2>
     <div class="c-row"><span class="c-label">E-Mail</span><a href="mailto:fit.data1@gmail.com">fit.data1@gmail.com</a></div>
-    <div class="c-row"><span class="c-label">Instagram</span><a href="https://www.instagram.com/fitdataapp/" target="_blank">@fitdataapp</a></div>
     <div class="c-row"><span class="c-label">Antwortzeit</span><span>Innerhalb von 24–48 Stunden</span></div>
   </div>
 
@@ -242,15 +239,14 @@
         <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
         <span>FitData</span>
       </a>
-      <p>Dein KI-gestützter Fitness-Begleiter für iPhone und Apple Watch.</p>
+      <p>Dein KI-gestützter Trainingsbegleiter für iPhone und Apple Watch.</p>
     </div>
-    <div class="fcol"><h4>App</h4><a href="index-de.html">Startseite</a><a href="index-de.html#features">Features</a><a href="index-de.html#faq">FAQ</a></div>
-    <div class="fcol"><h4>Rechtliches</h4><a href="privacy-en.html">Privacy Policy</a><a href="privacy-de.html">Datenschutz</a>
-    <a href="terms-en.html">Terms of Use</a><a href="terms-de.html">Nutzungsbedingungen</a></div>
-    <div class="fcol"><h4>Support</h4><a href="support-en.html">Help Center</a><a href="support.html">Hilfe (DE)</a><a href="mailto:fit.data1@gmail.com">Kontakt</a><a href="https://www.instagram.com/fitdataapp/" target="_blank">Instagram</a></div>
+    <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a><a href="index-de.html#features">Funktionen</a><a href="index-de.html#faq">Fragen</a></div>
+    <div class="fcol"><h4>Rechtliches</h4><a href="privacy-de.html">Datenschutz</a><a href="terms-de.html">Nutzungsbedingungen</a><a href="impressum-de.html">Impressum</a></div>
+    <div class="fcol"><h4>Hilfe</h4><a href="support.html">Hilfe</a></div>
   </div>
   <div class="fbot">
-    <p>© 2025 FitData. Alle Rechte vorbehalten.</p>
+    <p>© 2026 FitData. Alle Rechte vorbehalten.</p>
     <p>Gemacht für Athleten überall.</p>
   </div>
 </footer>

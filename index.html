@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FitData — Your Run & Workout App</title>
+  <title>FitData - Progress, made visible</title>
   <link rel="icon" type="image/png" href="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -212,24 +212,23 @@
     .iphone-di { display: none; }
 
     /* ── MEET FITDATA (zoom section) ── */
-    .zoom-section { position: relative; height: 200vh; }
+    .zoom-section { position: relative; background: var(--bg); }
     .zoom-sticky {
-      position: sticky; top: 0; height: 100vh;
+      position: relative;
       display: flex; flex-direction: column;
       align-items: center; justify-content: center;
       gap: 20px; overflow: hidden;
-      background: var(--bg);
+      padding: 72px 80px 48px;
     }
     .zoom-headline {
       font-family: 'Gabarito', sans-serif;
       font-size: 42px; font-weight: 700; letter-spacing: -1px;
       color: var(--text); text-align: center;
-      transition: opacity .4s ease;
     }
     .zoom-phones {
       display: flex; align-items: flex-end; gap: 20px;
       transform-origin: center bottom;
-      will-change: transform;
+      transform: scale(1);
     }
     .zoom-phones .side-wrap {
       /* side phones fully visible, slightly smaller than center */
@@ -294,7 +293,7 @@
     .feat-row.flip > * { direction: ltr; }
     .feat-row:last-child { margin-bottom: 0; }
     /* Extra breathing room before detail-section */
-    .features-inner { padding-bottom: 120px; }
+    .features-inner { padding-top: 72px; padding-bottom: 120px; }
 
     .feat-text .tag {
       font-family: 'Gabarito', sans-serif;
@@ -393,6 +392,7 @@
       .hero-trust { justify-content: center; }
       .hero-right { height: auto; padding: 48px 0 0; align-items: flex-start; }
       .hero-phone-back { margin-right: -40px; }
+      .zoom-sticky { padding: 56px 32px 40px; }
       .zoom-phones .side-wrap { display: none; }
       .feat-row { grid-template-columns: 1fr; gap: 40px; }
       .feat-row.flip { direction: ltr; }
@@ -411,6 +411,9 @@
       .hero { padding: 80px 20px 0; }
       .hero h1 { font-size: 36px; }
       .hero-phone-back { display: none; }
+      .watch-mockup { display: none; }
+      .iphone-watch-group { justify-content: center; }
+      .zoom-sticky { padding: 40px 20px 32px; }
       .features-inner { padding: 48px 20px; }
       .detail-inner { padding: 48px 20px; }
       .cta-sec { padding: 48px 20px; }
@@ -418,6 +421,30 @@
       footer { padding: 40px 20px 28px; }
     }
   </style>
+  <script>
+    (function () {
+      var params = new URLSearchParams(window.location.search);
+      var selected = params.get('lang');
+      if (selected === 'en' || selected === 'de') {
+        localStorage.setItem('fitdataLanguage', selected);
+        if (selected === 'en' && window.location.search) {
+          history.replaceState(null, '', window.location.pathname + window.location.hash);
+        }
+        return;
+      }
+
+      var stored = localStorage.getItem('fitdataLanguage');
+      if (stored === 'en' || stored === 'de') {
+        if (stored === 'de') window.location.replace('index-de.html');
+        return;
+      }
+
+      var languages = navigator.languages && navigator.languages.length ? navigator.languages : [navigator.language || 'de'];
+      var preferred = languages.some(function (language) { return /^de(-|$)/i.test(language); }) ? 'de' : 'en';
+      localStorage.setItem('fitdataLanguage', preferred);
+      if (preferred === 'de') window.location.replace('index-de.html');
+    })();
+  </script>
 </head>
 <body>
 
@@ -435,8 +462,8 @@
     <a href="terms-en.html">Terms</a>
     <a href="imprint-en.html">Imprint</a>
     <div class="nav-lang">
-      <a class="active" href="index.html">EN</a>
-      <a href="index-de.html">DE</a>
+      <a class="active" href="index.html?lang=en">EN</a>
+      <a href="index-de.html?lang=de">DE</a>
     </div>
     <a class="btn-nav" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">Download</a>
   </div>
@@ -446,7 +473,7 @@
 <section class="hero">
   <div class="hero-left">
     <span class="eyebrow">Workouts &amp; Running — For iPhone &amp; Apple Watch</span>
-    <h1>Build your custom<br>run and workout plans.</h1>
+    <h1>Build your custom workout plan - running, lifting or calisthenics.</h1>
     <p>Plan workouts, track every run, log every lift — then analyze your performance. All in one app, fully offline.</p>
     <div class="hero-btns">
       <a class="btn-primary" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">
@@ -731,7 +758,7 @@
 <div class="cta-sec">
   <span class="label-tag">Get Started</span>
   <h2>Start workouts<br>smarter today.</h2>
-  <p>Workouts, runs, AI coaching — free to download. Pro when you're ready.</p>
+  <p>Workouts, Runs, AI Coaching - free to download. PRO when you're ready.</p>
   <div class="cta-btns">
     <a class="btn-cta-primary" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">
       <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store" />
@@ -747,7 +774,7 @@
         <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
         <span>FitData</span>
       </a>
-      <p>Your run & workout app for iPhone and Apple Watch.</p>
+      <p>WORKOUTS &amp; RUNNING FOR IPHONE &amp; APPLE WATCH</p>
     </div>
     <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">Download</a><a href="index.html#features">Features</a><a href="index.html#faq">FAQ</a></div>
     <div class="fcol"><h4>Legal</h4><a href="privacy-en.html">Privacy Policy</a><a href="terms-en.html">Terms of Use</a><a href="imprint-en.html">Imprint</a></div>
@@ -759,29 +786,5 @@
   </div>
 </footer>
 
-
-<script>
-  (function () {
-    var section = document.getElementById('zoom-section');
-    var phones  = document.getElementById('zoom-phones');
-    var headline = document.getElementById('zoom-headline');
-    if (!section || !phones) return;
-
-    function update() {
-      var rect     = section.getBoundingClientRect();
-      var scrolled = -rect.top;
-      var range    = section.offsetHeight - window.innerHeight;
-      var p        = Math.max(0, Math.min(1, scrolled / range));
-
-      // phones scale from 0.72 → 1.0
-      phones.style.transform = 'scale(' + (0.72 + p * 0.28) + ')';
-      // headline fades out in first half of scroll
-      headline.style.opacity = Math.max(0, 1 - p * 2.5);
-    }
-
-    window.addEventListener('scroll', update, { passive: true });
-    update();
-  })();
-</script>
 </body>
 </html>

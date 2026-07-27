@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FitData Blog</title>
+    <link>https://fitdata.app/blog-de.html</link>
+    <description>Tipps zu Workouts, Laufen und Training mit FitData.</description>
+    <language>de</language>
+    <atom:link href="https://fitdata.app/feed-de.xml" rel="self" type="application/rss+xml"/>
+
+  </channel>
+</rss>

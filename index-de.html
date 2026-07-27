@@ -1,87 +1,56 @@
 <!DOCTYPE html>
-<html lang="de">
+<html lang="de" class="no-js">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>FitData - Progress, made visible</title>
+  <title>FitData — Fortschritt sichtbar machen</title>
+  <meta name="description" content="Erstelle individuelle Trainingspläne, tracke jeden Lauf und analysiere deine Leistung. FitData für iPhone und Apple Watch — funktioniert offline." />
+  <link rel="canonical" href="https://fitdata.app/index-de.html" />
+  <link rel="alternate" hreflang="en" href="https://fitdata.app/index.html" />
+  <link rel="alternate" hreflang="de" href="https://fitdata.app/index-de.html" />
+  <link rel="alternate" hreflang="x-default" href="https://fitdata.app/index.html" />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="de_DE" />
+  <meta property="og:title" content="FitData — Fortschritt sichtbar machen" />
+  <meta property="og:description" content="Erstelle individuelle Trainingspläne, tracke jeden Lauf und analysiere deine Leistung. FitData für iPhone und Apple Watch — funktioniert offline." />
+  <meta property="og:url" content="https://fitdata.app/index-de.html" />
+  <meta property="og:image" content="https://fitdata.app/assets/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="FitData — Fortschritt sichtbar machen" />
+  <meta name="twitter:description" content="Erstelle individuelle Trainingspläne, tracke jeden Lauf und analysiere deine Leistung. FitData für iPhone und Apple Watch — funktioniert offline." />
+  <meta name="twitter:image" content="https://fitdata.app/assets/og-image.png" />
   <link rel="icon" type="image/png" href="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Gabarito:wght@400;500;600;700&family=Atkinson+Hyperlegible:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet" />
+  <link rel="preload" href="assets/fonts/gabarito-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="preload" href="assets/fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="assets/site.css" />
   <script src="analytics-consent.js" defer></script>
+  <link rel="alternate" type="application/rss+xml" title="FitData Blog" href="feed-de.xml" />
+    <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "FitData",
+    "operatingSystem": "iOS",
+    "applicationCategory": "HealthApplication",
+    "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+    "url": "https://fitdata.app"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {"@type": "Question", "name": "Funktioniert FitData offline?", "acceptedAnswer": {"@type": "Answer", "text": "Ja – FitData ist für Offline-Nutzung ausgelegt. Du kannst Trainings protokollieren, Pläne ansehen und Sätze verfolgen, auch ohne Internetverbindung. Daten synchronisieren automatisch, sobald du wieder online bist. Nur der KI-Chat benötigt eine Verbindung."}},
+      {"@type": "Question", "name": "Was ist in FitData Pro enthalten?", "acceptedAnswer": {"@type": "Answer", "text": "Pro schaltet frei: KI-Trainingsassistent mit 80+ monatlichen Gesprächen, unbegrenzte Trainingspläne, erweiterte Leistungsanalysen, vollständige Trainingshistorie, Kalenderansicht und priorisierte Hilfe."}},
+      {"@type": "Question", "name": "Wie funktioniert die Apple Health-Integration?", "acceptedAnswer": {"@type": "Answer", "text": "FitData liest und schreibt in Apple Health mit deiner Erlaubnis. Abgeschlossene Trainings schließen automatisch deine Activity Rings, und HealthKit-Daten bereichern deine Analysen in FitData."}},
+      {"@type": "Question", "name": "Sind meine KI-Chat-Daten privat?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. KI-Gespräche sind verschlüsselt und werden von vertrauenswürdigen Anbietern unter strengen Datenschutzvereinbarungen verarbeitet. Du kannst kontrollieren, welche Pläne die KI sehen kann, und deine Historie jederzeit löschen."}},
+      {"@type": "Question", "name": "Synchronisiert FitData geräteübergreifend?", "acceptedAnswer": {"@type": "Answer", "text": "Ja. Melde dich auf einem beliebigen Gerät mit demselben Account an und deine Trainings, Pläne und Fortschritte synchronisieren automatisch. Offline-Änderungen synchronisieren, sobald du wieder online bist."}},
+      {"@type": "Question", "name": "Wie kündige ich mein Abo?", "acceptedAnswer": {"@type": "Answer", "text": "Verwalte oder kündige dein Pro-Abo jederzeit über iOS Einstellungen → Apple ID → Abonnements. Ohne Umwege."}}
+    ]
+  }
+  </script>
   <style>
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    :root {
-      /* FitData color system — clean neutral + vibrant orange */
-      --text:     #111111;
-      --text-2:   #555550;
-      --text-3:   #999990;
-      --accent:   #E8722A;
-      --accent-h: #D4621A;
-      --bg:       #FDFAF7;
-      --bg-cream: #F7EFE5;
-      --bg-card:  #FFFFFF;
-      --border:   #EAD9CC;
-      --shadow-sm: rgba(232,114,42,0.07) 0px 1px 2px 0px, rgba(232,114,42,0.13) 0px 16px 32px 0px;
-      --shadow-md: rgba(232,114,42,0.20) 0px 2px 8px 0px;
-      --shadow-nav: rgb(234,217,204) 0px 1px 0px 0px, rgba(0,0,0,0.10) 0px 10px 30px -18px;
-    }
-
-    html { scroll-behavior: smooth; }
-
-    body {
-      font-family: 'Atkinson Hyperlegible', system-ui, -apple-system, sans-serif;
-      background: var(--bg);
-      color: var(--text);
-      line-height: 1.6;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3, h4, h5, button, .btn, .label-tag, .eyebrow, nav .nav-logo span {
-      font-family: 'Gabarito', system-ui, sans-serif;
-    }
-
-    /* ── NAV ── */
-    nav {
-      position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-      height: 80px;
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 0 80px;
-      background: rgba(253,248,244,0.92);
-      backdrop-filter: saturate(180%) blur(20px);
-      box-shadow: var(--shadow-nav);
-    }
-    .nav-logo {
-      display: flex; align-items: center; gap: 10px;
-      text-decoration: none; color: var(--text);
-    }
-    .nav-logo img { width: 36px; height: 36px; border-radius: 9px; }
-    .nav-logo span { font-family: 'Gabarito', sans-serif; font-size: 18px; font-weight: 700; }
-    .nav-links { display: flex; align-items: center; gap: 32px; }
-    .nav-links a {
-      font-family: 'Atkinson Hyperlegible', sans-serif;
-      font-size: 17px; color: var(--text); text-decoration: none;
-      transition: color .15s;
-    }
-    .nav-links a:hover { color: var(--accent); text-decoration: underline; }
-    .btn-nav {
-      font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 700;
-      background: var(--accent); color: white;
-      padding: 8px 20px; border-radius: 999px; border: none;
-      text-decoration: none; cursor: pointer;
-      box-shadow: var(--shadow-md);
-      transition: background .15s, box-shadow .15s;
-    }
-    .btn-nav:hover { background: var(--accent-h); box-shadow: rgba(232,114,42,0.28) 0px 4px 14px 0px; }
-    .nav-lang { display: flex; gap: 6px; align-items: center; }
-    .nav-lang a {
-      font-family: 'Gabarito', sans-serif; font-size: 13px; font-weight: 700;
-      padding: 5px 12px; border-radius: 999px; text-decoration: none;
-      border: 1.5px solid var(--border); color: var(--text-2); background: transparent;
-      transition: all .15s;
-    }
-    .nav-lang a.active, .nav-lang a:hover { background: var(--text); color: white; border-color: var(--text); }
 
     /* ── HERO ── */
     .hero {
@@ -199,10 +168,18 @@
     }
     .iphone.md .iphone-inner { border-radius: 16px; }
     .iphone.sm .iphone-inner { border-radius: 14px; }
-    .iphone-inner img {
+    .iphone-inner img,
+    .iphone-inner picture {
+      width: 100%; height: 100%;
+      display: block;
+    }
+    .iphone-inner picture img {
       width: 100%; height: 100%;
       object-fit: cover; object-position: top center;
       display: block;
+    }
+    .iphone-inner > img {
+      object-fit: cover; object-position: top center;
     }
     .iphone-di { display: none; }
 
@@ -274,8 +251,8 @@
       gap: 80px; align-items: center;
       margin-bottom: 96px;
     }
-    .feat-row.flip { direction: rtl; }
-    .feat-row.flip > * { direction: ltr; }
+    .feat-row.flip .feat-phone-wrap { order: 1; }
+    .feat-row.flip .feat-text { order: 2; }
     .feat-row:last-child { margin-bottom: 0; }
     /* Extra breathing room before detail-section */
     .features-inner { padding-top: 72px; padding-bottom: 120px; }
@@ -328,31 +305,8 @@
     details.fq[open] summary { color: var(--accent); }
     details.fq .fqb { padding-bottom: 20px; font-size: 17px; color: var(--text-2); line-height: 1.7; }
 
-    /* ── CTA ── */
-    .cta-sec { background: var(--text); padding: 96px 80px; text-align: center; }
-    .cta-sec .label-tag { color: rgba(255,255,255,0.45); }
-    .cta-sec h2 { font-size: 56px; font-weight: 700; letter-spacing: -1.5px; color: white; margin-bottom: 16px; }
-    .cta-sec p { font-size: 17px; color: rgba(255,255,255,0.5); margin-bottom: 40px; line-height: 1.6; }
-    .cta-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
-    .btn-cta-primary { display: inline-flex; align-items: center; text-decoration: none; transition: opacity .15s; flex-shrink: 0; }
-    .btn-cta-primary:hover { opacity: .84; }
-    .btn-cta-primary img { height: 52px; display: block; border-radius: 11px; }
-
-    /* ── FOOTER ── */
-    footer { background: var(--bg); border-top: 1px solid var(--border); padding: 64px 80px 40px; }
-    .ft { max-width: 1200px; margin: 0 auto; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 40px; margin-bottom: 48px; }
-    .fb { max-width: 280px; }
-    .fb .nav-logo { margin-bottom: 12px; }
-    .fb p { font-size: 17px; color: var(--text-2); line-height: 1.6; }
-    .fcol h4 { font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.6px; color: var(--text-3); margin-bottom: 16px; }
-    .fcol a { display: block; font-size: 17px; color: var(--text-2); text-decoration: none; margin-bottom: 10px; transition: color .15s; }
-    .fcol a:hover { color: var(--accent); text-decoration: underline; }
-    .fbot { max-width: 1200px; margin: 0 auto; border-top: 1px solid var(--border); padding-top: 28px; display: flex; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
-    .fbot p { font-size: 14px; color: var(--text-3); }
-
     /* ── RESPONSIVE ── */
     @media (max-width: 960px) {
-      nav { padding: 0 32px; }
       .hero { grid-template-columns: 1fr; height: auto; min-height: 100svh; padding: 80px 32px 0; text-align: center; }
       .hero-left { padding-top: 40px; }
       .hero h1 { font-size: 44px; }
@@ -364,19 +318,14 @@
       .zoom-sticky { padding: 56px 32px 40px; }
       .zoom-phones .side-wrap { display: none; }
       .feat-row { grid-template-columns: 1fr; gap: 40px; }
-      .feat-row.flip { direction: ltr; }
+      .feat-row.flip .feat-phone-wrap,
+      .feat-row.flip .feat-text { order: unset; }
       .feat-phone-wrap { min-height: 340px; }
       .detail-inner { padding: 64px 32px; }
       .detail-phones .dp-side { display: none; }
       .features-inner { padding: 64px 32px; }
-      .cta-sec { padding: 64px 32px; }
-      .cta-sec h2 { font-size: 40px; }
-      footer { padding: 48px 32px 32px; }
-      .ft { flex-direction: column; gap: 32px; }
     }
     @media (max-width: 600px) {
-      nav { padding: 0 20px; height: 64px; }
-      .nav-links { display: none; }
       .hero { padding: 80px 20px 0; }
       .hero h1 { font-size: 36px; }
       .hero-phone-back { display: none; }
@@ -385,9 +334,6 @@
       .zoom-sticky { padding: 40px 20px 32px; }
       .features-inner { padding: 48px 20px; }
       .detail-inner { padding: 48px 20px; }
-      .cta-sec { padding: 48px 20px; }
-      .cta-sec h2 { font-size: 32px; }
-      footer { padding: 40px 20px 28px; }
     }
   </style>
   <script>
@@ -410,19 +356,19 @@
 <!-- ── NAV ── -->
 <nav>
   <a class="nav-logo" href="index-de.html">
-    <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
+    <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" width="36" height="36" />
     <span>FitData</span>
   </a>
   <div class="nav-links">
     <a href="#features">Funktionen</a>
+    <a href="blog-de.html">Blog</a>
     <a href="#faq">Fragen</a>
     <a href="support.html">Hilfe</a>
     <a href="privacy-de.html">Datenschutz</a>
     <a href="terms-de.html">Nutzungsbedingungen</a>
     <a href="impressum-de.html">Impressum</a>
     <div class="nav-lang">
-      <a href="index.html?lang=en">EN</a>
-      <a class="active" href="index-de.html?lang=de">DE</a>
+      <a href="index.html?lang=en" data-alt-href="index.html?lang=en">EN</a><a class="active" href="index-de.html?lang=de">DE</a>
     </div>
     <a class="btn-nav" href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a>
   </div>
@@ -465,7 +411,10 @@
         <div class="iphone lg">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Run_RunPlan.png" alt="Laufplan" />
+            <picture>
+              <source srcset="assets/de/Run_RunPlan.webp" type="image/webp" />
+              <img src="assets/de/Run_RunPlan.png" alt="Laufplan" width="600" height="1304" loading="eager" fetchpriority="high" />
+            </picture>
           </div>
         </div>
       </div>
@@ -474,7 +423,10 @@
         <div class="iphone lg">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Workout_Start.PNG" alt="Training starten" />
+            <picture>
+              <source srcset="assets/de/Workout_Start.webp" type="image/webp" />
+              <img src="assets/de/Workout_Start.PNG" alt="Training starten" width="600" height="1304" loading="eager" fetchpriority="high" />
+            </picture>
           </div>
         </div>
       </div>
@@ -493,7 +445,10 @@
         <div class="iphone md">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Workout_ExercisePerformance.PNG" alt="Übungsleistung" />
+            <picture>
+              <source srcset="assets/de/Workout_ExercisePerformance.webp" type="image/webp" />
+              <img src="assets/de/Workout_ExercisePerformance.PNG" alt="Übungsleistung" width="600" height="1304" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </div>
@@ -502,7 +457,10 @@
       <div class="iphone lg">
         <div class="iphone-di"></div>
         <div class="iphone-inner">
-          <img src="assets/de/Workout_Home.PNG" alt="Training" />
+          <picture>
+              <source srcset="assets/de/Workout_Home.webp" type="image/webp" />
+              <img src="assets/de/Workout_Home.PNG" alt="Training" width="600" height="1304" loading="lazy" decoding="async" />
+            </picture>
         </div>
       </div>
 
@@ -511,7 +469,10 @@
         <div class="iphone md">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Home_WorkoutDetail1.png" alt="Trainingsdetails" />
+            <picture>
+              <source srcset="assets/de/Home_WorkoutDetail1.webp" type="image/webp" />
+              <img src="assets/de/Home_WorkoutDetail1.png" alt="Trainingsdetails" width="600" height="1304" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </div>
@@ -549,8 +510,9 @@
         <div class="iphone lg">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <video autoplay muted loop playsinline>
-              <source src="assets/de/Create_Workoutplan.MP4" type="video/mp4" />
+            <video data-lazy-video muted loop playsinline preload="none" poster="assets/de/Create_Workoutplan-poster.jpg">
+              <source src="assets/de/Create_Workoutplan.webm" type="video/webm" />
+              <source src="assets/de/Create_Workoutplan-opt.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
@@ -575,7 +537,10 @@
           <div class="iphone lg">
             <div class="iphone-di"></div>
             <div class="iphone-inner">
-              <img src="assets/de/Workout_Active.png" alt="Training Aktiv" />
+              <picture>
+              <source srcset="assets/de/Workout_Active.webp" type="image/webp" />
+              <img src="assets/de/Workout_Active.png" alt="Training Aktiv" width="600" height="1304" loading="lazy" decoding="async" />
+            </picture>
             </div>
           </div>
           <img class="watch-mockup" src="assets/de/Watch_Workout_Active_DE-portrait.png" alt="Apple Watch" />
@@ -593,15 +558,40 @@
           <li>Volumen-, Kraft- und Häufigkeitstrends</li>
           <li>Leistungsverlauf pro Übung</li>
           <li>Persönliche Rekorde werden automatisch markiert</li>
-          <li>Vollständige Trainingshistorie mit Session-Details</li>
         </ul>
       </div>
       <div class="feat-phone-wrap">
         <div class="iphone lg">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <video autoplay muted loop playsinline>
-              <source src="assets/de/Workout_History+Performanc.MP4" type="video/mp4" />
+            <video data-lazy-video muted loop playsinline preload="none" poster="assets/de/Workout_Performane-poster.jpg">
+              <source src="assets/de/Workout_Performane.webm" type="video/webm" />
+              <source src="assets/de/Workout_Performane-opt.mp4" type="video/mp4" />
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 3b: Trainingshistorie (Video) -->
+    <div class="feat-row flip">
+      <div class="feat-text">
+        <span class="tag">Trainingshistorie</span>
+        <h3>Jede Session.<br>Immer abrufbar.</h3>
+        <p>Blättere durch deine vergangenen Workouts – mit allen Details zu Sätzen, Gewichten und Dauer. Deine komplette Historie, übersichtlich und durchsuchbar.</p>
+        <ul class="feat-bullets">
+          <li>Vollständige Trainingshistorie mit Session-Details</li>
+          <li>Filter nach Übung, Plan oder Zeitraum</li>
+          <li>Vergleiche Sessions und erkenne Muster</li>
+        </ul>
+      </div>
+      <div class="feat-phone-wrap">
+        <div class="iphone lg">
+          <div class="iphone-di"></div>
+          <div class="iphone-inner">
+            <video data-lazy-video muted loop playsinline preload="none" poster="assets/de/Workout_History-poster.jpg">
+              <source src="assets/de/Workout_History.webm" type="video/webm" />
+              <source src="assets/de/Workout_History-opt.mp4" type="video/mp4" />
             </video>
           </div>
         </div>
@@ -609,7 +599,7 @@
     </div>
 
     <!-- 4: Aktiver Lauf (iPhone + Apple Watch) -->
-    <div class="feat-row flip">
+    <div class="feat-row">
       <div class="feat-text">
         <span class="tag">Aktiver Lauf</span>
         <h3>Läufe live verfolgen.<br>Jede Kennzahl.</h3>
@@ -626,7 +616,10 @@
           <div class="iphone lg">
             <div class="iphone-di"></div>
             <div class="iphone-inner">
-              <img src="assets/de/Run_Active.png" alt="Aktiver Lauf" />
+              <picture>
+              <source srcset="assets/de/Run_Active.webp" type="image/webp" />
+              <img src="assets/de/Run_Active.png" alt="Aktiver Lauf" width="600" height="1304" loading="lazy" decoding="async" />
+            </picture>
             </div>
           </div>
           <img class="watch-mockup" src="assets/de/Watch_Run_Active_DE-portrait.png" alt="Apple Watch" />
@@ -650,21 +643,30 @@
         <div class="iphone sm">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Home_WorkoutDetail1.png" alt="Trainingsdetails" />
+            <picture>
+              <source srcset="assets/de/Home_WorkoutDetail1.webp" type="image/webp" />
+              <img src="assets/de/Home_WorkoutDetail1.png" alt="Trainingsdetails" width="600" height="1304" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </div>
       <div class="iphone md">
         <div class="iphone-di"></div>
         <div class="iphone-inner">
-          <img src="assets/de/Home_WorkoutDetail2.png" alt="Trainingsdetails 2" />
+          <picture>
+              <source srcset="assets/de/Home_WorkoutDetail2.webp" type="image/webp" />
+              <img src="assets/de/Home_WorkoutDetail2.png" alt="Trainingsdetails 2" width="600" height="1304" loading="lazy" decoding="async" />
+            </picture>
         </div>
       </div>
       <div class="dp-side">
         <div class="iphone sm">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Home_WorkoutDetail3.png" alt="Trainingsdetails 3" />
+            <picture>
+              <source srcset="assets/de/Home_WorkoutDetail3.webp" type="image/webp" />
+              <img src="assets/de/Home_WorkoutDetail3.png" alt="Trainingsdetails 3" width="600" height="1304" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </div>
@@ -675,7 +677,7 @@
 <!-- ── KI PERSONAL TRAINER ── -->
 <div class="features-section">
   <div class="features-inner" style="padding-top: 96px; padding-bottom: 96px;">
-    <div class="feat-row" style="margin-bottom: 0;">
+    <div class="feat-row flip" style="margin-bottom: 0;">
       <div class="feat-text">
         <span class="tag">KI-Trainingsassistent</span>
         <h3>KI für dein Training.<br>Basierend auf deinen Daten.</h3>
@@ -691,7 +693,10 @@
         <div class="iphone lg">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <img src="assets/de/Workout_KI.png" alt="KI-Trainingsassistent" />
+            <picture>
+              <source srcset="assets/de/Workout_KI.webp" type="image/webp" />
+              <img src="assets/de/Workout_KI.png" alt="KI-Trainingsassistent" width="600" height="1304" loading="lazy" decoding="async" />
+            </picture>
           </div>
         </div>
       </div>
@@ -730,12 +735,12 @@
   <div class="ft">
     <div class="fb">
       <a class="nav-logo" href="index-de.html">
-        <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" />
+        <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" width="36" height="36" />
         <span>FitData</span>
       </a>
       <p>WORKOUTS &amp; RUNNING FOR IPHONE &amp; APPLE WATCH</p>
     </div>
-    <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a><a href="index-de.html#features">Funktionen</a><a href="index-de.html#faq">Fragen</a></div>
+    <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/de/app/fitdata-trainings-app/id6740706351" target="_blank" rel="noopener">Herunterladen</a><a href="index-de.html#features">Funktionen</a><a href="blog-de.html">Blog</a><a href="index-de.html#faq">Fragen</a></div>
     <div class="fcol"><h4>Rechtliches</h4><a href="privacy-de.html">Datenschutz</a><a href="terms-de.html">Nutzungsbedingungen</a><a href="impressum-de.html">Impressum</a></div>
     <div class="fcol"><h4>Hilfe</h4><a href="support.html">Hilfe</a></div>
   </div>
@@ -745,5 +750,8 @@
   </div>
 </footer>
 
+<script src="assets/nav.js" defer></script>
+<script src="assets/scroll-reveal.js" defer></script>
+<script src="assets/video-lazy.js" defer></script>
 </body>
 </html>

@@ -50,25 +50,31 @@ Its existing app Analytics/Crashlytics behavior is separate from website trackin
 
 ## App image provenance
 
-Six actual app screenshots (DE/EN) are stored under
-`matchdayxi/assets/screenshots/`: the Fantasy welcome screen and two onboarding
-pages. They were captured on a separate iPhone 17 demo simulator on October 15,
-2026 and resized without changing their contents. `sources.json` lists the original
-XCTest attachment names. No production account or league was photographed.
+The current website uses the screenshots supplied by the owner in
+`/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/`:
 
-The first Xcode run stalled during diagnostic collection and did not produce a
-usable result bundle. The repeat with `-collect-test-diagnostics never` and the
-English run completed. Their bundles are temporarily available at
-`/private/tmp/matchday-website-shots-de-retry.xcresult` and
-`/private/tmp/matchday-website-shots-en.xcresult`.
+- `Fantasy/DE` and `Fantasy/EN`: `Market.png`, `Lineup.png`.
+- `Builder/DE` and `Builder/EN`: `Pitch.png`.
 
-The legacy screenshot test can report success without reaching every intended
-screen: its Builder tab selector is outdated and its registration flow did not
-complete. Images labelled Pitch/CreateLeague were actually authentication sheets
-and were discarded. This is not a successful market/lineup/backend flow test.
-Market, lineup and standings images require a separate prepared capture before
-using such images in Store material. This website labels onboarding images as
-introductions; it does not portray them as those missing gameplay screens.
+These six screenshots replace the earlier provisional onboarding captures.
+They are only resized, without retouching the UI. `sources.json` records the
+source paths, original and website SHA-256 checksums, and output dimensions.
+Some supplied files have mismatched names or partially translated UI; only the
+visually verified market, lineup and builder views are used in matching sections.
+No claim is made that supplied images prove current backend or device behavior.
+
+The phone frame is the **same** `assets/iphone17-frame.svg` used by FitData,
+rendered as a CSS overlay with the same screen inset and clipping geometry.
+No black-border substitute or AI-generated phone mockup is used.
+
+The alternate app follows Imprint directly in both header and footer, on both
+sites and in blog templates. Language and download controls remain separate.
+The static checker verifies this placement, including generated articles.
+
+Landing-page, support, FAQ, metadata, privacy, terms and contact copy have been
+reviewed in both languages. Legal processing/deletion limits and provider details
+remain consistent with the earlier technical draft; the review is editorial,
+not legal approval or a change to the app's data processing.
 
 ## Publication is a separate step
 

@@ -1,4 +1,4 @@
-/* Matchday reuses FitData's layout vocabulary and local fonts. */
+/* Product colors; type, navigation and the SVG phone frame match FitData. */
 html[data-app="matchdayxi"] {
   --accent: #247344; --accent-h: #195531; --bg: #f8fbf6;
   --bg-cream: #e9f2e5; --border: #d5e2d0; --text-2: #4c584b; --text-3: #63725e;
@@ -14,10 +14,20 @@ html[data-app="matchdayxi"] {
 [data-app="matchdayxi"] .nav-links .btn-nav { color: white; }
 [data-app="matchdayxi"] .btn-nav:hover { box-shadow: 0 4px 14px #24734433; }
 [data-app="matchdayxi"] main { overflow-wrap: anywhere; }
-.md-hero { max-width: 1360px; margin: auto; padding: 166px 80px 90px; display: grid; grid-template-columns: 1.35fr 1fr; align-items: center; gap: 70px; }
-.md-hero h1 { font-size: clamp(42px, 5.3vw, 76px); line-height: 1.02; letter-spacing: -2.5px; margin: 18px 0 24px; max-width: 740px; }
-.md-hero p { font-size: 20px; line-height: 1.65; color: var(--text-2); max-width: 570px; }
-.md-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 16px; margin: 30px 0; }
+
+/* Same frame, inset and clipping geometry as FitData's .iphone component. */
+.iphone { position: relative; flex-shrink: 0; filter: drop-shadow(0 20px 48px #0000004d) drop-shadow(0 2px 8px #00000024); }
+.iphone::after { content: ''; position: absolute; inset: 0; background: url('../../assets/iphone17-frame.svg') center / 100% 100% no-repeat; pointer-events: none; z-index: 3; }
+.iphone.lg { width: 286px; height: 596px; }
+.iphone.md { width: 252px; height: 525px; }
+.iphone-inner { position: absolute; left: 4.32%; top: 2.29%; width: 91.36%; height: 95.42%; overflow: hidden; background: #080808; z-index: 1; border-radius: 18px; }
+.iphone.md .iphone-inner { border-radius: 16px; }
+.iphone-inner img { width: 100%; height: 100%; display: block; object-fit: cover; object-position: top center; }
+
+.md-hero { max-width: 1440px; margin: auto; padding: 154px 64px 86px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 50px; }
+.md-hero h1 { font-size: clamp(44px, 4.8vw, 70px); line-height: 1.05; letter-spacing: -2.4px; margin: 18px 0 26px; }
+.md-hero-copy > p { font-size: 20px; line-height: 1.7; color: var(--text-2); max-width: 570px; }
+.md-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin: 32px 0 28px; }
 .md-button, .md-secondary { display: inline-flex; padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none; align-items: center; min-height: 48px; }
 .md-button { background: var(--accent); color: white; border: 1px solid var(--accent); }
 .md-button:hover { background: var(--accent-h); }
@@ -25,27 +35,34 @@ html[data-app="matchdayxi"] {
 .md-secondary:hover { background: var(--bg-cream); }
 .md-trust { display: flex; flex-wrap: wrap; gap: 18px; color: var(--text-2); font-size: 14px; }
 .md-trust span::before { content: '✓ '; color: var(--accent); }
-.md-brand-art { padding: 38px; background: var(--bg-cream); border: 1px solid var(--border); border-radius: 40px; text-align: center; transform: rotate(3deg); box-shadow: var(--shadow-sm); }
-.md-brand-art img { display: block; width: min(100%, 280px); height: auto; margin: 0 auto 26px; border-radius: 26%; }
-.md-brand-art > span { display: block; font: 700 32px 'Gabarito', sans-serif; }
-.md-brand-art p { margin-top: 8px; font-size: 16px; }
-.md-features { max-width: 1200px; margin: auto; padding: 64px 40px 90px; display: grid; grid-template-columns: 1fr 1fr; gap: 24px; scroll-margin-top: 96px; }
-.md-section-heading { grid-column: 1 / -1; margin-bottom: 18px; }
-.md-section-heading h2, .md-faq h2, .md-availability h2 { font-size: clamp(32px,4vw,48px); line-height: 1.12; letter-spacing: -1.2px; margin: 12px 0 18px; }
-.md-section-heading p { color: var(--text-2); font-size: 19px; }
-.md-feature { background: var(--bg-card); padding: 36px; border: 1.5px solid var(--border); border-radius: 24px; box-shadow: var(--shadow-sm); }
-.md-feature:last-child { grid-column: 1 / -1; }
-.md-feature h3 { font-size: 30px; line-height: 1.14; letter-spacing: -.5px; margin: 16px 0; max-width: 440px; }
-.md-feature p { font-size: 18px; color: var(--text-2); line-height: 1.7; }
-.md-feature ul { list-style: none; padding: 0; margin: 24px 0 0; display: grid; gap: 10px; }
-.md-feature li::before { content: '→ '; color: var(--accent); }
-.md-faq { max-width: 820px; margin: auto; padding: 50px 40px 90px; scroll-margin-top: 100px; }
+.md-hero-phones { display: flex; align-items: center; justify-content: center; min-width: 0; padding: 18px 0; }
+.md-phone-back { z-index: 2; margin-right: -38px; transform: rotate(-6deg); }
+.md-phone-front { z-index: 1; transform: rotate(7deg) translateY(24px); }
+.md-steps { max-width: 1200px; margin: auto; padding: 50px 40px 76px; scroll-margin-top: 100px; }
+.md-section-heading { max-width: 780px; margin-bottom: 38px; }
+.md-section-heading h2, .md-faq h2, .md-availability h2, .md-matchday h2 { font-size: clamp(32px,3.7vw,48px); line-height: 1.14; letter-spacing: -1.2px; margin: 12px 0 18px; }
+.md-section-heading p { color: var(--text-2); font-size: 19px; line-height: 1.7; }
+.md-steps-grid { display: grid; grid-template-columns: repeat(3,1fr); gap: 26px; }
+.md-steps-grid article { padding-top: 24px; border-top: 1px solid var(--border); }
+.md-step-number { color: var(--accent); font: 700 16px 'Gabarito', sans-serif; }
+.md-steps-grid h3 { font-size: 26px; margin: 12px 0; }
+.md-steps-grid p { font-size: 17px; line-height: 1.75; color: var(--text-2); }
+.md-feature-row { max-width: 1200px; margin: auto; padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr; align-items: center; gap: 80px; }
+.md-feature-row.flip .md-feature-visual { order: -1; }
+.md-feature-copy h2 { font-size: clamp(32px,3.3vw,44px); line-height: 1.12; letter-spacing: -1px; margin: 16px 0 22px; max-width: 480px; }
+.md-feature-copy p { font-size: 19px; line-height: 1.8; color: var(--text-2); }
+.md-feature-copy ul { list-style: none; display: grid; gap: 12px; padding: 0; margin: 28px 0 0; font-size: 17px; }
+.md-feature-copy li::before { content: '→ '; color: var(--accent); }
+.md-feature-visual { min-height: 620px; display: flex; align-items: center; justify-content: center; background: var(--bg-cream); border: 1px solid var(--border); border-radius: 36px; }
+.md-matchday { max-width: 1040px; margin: 42px auto; padding: 50px 40px; text-align: center; }
+.md-matchday p { max-width: 760px; margin: auto; font-size: 20px; line-height: 1.8; color: var(--text-2); }
+.md-faq { max-width: 820px; margin: auto; padding: 70px 40px 80px; scroll-margin-top: 100px; }
 .faq-list { margin-top: 28px; }
 [data-app="matchdayxi"] details.fq { border-bottom: 1px solid var(--border); padding: 22px 0; }
 [data-app="matchdayxi"] details.fq summary { font: 700 20px 'Gabarito', sans-serif; cursor: pointer; padding-right: 12px; }
 [data-app="matchdayxi"] details.fq p { font-size: 17px; color: var(--text-2); line-height: 1.8; padding-top: 15px; }
-.md-availability { padding: 90px 32px; text-align: center; background: var(--bg-cream); border-top: 1px solid var(--border); scroll-margin-top: 80px; }
-.md-availability p { max-width: 630px; margin: 0 auto 28px; font-size: 19px; color: var(--text-2); }
+.md-availability { padding: 86px 32px; text-align: center; background: var(--bg-cream); border-top: 1px solid var(--border); scroll-margin-top: 80px; }
+.md-availability p { max-width: 620px; margin: 0 auto 28px; font-size: 19px; line-height: 1.8; color: var(--text-2); }
 .md-page-header { padding: 140px 24px 56px; text-align: center; border-bottom: 1px solid var(--border); }
 .md-page-header .back { color: var(--text-2); display: inline-block; margin-bottom: 26px; text-decoration: none; }
 .md-page-header h1 { font-size: clamp(34px,5vw,56px); line-height: 1.1; letter-spacing: -1.5px; margin-bottom: 14px; }
@@ -55,30 +72,33 @@ html[data-app="matchdayxi"] {
 .md-document h2 { font-size: 24px; line-height: 1.25; margin-bottom: 18px; }
 .md-document p { font-size: 18px; color: var(--text-2); line-height: 1.8; }
 .md-document a { color: var(--accent); text-underline-offset: 3px; }
-.md-document .contact-box { padding: 28px; background: var(--bg-cream); border: 1.5px solid var(--border); border-radius: 24px; }
+.md-document .contact-box { margin-top: 48px; padding: 28px; background: var(--bg-cream); border: 1.5px solid var(--border); border-radius: 24px; }
 .contact-box .text-link { display: inline-block; margin-top: 18px; font-weight: 700; }
-.md-preview { max-width: 1200px; padding: 36px 32px 70px; margin: auto; }
-.md-preview h2 { font-size: 36px; text-align: center; margin-bottom: 36px; }
-.md-shot-grid { display: flex; gap: 30px; justify-content: center; flex-wrap: wrap; }
-.md-shot-grid figure { flex: 0 1 250px; margin: 0; text-align: center; }
-.md-shot-grid img { width: 100%; height: auto; border: 7px solid #202321; border-radius: 34px; box-shadow: var(--shadow-sm); }
-.md-shot-grid figcaption { font-weight: 700; margin-top: 16px; color: var(--text-2); }
-@media(max-width:960px) {
- .md-hero { padding: 136px 32px 64px; gap: 40px; }
- .md-brand-art { padding: 24px; }
- .md-hero h1 { font-size: 48px; }
+@media(max-width:1250px) and (min-width:981px) {
+ .md-hero { padding-left: 40px; padding-right: 40px; gap: 30px; }
+ .md-hero .iphone.lg { width: 240px; height: 500px; }
+}
+@media(max-width:980px) {
+ .md-hero { grid-template-columns: 1fr; padding: 128px 32px 60px; gap: 36px; }
+ .md-hero-copy { max-width: 660px; margin: auto; text-align: center; }
+ .md-hero-copy > p { margin: auto; }
+ .md-actions, .md-trust { justify-content: center; }
+ .md-hero-phones { margin-top: 8px; }
+ .md-feature-row { gap: 40px; padding: 44px 32px; }
+ .md-feature-visual { min-height: 570px; }
 }
 @media(max-width:650px) {
- .md-hero { grid-template-columns: 1fr; padding: 112px 24px 50px; gap: 38px; }
- .md-hero h1 { font-size: 46px; letter-spacing: -1.7px; }
- .md-brand-art { max-width: 330px; margin: 0 auto; transform: none; }
- .md-features { grid-template-columns: 1fr; padding: 40px 20px 60px; }
- .md-feature { padding: 28px; }
+ .md-hero { padding: 112px 24px 50px; }
+ .md-hero h1 { font-size: 44px; letter-spacing: -1.6px; }
+ .md-phone-back { display: none; }
+ .md-phone-front { transform: none; }
+ .md-hero .iphone.lg { width: 260px; height: 542px; }
+ .md-steps { padding: 32px 24px 40px; }
+ .md-steps-grid { grid-template-columns: 1fr; gap: 20px; }
+ .md-feature-row { grid-template-columns: 1fr; padding: 32px 24px; gap: 30px; }
+ .md-feature-row.flip .md-feature-visual { order: unset; }
+ .md-feature-visual { min-height: 590px; }
+ .md-matchday { padding: 32px 24px; margin: 22px auto; }
  .md-faq { padding: 40px 24px 64px; }
  .md-page-header { padding-top: 112px; }
- .md-preview { padding: 24px 20px 50px; }
 }
-
-.md-brand-art.has-screenshot { padding: 0; border: 0; box-shadow: none; background: none; max-width: 270px; margin: auto; }
-.md-brand-art.has-screenshot img { max-width: 250px; width: 100%; border: 7px solid #202321; border-radius: 36px; box-shadow: var(--shadow-sm); margin-bottom: 18px; }
-@media(max-width:650px) { .md-brand-art.has-screenshot img { max-width: 250px; } }

@@ -1,56 +1,62 @@
 {
-  "assets/screenshots/de/welcome.png": {
-    "attachment": "DE_Welcome_0_F9EF73A3-C73F-40AD-8B42-8405ADF87377.png",
-    "device": "Matchday Website Preview",
-    "sourceDimensions": [
-      1206,
-      2622
+  "assets/screenshots/de/market.png": {
+    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Fantasy/DE/Market.png",
+    "sourceSHA256": "acea360ae58b0f6e04cf1b0c3c391abad202f6de3d271e8032dece13bfd1ec11",
+    "dimensions": [
+      828,
+      1800
     ],
-    "content": "Actual app screenshot; resized only"
+    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "71e7f7ca89fabddfa7d9846a8f3115e00a859cae3a352394e0a10f73dcbe25f5"
   },
-  "assets/screenshots/de/squad-introduction.png": {
-    "attachment": "DE_Onboarding_02_0_B5C7C8EE-E94E-4536-9573-7D8FEE5E0264.png",
-    "device": "Matchday Website Preview",
-    "sourceDimensions": [
-      1206,
-      2622
+  "assets/screenshots/de/lineup.png": {
+    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Fantasy/DE/Lineup.png",
+    "sourceSHA256": "c2f419f8a1f1d0515663410ba50c3cc1f1dda8d441a28a8018be7a82ace24909",
+    "dimensions": [
+      828,
+      1800
     ],
-    "content": "Actual app screenshot; resized only"
+    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "b651f2eeac2c39cc021ce17d3a488d62398fddb3f079c13de2200dc75d47a1de"
   },
-  "assets/screenshots/de/points-introduction.png": {
-    "attachment": "DE_Onboarding_03_0_5105261E-F93F-420E-9199-F982B1BFE0C9.png",
-    "device": "Matchday Website Preview",
-    "sourceDimensions": [
-      1206,
-      2622
+  "assets/screenshots/de/pitch.png": {
+    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Builder/DE/Pitch.png",
+    "sourceSHA256": "579112f253df4b12d6b129c2db33102a5612718adf64c91c9bd2f95a90ba94b5",
+    "dimensions": [
+      828,
+      1800
     ],
-    "content": "Actual app screenshot; resized only"
+    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "7d6484d5d78104a17ccd0afe8d792d872721806cbde24859c571ba46ecd6afc6"
   },
-  "assets/screenshots/en/welcome.png": {
-    "attachment": "EN_Welcome_0_8233754A-5D63-4DA8-BC08-2A9AF901F862.png",
-    "device": "Matchday Website Preview",
-    "sourceDimensions": [
-      1206,
-      2622
+  "assets/screenshots/en/market.png": {
+    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Fantasy/EN/Market.png",
+    "sourceSHA256": "d549f2f09427acdd0ac70d482390769ab6264c898031c39355a3ec5b691bb7e1",
+    "dimensions": [
+      828,
+      1800
     ],
-    "content": "Actual app screenshot; resized only"
+    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "641a2ccd880e09e0d6045d16c91673bec79870cb489eb7abdd5dde1b37bf49ad"
   },
-  "assets/screenshots/en/squad-introduction.png": {
-    "attachment": "EN_Onboarding_02_0_19391B07-BE7A-4239-B2B0-40422AEF5CC4.png",
-    "device": "Matchday Website Preview",
-    "sourceDimensions": [
-      1206,
-      2622
+  "assets/screenshots/en/lineup.png": {
+    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Fantasy/EN/Lineup.png",
+    "sourceSHA256": "22c88e36c762944d6d1d179a0fea8d6db2cac525d7dd7d9f76b19ac69e4c3df4",
+    "dimensions": [
+      828,
+      1800
     ],
-    "content": "Actual app screenshot; resized only"
+    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "97576783cf544fc663dfc39d71182dfe06deae56372807ba8347eeb09ff91904"
   },
-  "assets/screenshots/en/points-introduction.png": {
-    "attachment": "EN_Onboarding_03_0_5BC58D4E-E669-40D3-A84C-A0E73C8E44B3.png",
-    "device": "Matchday Website Preview",
-    "sourceDimensions": [
-      1206,
-      2622
+  "assets/screenshots/en/pitch.png": {
+    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Builder/EN/Pitch.png",
+    "sourceSHA256": "8ecd8e0169b2e5a789cd1fa57fe740c3ce2a39c201a0bddcd8b1f9d66cc842cd",
+    "dimensions": [
+      828,
+      1800
     ],
-    "content": "Actual app screenshot; resized only"
+    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "a7341bfb3ec75740ff17ec1ada9838c2c4203da3aa8db33eeb0083ef6c29c3e3"
   }
 }

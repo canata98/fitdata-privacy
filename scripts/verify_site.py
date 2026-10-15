@@ -17,16 +17,22 @@ ROOT = Path(__file__).resolve().parent.parent
 
 
 class Page(HTMLParser):
-    def __init__(self, path):
+    def __init__(self, path=None, content=None):
         super().__init__(convert_charrefs=True)
         self.refs, self.ids, self.images, self.scripts = [], set(), [], []
         self.lang, self.h1, self.switch = None, 0, 0
         self.canonical, self.languages, self.social_images = [], {}, []
         self.redirect = False
-        self.feed(path.read_text(encoding="utf-8"))
+        self.region = None
+        self.menus = {"nav": [], "footer": []}
+        self.feed(path.read_text(encoding="utf-8") if content is None else content)
 
     def handle_starttag(self, tag, attrs):
         data = dict(attrs)
+        if tag in self.menus:
+            self.region = tag
+        if tag == "a" and self.region is not None:
+            self.menus[self.region].append((data.get("href", ""), "data-app-switch" in data))
         if tag == "html":
             self.lang = data.get("lang")
         if tag == "h1":
@@ -56,6 +62,22 @@ class Page(HTMLParser):
                 self.languages[data["hreflang"]] = data["href"]
 
 
+    def handle_endtag(self, tag):
+        if tag == self.region:
+            self.region = None
+
+
+def app_switch_follows_imprint(page):
+    for links in page.menus.values():
+        positions = [index for index, (_, switch) in enumerate(links) if switch]
+        if len(positions) != 1 or positions[0] == 0:
+            return False
+        previous = urlsplit(links[positions[0] - 1][0]).path
+        if not previous.endswith(("impressum-de.html", "imprint-en.html")):
+            return False
+    return True
+
+
 def matchday_sitemap(path):
     root = ET.parse(path).getroot()
     ns = {"s": "http://www.sitemaps.org/schemas/sitemap/0.9"}
@@ -72,6 +94,7 @@ def check_blog_rebuild():
         rendered = build_blog.render_article(post, None)
         expected = "index-de.html" if post["lang"] == "de" else "index.html"
         assert rendered.count("data-app-switch") == 2, "Generated article loses app switch"
+        assert app_switch_follows_imprint(Page(content=rendered)), "Generated article moves app switch away from imprint"
         assert rendered.count(f'../matchdayxi/{expected}') == 2, "Wrong article app language"
     before = matchday_sitemap(ROOT / "sitemap.xml")
     original_root, original_blog = build_blog.ROOT, build_blog.BLOG_DIR
@@ -113,6 +136,8 @@ def main():
                 failures.append(f"{path.relative_to(ROOT)}: missing anchor {reference}")
         if page.switch < 2 and not page.redirect:
             failures.append(f"{path.relative_to(ROOT)}: missing navigation/footer app switches")
+        if not page.redirect and not app_switch_follows_imprint(page):
+            failures.append(f"{path.relative_to(ROOT)}: app switch must follow imprint in navigation and footer")
         if path.parent.name != "matchdayxi":
             continue
         if page.lang not in ("de", "en") or page.h1 != 1:

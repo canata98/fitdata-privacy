@@ -2,6 +2,8 @@
   'use strict';
 
   document.documentElement.classList.remove('no-js');
+  document.body.classList.remove('no-js');
+  var isGerman = document.documentElement.lang === 'de';
 
   var nav = document.querySelector('nav');
   if (!nav) return;
@@ -14,7 +16,7 @@
   toggle.className = 'nav-toggle';
   toggle.setAttribute('aria-expanded', 'false');
   toggle.setAttribute('aria-controls', 'nav-menu');
-  toggle.setAttribute('aria-label', 'Open menu');
+  toggle.setAttribute('aria-label', isGerman ? 'Menü öffnen' : 'Open menu');
   toggle.innerHTML = '<span></span><span></span><span></span>';
 
   links.id = 'nav-menu';
@@ -24,7 +26,7 @@
 
   function setOpen(open) {
     toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
-    toggle.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+    toggle.setAttribute('aria-label', isGerman ? (open ? 'Menü schließen' : 'Menü öffnen') : (open ? 'Close menu' : 'Open menu'));
     links.classList.toggle('is-open', open);
     document.body.style.overflow = open ? 'hidden' : '';
     if (open) {
@@ -65,15 +67,19 @@
     var last = focusable[focusable.length - 1];
     if (e.shiftKey && document.activeElement === first) {
       e.preventDefault();
-      last.focus();
+      toggle.focus();
     } else if (!e.shiftKey && document.activeElement === last) {
       e.preventDefault();
-      first.focus();
+      toggle.focus();
     }
   });
 
+  document.addEventListener('focusin', function (event) {
+    if (toggle.getAttribute('aria-expanded') === 'true' && !nav.contains(event.target)) closeMenu();
+  });
+
   window.addEventListener('resize', function () {
-    if (window.innerWidth > 600) closeMenu();
+    if (window.innerWidth > 1200) closeMenu();
   });
 
   document.querySelectorAll('.nav-lang a[data-alt-href]').forEach(function (langLink) {

@@ -1,4 +1,7 @@
 (function () {
+  // Only the published site may load analytics; previews stay local.
+  if (location.hostname !== 'fitdata.app' && location.hostname !== 'www.fitdata.app') return;
+
   const measurementId = "G-HRDGLSTKS1";
   const consentKey = "fitdata_analytics_consent";
   const existingConsent = localStorage.getItem(consentKey);

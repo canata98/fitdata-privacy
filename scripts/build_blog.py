@@ -350,6 +350,7 @@ def render_article(post: dict, alt_lang_post: dict | None) -> str:
     <span>FitData</span>
   </a>
   <div class="nav-links">
+    <a class="app-switch" data-app-switch href="../matchdayxi/{'index-de.html' if lang == 'de' else 'index.html'}"><img src="../matchdayxi/assets/app-icon.png" alt="" width="20" height="20">Matchday XI</a>
     <a href="../{cfg['index']}#features">{cfg['nav_features']}</a>
     <a href="../{cfg['blog_nav']}">{cfg['nav_blog']}</a>
     <a href="../{cfg['index']}#faq">{cfg['nav_faq']}</a>
@@ -410,7 +411,7 @@ def render_article(post: dict, alt_lang_post: dict | None) -> str:
     </div>
     <div class="fcol"><h4>{cfg['footer_app']}</h4><a href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">{cfg['nav_download']}</a><a href="../{cfg['index']}#features">{cfg['nav_features']}</a><a href="../{cfg['blog_nav']}">{cfg['nav_blog']}</a><a href="../{cfg['index']}#faq">{cfg['nav_faq']}</a></div>
     <div class="fcol"><h4>{cfg['footer_legal']}</h4><a href="../{cfg['privacy']}">{cfg['footer_privacy']}</a><a href="../{cfg['terms']}">{cfg['footer_terms']}</a><a href="../{cfg['imprint']}">{cfg['footer_imprint']}</a></div>
-    <div class="fcol"><h4>{cfg['footer_support']}</h4><a href="../{cfg['support']}">{cfg['nav_support']}</a></div>
+    <div class="fcol"><h4>{cfg['footer_support']}</h4><a data-app-switch href="../matchdayxi/{'index-de.html' if lang == 'de' else 'index.html'}">Matchday XI →</a><a href="../{cfg['support']}">{cfg['nav_support']}</a></div>
   </div>
   <div class="fbot">
     <p>{cfg['footer_rights']}</p>

@@ -1,0 +1,56 @@
+{
+  "assets/screenshots/de/welcome.png": {
+    "attachment": "DE_Welcome_0_F9EF73A3-C73F-40AD-8B42-8405ADF87377.png",
+    "device": "Matchday Website Preview",
+    "sourceDimensions": [
+      1206,
+      2622
+    ],
+    "content": "Actual app screenshot; resized only"
+  },
+  "assets/screenshots/de/squad-introduction.png": {
+    "attachment": "DE_Onboarding_02_0_B5C7C8EE-E94E-4536-9573-7D8FEE5E0264.png",
+    "device": "Matchday Website Preview",
+    "sourceDimensions": [
+      1206,
+      2622
+    ],
+    "content": "Actual app screenshot; resized only"
+  },
+  "assets/screenshots/de/points-introduction.png": {
+    "attachment": "DE_Onboarding_03_0_5105261E-F93F-420E-9199-F982B1BFE0C9.png",
+    "device": "Matchday Website Preview",
+    "sourceDimensions": [
+      1206,
+      2622
+    ],
+    "content": "Actual app screenshot; resized only"
+  },
+  "assets/screenshots/en/welcome.png": {
+    "attachment": "EN_Welcome_0_8233754A-5D63-4DA8-BC08-2A9AF901F862.png",
+    "device": "Matchday Website Preview",
+    "sourceDimensions": [
+      1206,
+      2622
+    ],
+    "content": "Actual app screenshot; resized only"
+  },
+  "assets/screenshots/en/squad-introduction.png": {
+    "attachment": "EN_Onboarding_02_0_19391B07-BE7A-4239-B2B0-40422AEF5CC4.png",
+    "device": "Matchday Website Preview",
+    "sourceDimensions": [
+      1206,
+      2622
+    ],
+    "content": "Actual app screenshot; resized only"
+  },
+  "assets/screenshots/en/points-introduction.png": {
+    "attachment": "EN_Onboarding_03_0_5BC58D4E-E669-40D3-A84C-A0E73C8E44B3.png",
+    "device": "Matchday Website Preview",
+    "sourceDimensions": [
+      1206,
+      2622
+    ],
+    "content": "Actual app screenshot; resized only"
+  }
+}

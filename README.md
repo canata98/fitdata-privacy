@@ -48,6 +48,28 @@ FitData's existing consent-based analytics can load only on `fitdata.app` or
 consent or contacting Google. Matchday does not include the analytics script.
 Its existing app Analytics/Crashlytics behavior is separate from website tracking.
 
+## App image provenance
+
+Six actual app screenshots (DE/EN) are stored under
+`matchdayxi/assets/screenshots/`: the Fantasy welcome screen and two onboarding
+pages. They were captured on a separate iPhone 17 demo simulator on October 15,
+2026 and resized without changing their contents. `sources.json` lists the original
+XCTest attachment names. No production account or league was photographed.
+
+The first Xcode run stalled during diagnostic collection and did not produce a
+usable result bundle. The repeat with `-collect-test-diagnostics never` and the
+English run completed. Their bundles are temporarily available at
+`/private/tmp/matchday-website-shots-de-retry.xcresult` and
+`/private/tmp/matchday-website-shots-en.xcresult`.
+
+The legacy screenshot test can report success without reaching every intended
+screen: its Builder tab selector is outdated and its registration flow did not
+complete. Images labelled Pitch/CreateLeague were actually authentication sheets
+and were discarded. This is not a successful market/lineup/backend flow test.
+Market, lineup and standings images require a separate prepared capture before
+using such images in Store material. This website labels onboarding images as
+introductions; it does not portray them as those missing gameplay screens.
+
 ## Publication is a separate step
 
 This branch is a local implementation. Do not push or deploy as part of previewing.
@@ -77,7 +99,7 @@ Before publication:
   no horizontal overflow or broken loaded images; no injected Google analytics tags.
 - App switch in both directions; DE/EN switch on the same privacy page.
 - Mobile menu: focus enters links, Escape closes and restores focus to the toggle.
-- Navigation also has a CSS fallback for disabled JavaScript.
+- Navigation without JavaScript: checked on a local CSP-blocked preview for both apps at 390 px; app links remain visible and usable without overflow.
 - `verify_site.py`: all local references and isolated blog regeneration passed.
 - These checks do not verify live deployment, mail delivery, App Store access,
   legal completeness, real-device app behavior or a productive backend rollout.

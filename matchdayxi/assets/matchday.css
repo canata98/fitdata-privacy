@@ -78,3 +78,7 @@ html[data-app="matchdayxi"] {
  .md-page-header { padding-top: 112px; }
  .md-preview { padding: 24px 20px 50px; }
 }
+
+.md-brand-art.has-screenshot { padding: 0; border: 0; box-shadow: none; background: none; max-width: 270px; margin: auto; }
+.md-brand-art.has-screenshot img { max-width: 250px; width: 100%; border: 7px solid #202321; border-radius: 36px; box-shadow: var(--shadow-sm); margin-bottom: 18px; }
+@media(max-width:650px) { .md-brand-art.has-screenshot img { max-width: 250px; } }

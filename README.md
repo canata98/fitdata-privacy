@@ -1,5 +1,21 @@
 # FitData & Matchday XI website
 
+## Published — October 16, 2026
+
+The owner authorized publication after the local review. Content commit `d23fbe8`
+was fast-forwarded to `main`; GitHub Pages built it successfully. All ten Matchday
+pages and the two FitData landing pages returned HTTP 200 with HTML identical to
+the reviewed local files. The publication did not include the 23 existing untracked
+FitData media variants; an isolated `git archive` verification confirmed they are
+not required by the committed pages. Earlier local-only notes below describe the
+implementation stages before this publication.
+
+Public Matchday DE/EN privacy and terms pages are now reachable. The app repository
+was updated separately in commit `474e2ff` to use these pages in the app's language.
+The previous `canata.app/rematch/...` URLs are no longer the current app targets.
+The publication itself does not complete the remaining signed-device, provider
+retention or data/media-rights checks documented in the refresh report.
+
 Static HTML/CSS/JavaScript, with German and English pages. No application build,
 Node dependencies or additional hosting service is required.
 

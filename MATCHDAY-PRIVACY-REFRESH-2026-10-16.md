@@ -1,5 +1,7 @@
 # Matchday website refresh — October 16, 2026
 
+> Publication follow-up, October 16: owner approved publishing after this local review. Content commit `d23fbe8` is live on `fitdata.app`; all twelve checked pages returned HTTP 200 and matched the reviewed HTML exactly. The app links were updated separately in app commit `474e2ff`. Earlier 404/local-only observations below record the pre-publication stage.
+
 ## Scope
 
 Compared the current FitData website commit `7acd97b` (FitData 3.4 content,

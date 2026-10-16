@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>FitData — Progress, made visible</title>
-  <meta name="description" content="Build custom workout plans, track every run, and analyze your performance. FitData for iPhone and Apple Watch — works offline." />
+  <meta name="description" content="Plan workouts and structured runs, log food and macros, and follow your progress. FitData for iPhone, iPhone Duo and Apple Watch." />
   <link rel="canonical" href="https://fitdata.app/index.html" />
   <link rel="alternate" hreflang="en" href="https://fitdata.app/index.html" />
   <link rel="alternate" hreflang="de" href="https://fitdata.app/index-de.html" />
@@ -12,19 +12,19 @@
   <meta property="og:type" content="website" />
   <meta property="og:locale" content="en_US" />
   <meta property="og:title" content="FitData — Progress, made visible" />
-  <meta property="og:description" content="Build custom workout plans, track every run, and analyze your performance. FitData for iPhone and Apple Watch — works offline." />
+  <meta property="og:description" content="Plan workouts and structured runs, log food and macros, and follow your progress. FitData for iPhone, iPhone Duo and Apple Watch." />
   <meta property="og:url" content="https://fitdata.app/index.html" />
   <meta property="og:image" content="https://fitdata.app/assets/og-image.png" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="FitData — Progress, made visible" />
-  <meta name="twitter:description" content="Build custom workout plans, track every run, and analyze your performance. FitData for iPhone and Apple Watch — works offline." />
+  <meta name="twitter:description" content="Plan workouts and structured runs, log food and macros, and follow your progress. FitData for iPhone, iPhone Duo and Apple Watch." />
   <meta name="twitter:image" content="https://fitdata.app/assets/og-image.png" />
   <link rel="icon" type="image/png" href="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" />
   <link rel="preload" href="assets/fonts/gabarito-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="preload" href="assets/fonts/atkinson-400.woff2" as="font" type="font/woff2" crossorigin />
   <link rel="stylesheet" href="assets/site.css" />
   <script src="analytics-consent.js" defer></script>
-  <link rel="alternate" type="application/rss+xml" title="FitData Blog" href="feed-en.xml" />
+  <!-- <link rel="alternate" type="application/rss+xml" title="FitData Blog" href="feed-en.xml" /> -->
     <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -37,19 +37,69 @@
   }
   </script>
   <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {"@type": "Question", "name": "Does FitData work offline?", "acceptedAnswer": {"@type": "Answer", "text": "Yes — FitData is offline-first. You can log workouts, view plans, and track sets without any internet connection. Data syncs automatically when you're back online. Only AI Chat requires a connection."}},
-      {"@type": "Question", "name": "What's included in FitData Pro?", "acceptedAnswer": {"@type": "Answer", "text": "Pro unlocks: AI Workout Coach with 80+ monthly conversations, unlimited workout plans, advanced performance analytics, full workout history, calendar view, and priority support."}},
-      {"@type": "Question", "name": "How does Apple Health integration work?", "acceptedAnswer": {"@type": "Answer", "text": "FitData reads and writes to Apple Health with your permission. Completed workouts automatically close your activity rings, and HealthKit data enriches your analytics inside FitData."}},
-      {"@type": "Question", "name": "Is my AI chat data private?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. AI conversations are encrypted and processed by trusted providers under strict privacy agreements. You control which plans the AI can see, and you can delete your history anytime."}},
-      {"@type": "Question", "name": "Does FitData sync across devices?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. Log in with the same account on any device and your workouts, plans, and progress sync automatically. Offline changes sync as soon as you're back online."}},
-      {"@type": "Question", "name": "How do I cancel my subscription?", "acceptedAnswer": {"@type": "Answer", "text": "Manage or cancel your Pro subscription anytime through iOS Settings → Apple ID → Subscriptions. No hoops to jump through."}}
-    ]
-  }
-  </script>
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What can I use offline?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Saved plans, workout logging, cached food search, and your local diary are available offline. Synchronization, cloud AI, and uncached product lookups need a connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What's included in FitData Pro?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pro adds a larger monthly AI allowance and premium planning and analysis features. Meal photo recognition is a Pro feature with a limited free trial. See the subscription screen in the app for current limits and offers."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I track food and weight?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Log foods and meals, review calories and macros, set nutrition targets, and follow your weight history. AI suggestions are reviewed before saving."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does Apple Health integration work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "With your permission, FitData reads supported activity and health data and saves workouts and nutrition entries to Apple Health. Available data depends on your permissions and recording devices."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How does AI processing work?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Cloud chat and meal photo recognition use Google Gemini and require a connection. Some supported tasks run with Apple Intelligence when available. HealthKit measurements stay out of Gemini requests. See the Privacy Policy for details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does FitData support iPhone Duo?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. FitData 3.4 adapts its dashboards to the inner display, with related cards shown side by side. The video above shows the app running in the iPhone Duo simulator."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I cancel my subscription?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Manage or cancel your Pro subscription in iOS Settings → Apple Account → Subscriptions."
+      }
+    }
+  ]
+}
+</script>
   <style>
 
     /* ── HERO ── */
@@ -366,6 +416,7 @@
       if (preferred === 'de') window.location.replace('index-de.html');
     })();
   </script>
+  <link rel="stylesheet" href="assets/fitdata-refresh.css?v=20261016-3">
 </head>
 <body>
 
@@ -377,7 +428,7 @@
   </a>
   <div class="nav-links">
     <a href="#features">Features</a>
-    <a href="blog-en.html">Blog</a>
+    <!-- <a href="blog-en.html">Blog</a> -->
     <a href="#faq">FAQ</a>
     <a href="support-en.html">Support</a>
     <a href="privacy-en.html">Privacy</a>
@@ -394,9 +445,9 @@
 <!-- ── HERO ── -->
 <section class="hero">
   <div class="hero-left">
-    <span class="eyebrow">Workouts &amp; Running — For iPhone &amp; Apple Watch</span>
-    <h1>Build your custom workout plan - running, lifting or calisthenics.</h1>
-    <p>Plan workouts, track every run, log every lift — then analyze your performance. All in one app, fully offline.</p>
+    <span class="eyebrow">Training, running &amp; nutrition · iPhone &amp; Apple Watch</span>
+    <h1>Your training.<br>Your runs.<br>Your nutrition.</h1>
+    <p>Build workout and running plans, track your sessions, and keep a food diary. See your activity, macros, and progress together in FitData.</p>
     <div class="hero-btns">
       <a class="btn-primary" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">
         <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_blk_092917.svg" alt="Download on the App Store" />
@@ -428,10 +479,7 @@
         <div class="iphone lg">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <picture>
-              <source srcset="assets/en/Run_RunPlan.webp" type="image/webp" />
-              <img src="assets/en/Run_RunPlan.png" alt="Run Plan" width="600" height="1304" loading="eager" fetchpriority="high" />
-            </picture>
+            <picture><source type="image/webp" srcset="assets/fitdata-2026/en/Run_RunPlan-600.webp 600w, assets/fitdata-2026/en/Run_RunPlan-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px"><img src="assets/fitdata-2026/en/Run_RunPlan-600.png" width="600" height="1304" alt="Running plan with scheduled and completed sessions" loading="eager" decoding="async" fetchpriority="high"></picture>
           </div>
         </div>
       </div>
@@ -440,10 +488,7 @@
         <div class="iphone lg">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <picture>
-              <source srcset="assets/en/Workout_Start.webp" type="image/webp" />
-              <img src="assets/en/Workout_Start.PNG" alt="Workout" width="600" height="1304" loading="eager" fetchpriority="high" />
-            </picture>
+            <picture><source type="image/webp" srcset="assets/fitdata-2026/en/Workout_Home-600.webp 600w, assets/fitdata-2026/en/Workout_Home-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px"><img src="assets/fitdata-2026/en/Workout_Home-600.png" width="600" height="1304" alt="Workout" loading="eager" decoding="async" fetchpriority="high"></picture>
           </div>
         </div>
       </div>
@@ -462,10 +507,7 @@
         <div class="iphone md">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <picture>
-              <source srcset="assets/en/Workout_ExercisePerformance.webp" type="image/webp" />
-              <img src="assets/en/Workout_ExercisePerformance.PNG" alt="Exercise Performance" width="600" height="1304" loading="lazy" decoding="async" />
-            </picture>
+            <picture><source type="image/webp" srcset="assets/fitdata-2026/en/Workout_ExercisePerformance-600.webp 600w, assets/fitdata-2026/en/Workout_ExercisePerformance-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px"><img src="assets/fitdata-2026/en/Workout_ExercisePerformance-600.png" width="600" height="1304" alt="Exercise Performance" loading="lazy" decoding="async"></picture>
           </div>
         </div>
       </div>
@@ -474,10 +516,7 @@
       <div class="iphone lg">
         <div class="iphone-di"></div>
         <div class="iphone-inner">
-          <picture>
-              <source srcset="assets/en/Workout_Home.webp" type="image/webp" />
-              <img src="assets/en/Workout_Home.PNG" alt="Workout" width="600" height="1304" loading="lazy" decoding="async" />
-            </picture>
+          <picture><source type="image/webp" srcset="assets/fitdata-2026/en/Workout_Home-600.webp 600w, assets/fitdata-2026/en/Workout_Home-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px"><img src="assets/fitdata-2026/en/Workout_Home-600.png" width="600" height="1304" alt="Workout" loading="lazy" decoding="async"></picture>
         </div>
       </div>
 
@@ -486,10 +525,7 @@
         <div class="iphone md">
           <div class="iphone-di"></div>
           <div class="iphone-inner">
-            <picture>
-              <source srcset="assets/en/Home_WorkoutDetail1.webp" type="image/webp" />
-              <img src="assets/en/Home_WorkoutDetail1.png" alt="Workout Detail" width="600" height="1304" loading="lazy" decoding="async" />
-            </picture>
+            <picture><source type="image/webp" srcset="assets/fitdata-2026/en/Home_WorkoutDetail1-600.webp 600w, assets/fitdata-2026/en/Home_WorkoutDetail1-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px"><img src="assets/fitdata-2026/en/Home_WorkoutDetail1-600.png" width="600" height="1304" alt="Workout Detail" loading="lazy" decoding="async"></picture>
           </div>
         </div>
       </div>
@@ -499,223 +535,389 @@
 </div>
 
 <div style="height:1px; background: var(--border); margin: 0 80px;"></div>
-<!-- ── FEATURES ── -->
+<!-- FitData current features: October 2026 -->
 <div class="features-section" id="features">
   <div class="features-inner">
-
     <div class="feat-header">
-      <span class="label-tag">Features</span>
-      <h2>Everything your run and workout needs.</h2>
-      <p>From your first set to your personal record — all in one place.</p>
+      <span class="label-tag">
+        Features
+      </span>
+      <h2>
+        A clearer view of your everyday progress.
+      </h2>
+      <p>
+        Plan your next session. Track what you do. See how it adds up.
+      </p>
     </div>
-
-    <!-- 1: Build Plans (video) -->
-    <div class="feat-row">
+    <section class="feat-row" id="feature-1">
       <div class="feat-text">
-        <span class="tag">Workout Tracking</span>
-        <h3>Build plans.<br>Log sets.<br>Break records.</h3>
-        <p>Create structured workout plans with exercises, sets, reps, and weights. Track your performance in real time with built-in rest timers.</p>
+        <span class="tag">
+          Workout planning
+        </span>
+        <h3>
+          A plan for
+          <br>
+          every session.
+        </h3>
+        <p>
+          Build your own strength or calisthenics plan with exercises, sets, reps, weights, and rest times. Keep the next session ready to go.
+        </p>
         <ul class="feat-bullets">
-          <li>Exercise database with performance charts</li>
-          <li>Real-time set logging with rest timer</li>
-          <li>Personal records tracked automatically</li>
-          <li>Weekly volume and strength trends</li>
+          <li>
+            Your own plans and reusable templates
+          </li>
+          <li>
+            Different set types and exercise order
+          </li>
+          <li>
+            Exercise history and performance charts
+          </li>
         </ul>
       </div>
       <div class="feat-phone-wrap">
         <div class="iphone lg">
-          <div class="iphone-di"></div>
+          <div class="iphone-di">
+          </div>
           <div class="iphone-inner">
-            <video data-lazy-video muted loop playsinline preload="none" poster="assets/en/Create_Workoutplan-poster.jpg">
-              <source src="assets/en/Create_Workoutplan.webm" type="video/webm" />
-              <source src="assets/en/Create_Workoutplan-opt.mp4" type="video/mp4" />
-            </video>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <!-- 2: Workout Active (iPhone + Apple Watch) -->
-    <div class="feat-row flip">
-      <div class="feat-text">
-        <span class="tag">Active Workout</span>
-        <h3>Start your workout.<br>Own every set.</h3>
-        <p>Launch any plan and FitData walks you through it — set by set, with automatic rest timers and live feedback. Control everything from your wrist.</p>
-        <ul class="feat-bullets">
-          <li>Step-by-step plan guidance</li>
-          <li>Auto rest timer between sets</li>
-          <li>Live weight and rep logging</li>
-          <li>Apple Watch controls at your wrist</li>
-        </ul>
-      </div>
-      <div class="feat-phone-wrap">
-        <div class="iphone-watch-group">
-          <div class="iphone lg">
-            <div class="iphone-di"></div>
-            <div class="iphone-inner">
-              <picture>
-              <source srcset="assets/en/Workout_Active.webp" type="image/webp" />
-              <img src="assets/en/Workout_Active.PNG" alt="Workout Active" width="600" height="1304" loading="lazy" decoding="async" />
+            <picture>
+              <source type="image/webp" srcset="assets/fitdata-2026/en/Workout_Plan-600.webp 600w, assets/fitdata-2026/en/Workout_Plan-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px">
+              <img src="assets/fitdata-2026/en/Workout_Plan-600.png" width="600" height="1304" alt="Workout plan with exercises and prescribed sets" loading="lazy" decoding="async">
             </picture>
-            </div>
           </div>
-          <img class="watch-mockup" src="assets/en/Watch_Workout_Active_EN-portrait.png" alt="Apple Watch" />
         </div>
       </div>
-    </div>
-
-    <!-- 3: Performance & Analytics (video) -->
-    <div class="feat-row">
+    </section>
+    <section class="feat-row flip" id="feature-2">
       <div class="feat-text">
-        <span class="tag">Performance &amp; Analytics</span>
-        <h3>See your progress.<br>In numbers.</h3>
-        <p>FitData tracks every rep, set, and session — then turns that data into clear charts and insights so you always know how you're improving.</p>
+        <span class="tag">
+          Active training
+        </span>
+        <h3>
+          One set at a time.
+          <br>
+          Every session counts.
+        </h3>
+        <p>
+          Start a saved plan, record your sets, and use the rest timer between exercises. Track your workout on iPhone or Apple Watch.
+        </p>
         <ul class="feat-bullets">
-          <li>Volume, strength, and frequency trends</li>
-          <li>Per-exercise performance history</li>
-          <li>Personal records highlighted automatically</li>
-          <li>Full workout history with session details</li>
+          <li>
+            Weight and rep logging during your workout
+          </li>
+          <li>
+            Rest timer and session controls
+          </li>
+          <li>
+            Workout tracking on Apple Watch
+          </li>
         </ul>
       </div>
       <div class="feat-phone-wrap">
         <div class="iphone lg">
-          <div class="iphone-di"></div>
+          <div class="iphone-di">
+          </div>
           <div class="iphone-inner">
-            <video data-lazy-video muted loop playsinline preload="none" poster="assets/en/Workout_History+Performanc-poster.jpg">
-              <source src="assets/en/Workout_History+Performanc.webm" type="video/webm" />
-              <source src="assets/en/Workout_History+Performanc-opt.mp4" type="video/mp4" />
-            </video>
+            <picture>
+              <source type="image/webp" srcset="assets/fitdata-2026/en/Workout_Active-600.webp 600w, assets/fitdata-2026/en/Workout_Active-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px">
+              <img src="assets/fitdata-2026/en/Workout_Active-600.png" width="600" height="1304" alt="Active strength workout with set logging and rest timer" loading="lazy" decoding="async">
+            </picture>
           </div>
         </div>
       </div>
-    </div>
-
-    <!-- 4: Run Active (iPhone + Apple Watch) -->
-    <div class="feat-row">
+    </section>
+    <section class="feat-row" id="feature-3">
       <div class="feat-text">
-        <span class="tag">Live Running</span>
-        <h3>Track runs live.<br>Every metric.</h3>
-        <p>Track pace, distance, and heart rate in real time — with full Apple Watch support so you can leave your phone behind.</p>
+        <span class="tag">
+          Structured running
+        </span>
+        <h3>
+          Give your next run
+          <br>
+          a little structure.
+        </h3>
+        <p>
+          Plan easy runs, intervals, and longer sessions. Add warm-up, repeated effort and recovery phases, and a cool-down to suit your session.
+        </p>
         <ul class="feat-bullets">
-          <li>Live pace, distance, and duration</li>
-          <li>Heart rate monitoring via Apple Watch</li>
-          <li>Interval and structured run support</li>
-          <li>Controls directly on your wrist</li>
+          <li>
+            Running plans and scheduled sessions
+          </li>
+          <li>
+            Time and distance goals for phases
+          </li>
+          <li>
+            Live pace, distance, and duration
+          </li>
         </ul>
       </div>
       <div class="feat-phone-wrap">
-        <div class="iphone-watch-group">
-          <div class="iphone lg">
-            <div class="iphone-di"></div>
-            <div class="iphone-inner">
-              <picture>
-              <source srcset="assets/en/Run_Active.webp" type="image/webp" />
-              <img src="assets/en/Run_Active.png" alt="Run Active" width="600" height="1304" loading="lazy" decoding="async" />
-            </picture>
-            </div>
+        <div class="iphone lg">
+          <div class="iphone-di">
           </div>
-          <img class="watch-mockup" src="assets/en/Watch_Run_Active_EN-portrait.png" alt="Apple Watch" />
+          <div class="iphone-inner">
+            <picture>
+              <source type="image/webp" srcset="assets/fitdata-2026/en/Run_CreateSession-600.webp 600w, assets/fitdata-2026/en/Run_CreateSession-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px">
+              <img src="assets/fitdata-2026/en/Run_CreateSession-600.png" width="600" height="1304" alt="Structured interval run editor with warm-up and repeating phases" loading="lazy" decoding="async">
+            </picture>
+          </div>
         </div>
       </div>
-    </div>
-
+    </section>
+    <section class="feat-row flip" id="feature-4">
+      <div class="feat-text">
+        <span class="tag">
+          Live running
+        </span>
+        <h3>
+          Your route.
+          <br>
+          Your pace.
+        </h3>
+        <p>
+          Keep your route and running metrics in view while you run. Review the session afterwards, including splits and available heart-rate data.
+        </p>
+        <ul class="feat-bullets">
+          <li>
+            Live route, duration, distance, and pace
+          </li>
+          <li>
+            Pause and resume your session
+          </li>
+          <li>
+            Heart-rate tracking with Apple Watch
+          </li>
+        </ul>
+      </div>
+      <div class="feat-phone-wrap">
+        <div class="iphone lg">
+          <div class="iphone-di">
+          </div>
+          <div class="iphone-inner">
+            <picture>
+              <source type="image/webp" srcset="assets/fitdata-2026/en/Run_Active-600.webp 600w, assets/fitdata-2026/en/Run_Active-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px">
+              <img src="assets/fitdata-2026/en/Run_Active-600.png" width="600" height="1304" alt="Active run showing the route and live running metrics" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feat-row" id="feature-5">
+      <div class="feat-text">
+        <span class="tag">
+          History &amp; performance
+        </span>
+        <h3>
+          See the work
+          <br>
+          you put in.
+        </h3>
+        <p>
+          Browse past workouts and runs. Compare exercise performance, training consistency, and session details over time.
+        </p>
+        <ul class="feat-bullets">
+          <li>
+            Calendar and session history
+          </li>
+          <li>
+            Per-exercise performance trends
+          </li>
+          <li>
+            Run routes, splits, and heart-rate zones
+          </li>
+        </ul>
+      </div>
+      <div class="feat-phone-wrap">
+        <div class="iphone lg">
+          <div class="iphone-di">
+          </div>
+          <div class="iphone-inner">
+            <picture>
+              <source type="image/webp" srcset="assets/fitdata-2026/en/Workout_Performance-600.webp 600w, assets/fitdata-2026/en/Workout_Performance-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px">
+              <img src="assets/fitdata-2026/en/Workout_Performance-600.png" width="600" height="1304" alt="Workout performance trends and exercise progress" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feat-row flip" id="nutrition">
+      <div class="feat-text">
+        <span class="tag">
+          Nutrition &amp; weight
+        </span>
+        <h3>
+          Meals, macros,
+          <br>
+          and the bigger picture.
+        </h3>
+        <p>
+          Keep a food diary by meal, track calories and macros, and follow your weight trend alongside your training.
+        </p>
+        <ul class="feat-bullets">
+          <li>
+            Search foods, scan barcodes, or add your own
+          </li>
+          <li>
+            Calories, protein, carbohydrates, and fat
+          </li>
+          <li>
+            Saved meals and weight history
+          </li>
+        </ul>
+      </div>
+      <div class="feat-phone-wrap">
+        <div class="iphone lg">
+          <div class="iphone-di">
+          </div>
+          <div class="iphone-inner">
+            <picture>
+              <source type="image/webp" srcset="assets/fitdata-2026/en/Nutrition_Home-600.webp 600w, assets/fitdata-2026/en/Nutrition_Home-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px">
+              <img src="assets/fitdata-2026/en/Nutrition_Home-600.png" width="600" height="1304" alt="Nutrition overview with calorie streak, macro tiles, and weight trend" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="feat-row" id="ai">
+      <div class="feat-text">
+        <span class="tag">
+          AI assistance
+        </span>
+        <h3>
+          Describe a meal.
+          <br>
+          Review before saving.
+        </h3>
+        <p>
+          Describe what you ate or use a meal photo. Check the suggested foods and portions before adding them to your diary. Ask the coach for help with workout and running plans.
+        </p>
+        <ul class="feat-bullets">
+          <li>
+            Editable food and portion review
+          </li>
+          <li>
+            Photo recognition with Pro; free trial allowance
+          </li>
+          <li>
+            Cloud AI needs an internet connection
+          </li>
+        </ul>
+      </div>
+      <div class="feat-phone-wrap">
+        <div class="iphone lg">
+          <div class="iphone-di">
+          </div>
+          <div class="iphone-inner">
+            <picture>
+              <source type="image/webp" srcset="assets/fitdata-2026/en/AI_FoodLog-600.webp 600w, assets/fitdata-2026/en/AI_FoodLog-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px">
+              <img src="assets/fitdata-2026/en/AI_FoodLog-600.png" width="600" height="1304" alt="AI meal review with editable food portions before adding to the diary" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
+    </section>
   </div>
 </div>
-
-<!-- ── DETAIL VIEW (3 phones) ── -->
-<div class="detail-section">
+<section class="detail-section">
   <div class="detail-inner">
     <div class="detail-header">
-      <span class="label-tag">Run Analytics</span>
-      <h3>Every split.<br>Every metric.</h3>
-      <p>Drill into any run — pace splits, heart rate zones, and performance trends over time. Your complete run history, always at a glance.</p>
+      <h2>
+        From your daily view to the details.
+      </h2>
+      <p>
+        See your recent activity, review a meal, and follow your weight trend.
+      </p>
     </div>
-    <div class="detail-phones">
-      <div class="dp-side">
-        <div class="iphone sm">
-          <div class="iphone-di"></div>
-          <div class="iphone-inner">
-            <picture>
-              <source srcset="assets/en/Home_WorkoutDetail1.webp" type="image/webp" />
-              <img src="assets/en/Home_WorkoutDetail1.png" alt="Workout Detail" width="600" height="1304" loading="lazy" decoding="async" />
-            </picture>
-          </div>
-        </div>
-      </div>
-      <div class="iphone md">
-        <div class="iphone-di"></div>
-        <div class="iphone-inner">
-          <picture>
-              <source srcset="assets/en/Home_WorkoutDetail2.webp" type="image/webp" />
-              <img src="assets/en/Home_WorkoutDetail2.png" alt="Workout Detail 2" width="600" height="1304" loading="lazy" decoding="async" />
-            </picture>
-        </div>
-      </div>
-      <div class="dp-side">
-        <div class="iphone sm">
-          <div class="iphone-di"></div>
-          <div class="iphone-inner">
-            <picture>
-              <source srcset="assets/en/Home_WorkoutDetail3.webp" type="image/webp" />
-              <img src="assets/en/Home_WorkoutDetail3.png" alt="Workout Detail 3" width="600" height="1304" loading="lazy" decoding="async" />
-            </picture>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-<!-- ── AI COACH FEATURE ── -->
-<div class="features-section">
-  <div class="features-inner" style="padding-top: 96px; padding-bottom: 96px;">
-    <!-- AI Coach -->
-    <div class="feat-row flip" style="margin-bottom: 0;">
-      <div class="feat-text">
-        <span class="tag">AI Coach</span>
-        <h3>AI for your fitness.<br>Backed by your data.</h3>
-        <p>FitData's AI knows your workout and run history — and gives specific, actionable answers.</p>
-        <ul class="feat-bullets">
-          <li>Linked to your workout plans, runs &amp; exercise history</li>
-          <li>Creates and adjusts workout plans for you</li>
-          <li>80+ conversations per month (Pro)</li>
-          <li>Encrypted — your data stays private</li>
-        </ul>
-      </div>
-      <div class="feat-phone-wrap">
+    <div class="current-gallery">
+      <div>
         <div class="iphone lg">
-          <div class="iphone-di"></div>
+          <div class="iphone-di">
+          </div>
           <div class="iphone-inner">
             <picture>
-              <source srcset="assets/en/Workout_KI.webp" type="image/webp" />
-              <img src="assets/en/Workout_KI.PNG" alt="AI Coach" width="600" height="1304" loading="lazy" decoding="async" />
+              <source type="image/webp" srcset="assets/fitdata-2026/en/Home_Summary-600.webp 600w, assets/fitdata-2026/en/Home_Summary-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px">
+              <img src="assets/fitdata-2026/en/Home_Summary-600.png" width="600" height="1304" alt="Activity overview with seven-day steps chart" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="iphone lg">
+          <div class="iphone-di">
+          </div>
+          <div class="iphone-inner">
+            <picture>
+              <source type="image/webp" srcset="assets/fitdata-2026/en/Nutrition_Day-600.webp 600w, assets/fitdata-2026/en/Nutrition_Day-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px">
+              <img src="assets/fitdata-2026/en/Nutrition_Day-600.png" width="600" height="1304" alt="Daily food diary organized by meal" loading="lazy" decoding="async">
+            </picture>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="iphone lg">
+          <div class="iphone-di">
+          </div>
+          <div class="iphone-inner">
+            <picture>
+              <source type="image/webp" srcset="assets/fitdata-2026/en/Nutrition_Weight-600.webp 600w, assets/fitdata-2026/en/Nutrition_Weight-1200.webp 1200w" sizes="(max-width: 600px) 70vw, 320px">
+              <img src="assets/fitdata-2026/en/Nutrition_Weight-600.png" width="600" height="1304" alt="Weight history and body metric chart" loading="lazy" decoding="async">
             </picture>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
-
+</section>
+<section class="duo-section" id="iphone-duo">
+  <div class="duo-inner">
+    <div class="detail-header">
+      <span class="label-tag">
+        FitData on iPhone Duo
+      </span>
+      <h2>
+        Open up.
+        <br>
+        See more together.
+      </h2>
+      <p>
+        Unfold FitData to see related charts and cards side by side. Turn the display or fold it back and continue in the same app.
+      </p>
+    </div>
+    <figure>
+      <div class="duo-player">
+        <video id="duo-demo" class="duo-video duo-video--hub" data-lazy-video data-user-playback controls muted playsinline preload="none" poster="assets/fitdata-2026/en/duo-poster-hub.jpg" aria-label="Play the FitData iPhone Duo demo: closed, unfolded, training and running">
+          <source data-src="assets/fitdata-2026/en/duo-demo-hub.webm" type="video/webm">
+          <source data-src="assets/fitdata-2026/en/duo-demo-hub.mp4" type="video/mp4">
+        </video>
+        <button type="button" class="duo-play" data-video-play aria-controls="duo-demo">
+          Play demo
+        </button>
+      </div>
+      <figcaption>
+        FitData 3.4 on iPhone Duo (simulator, iOS 27.1): start closed, unfold, then training and running.
+      </figcaption>
+    </figure>
+  </div>
+</section>
 <!-- ── FAQ ── -->
 <div class="faq-outer">
 <div class="faq-wrap" id="faq">
   <span class="label-tag">FAQ</span>
   <h2>Common questions</h2>
-  <details class="fq"><summary>Does FitData work offline?</summary><div class="fqb">Yes — FitData is offline-first. You can log workouts, view plans, and track sets without any internet connection. Data syncs automatically when you're back online. Only AI Chat requires a connection.</div></details>
-  <details class="fq"><summary>What's included in FitData Pro?</summary><div class="fqb">Pro unlocks: AI Workout Coach with 80+ monthly conversations, unlimited workout plans, advanced performance analytics, full workout history, calendar view, and priority support.</div></details>
-  <details class="fq"><summary>How does Apple Health integration work?</summary><div class="fqb">FitData reads and writes to Apple Health with your permission. Completed workouts automatically close your activity rings, and HealthKit data enriches your analytics inside FitData.</div></details>
-  <details class="fq"><summary>Is my AI chat data private?</summary><div class="fqb">Yes. AI conversations are encrypted and processed by trusted providers under strict privacy agreements. You control which plans the AI can see, and you can delete your history anytime.</div></details>
-  <details class="fq"><summary>Does FitData sync across devices?</summary><div class="fqb">Yes. Log in with the same account on any device and your workouts, plans, and progress sync automatically. Offline changes sync as soon as you're back online.</div></details>
-  <details class="fq"><summary>How do I cancel my subscription?</summary><div class="fqb">Manage or cancel your Pro subscription anytime through iOS Settings → Apple ID → Subscriptions. No hoops to jump through.</div></details>
+<details class="fq"><summary>What can I use offline?</summary><div class="fqb">Saved plans, workout logging, cached food search, and your local diary are available offline. Synchronization, cloud AI, and uncached product lookups need a connection.</div></details>
+<details class="fq"><summary>What&#x27;s included in FitData Pro?</summary><div class="fqb">Pro adds a larger monthly AI allowance and premium planning and analysis features. Meal photo recognition is a Pro feature with a limited free trial. See the subscription screen in the app for current limits and offers.</div></details>
+<details class="fq"><summary>Can I track food and weight?</summary><div class="fqb">Yes. Log foods and meals, review calories and macros, set nutrition targets, and follow your weight history. AI suggestions are reviewed before saving.</div></details>
+<details class="fq"><summary>How does Apple Health integration work?</summary><div class="fqb">With your permission, FitData reads supported activity and health data and saves workouts and nutrition entries to Apple Health. Available data depends on your permissions and recording devices.</div></details>
+<details class="fq"><summary>How does AI processing work?</summary><div class="fqb">Cloud chat and meal photo recognition use Google Gemini and require a connection. Some supported tasks run with Apple Intelligence when available. HealthKit measurements stay out of Gemini requests. See the Privacy Policy for details.</div></details>
+<details class="fq"><summary>Does FitData support iPhone Duo?</summary><div class="fqb">Yes. FitData 3.4 adapts its dashboards to the inner display, with related cards shown side by side. The video above shows the app running in the iPhone Duo simulator.</div></details>
+<details class="fq"><summary>How do I cancel my subscription?</summary><div class="fqb">Manage or cancel your Pro subscription in iOS Settings → Apple Account → Subscriptions.</div></details>
 </div>
 </div>
 
 <!-- ── CTA ── -->
 <div class="cta-sec">
   <span class="label-tag">Get Started</span>
-  <h2>Start workouts<br>smarter today.</h2>
-  <p>Workouts, Runs, AI Coaching - free to download. PRO when you're ready.</p>
+  <h2>Make room<br>for your next step.</h2>
+  <p>Training, running, nutrition, and progress. Download FitData for free; explore Pro in the app.</p>
   <div class="cta-btns">
     <a class="btn-cta-primary" href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">
       <img src="assets/Download_on_the_App_Store_Badge_US-UK_RGB_wht_092917.svg" alt="Download on the App Store" />
@@ -732,9 +934,9 @@
         <img src="assets/FitData_AppIcon-iOS-Default-1024x1024@1x.png" alt="FitData" width="36" height="36" />
         <span>FitData</span>
       </a>
-      <p>WORKOUTS &amp; RUNNING FOR IPHONE &amp; APPLE WATCH</p>
+      <p>TRAINING, RUNNING &amp; NUTRITION FOR IPHONE &amp; APPLE WATCH</p>
     </div>
-    <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">Download</a><a href="index.html#features">Features</a><a href="blog-en.html">Blog</a><a href="index.html#faq">FAQ</a></div>
+    <div class="fcol"><h4>App</h4><a href="https://apps.apple.com/us/app/fitdata-workout-app/id6740706351" target="_blank" rel="noopener">Download</a><a href="index.html#features">Features</a><!-- <a href="blog-en.html">Blog</a> --><a href="index.html#faq">FAQ</a></div>
     <div class="fcol"><h4>Legal</h4><a href="privacy-en.html">Privacy Policy</a><a href="terms-en.html">Terms of Use</a><a href="imprint-en.html">Imprint</a>
 <a data-app-switch href="matchdayxi/index.html">Matchday XI →</a></div>
     <div class="fcol"><h4>Support</h4><a href="support-en.html">Support</a></div>
@@ -747,6 +949,6 @@
 
 <script src="assets/nav.js" defer></script>
 <script src="assets/scroll-reveal.js" defer></script>
-<script src="assets/video-lazy.js" defer></script>
+<script src="assets/video-lazy.js?v=20261015-2" defer></script>
 </body>
 </html>

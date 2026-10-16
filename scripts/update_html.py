@@ -19,14 +19,14 @@ SCRIPTS = '''<script src="{prefix}assets/nav.js" defer></script>'''
 PAGES_SEO = {
     'index.html': {
         'lang': 'en', 'title': 'FitData — Progress, made visible',
-        'desc': 'Build custom workout plans, track every run, and analyze your performance. FitData for iPhone and Apple Watch — works offline.',
+        'desc': 'Plan workouts and structured runs, log food and macros, and follow your progress. FitData for iPhone, iPhone Duo and Apple Watch.',
         'canonical': 'https://fitdata.app/index.html',
         'href_en': 'https://fitdata.app/index.html', 'href_de': 'https://fitdata.app/index-de.html',
         'og_locale': 'en_US', 'prefix': '',
     },
     'index-de.html': {
         'lang': 'de', 'title': 'FitData — Fortschritt sichtbar machen',
-        'desc': 'Erstelle individuelle Trainingspläne, tracke jeden Lauf und analysiere deine Leistung. FitData für iPhone und Apple Watch — funktioniert offline.',
+        'desc': 'Plane Trainings und strukturierte Läufe, erfasse Mahlzeiten und Makros und verfolge deinen Fortschritt. FitData für iPhone, iPhone Duo und Apple Watch.',
         'canonical': 'https://fitdata.app/index-de.html',
         'href_en': 'https://fitdata.app/index.html', 'href_de': 'https://fitdata.app/index-de.html',
         'og_locale': 'de_DE', 'prefix': '',

@@ -1,0 +1,1419 @@
+{
+  "updated": "2026-10-15",
+  "source": "October 8–9, 2026 owner-supplied simulator screenshots; native UI resized only",
+  "assets": [
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/DE/Workout_Home_DE.png",
+      "source_sha256": "898f6570628ba57b32de785ed767b53f55150d7897d794829380c2f378ce2f0d",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Workout_Home",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Workout_Home-600.webp",
+          "sha256": "0a5fbc14aeef45cf737cf0e914976199c03baa7ed11fff6288c3a9fdaccf1bc3",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_Home-600.png",
+          "sha256": "079e29ddb4ee13329f39889083e76e1b4cf49e433479488c8fa22fac1c14abb3",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_Home-1200.webp",
+          "sha256": "cd621dab241933a97cd52b85611b4d7898cecb24cb90be9609713f109bb9192f",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/DE/Workout_Plan_DE.png",
+      "source_sha256": "f5d5fd8db924e01210d4c8a09819dbb88fb3c0c637c50568f1d90d572fd578f7",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Workout_Plan",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Workout_Plan-600.webp",
+          "sha256": "d851aaceb1fd50303079d8fbeec5f7a7f72d22af97a68b5e8f106ad4aa824c6d",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_Plan-600.png",
+          "sha256": "673818b84d57e9bd6e0a57b94bc484522c278803c85ddf4ac98d6dfe777a57ee",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_Plan-1200.webp",
+          "sha256": "845689a459668a86650b27fb744b840b197c87c15d97cba1c2ae9e7542bb794c",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/DE/Workout_Active_DE.png",
+      "source_sha256": "20387ce6968a70c6098f7c998a1f7065e71636fab7585ed4597a3645f72c7dc5",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Workout_Active",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Workout_Active-600.webp",
+          "sha256": "5d59b86ff54525928ddaf22f5ee84c8c2c565b891b9295a89d101338f592d09a",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_Active-600.png",
+          "sha256": "861a61c9b1763e5f8d0e5c5db684547b44d8bdec0db6dbcb7597b6c7a2e2b941",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_Active-1200.webp",
+          "sha256": "71b6e9d5d2c83913225084ca3e7483b95cef56839d6f104fc530188ecdae17b9",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/DE/Workout_Performance_DE.png",
+      "source_sha256": "2bae9d0522d0fd1f3f92d3a919c735ca25097611c2322d253ef83cd3affca2ca",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Workout_Performance",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Workout_Performance-600.webp",
+          "sha256": "805ecbbc1410ed235d170797f65de9a7ff5dfbad4a89f4ca9b360eb1dcb04dfd",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_Performance-600.png",
+          "sha256": "8385ba2000f247c6b734afbf47cc15f09d2a61f69da7e9f7300c7ada57c7f8d8",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_Performance-1200.webp",
+          "sha256": "335e5f542a56ace42bbef52708a510c35471555dcdbf2a2bfb48efb68975e4e6",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/DE/Workout_History_DE.png",
+      "source_sha256": "a730df0feb52f345fa0c019d082b4e09ad31ee411f5a9298f067118847333098",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Workout_History",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Workout_History-600.webp",
+          "sha256": "a86279442412ba64ca3821bf76993dfa558c49cb8e6a5bc92646c3ee853c22ad",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_History-600.png",
+          "sha256": "dd77a1fb62ebdcc5a7b0a5dd39eb35c3ad83c8b9e9f93bd9d880d325d353375d",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_History-1200.webp",
+          "sha256": "691656b314b6dd9a896a164e87b0d3c83056b5946a27351468ff4eee7a8abe2c",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/DE/Workout_ExercisePerformance_DE.png",
+      "source_sha256": "363bd61d85e1c9453e1f403145cbb59db89e4d75b44308372a3ff8ce746f6666",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Workout_ExercisePerformance",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Workout_ExercisePerformance-600.webp",
+          "sha256": "76fb792a5fdde589c36db88ab12e6409ff2beead118f91db6e3949114273c7eb",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_ExercisePerformance-600.png",
+          "sha256": "87afb454dfc3340a0e6e052c2024bfa9edded28af52f957e6c6dc057aead9fb4",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Workout_ExercisePerformance-1200.webp",
+          "sha256": "90b23f52413e512acf4e6d11542151feb17c5da78317df2221f3e55def870d26",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Run/DE/Run_RunPlan_DE.png",
+      "source_sha256": "285bd55336da997d0a57ac3a81bf89b697b46db0d079e526358ba36a5e736bc9",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Run_RunPlan",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Run_RunPlan-600.webp",
+          "sha256": "a766cecca3d1a4e824b557259a3b003433974374d7411efce7f0269abd112492",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Run_RunPlan-600.png",
+          "sha256": "b6a65a00188615ed2364e82fa26e6b621bc8c3574250a4dc876035a3aa4d0d40",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Run_RunPlan-1200.webp",
+          "sha256": "89ae6323d8c943581e30a3258a30b861f0abb8ece827c8f0f952f6a81b1f9afd",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Run/DE/Run_CreateSession_DE.png",
+      "source_sha256": "ab4ce386a0d7f4792a1e136eddf8c86c6d70383c591f99186a021e3354e7cb34",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Run_CreateSession",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Run_CreateSession-600.webp",
+          "sha256": "b35c4506cf4c6301ef025f343a184fe8f22ff7c685f0fbfc801e34a2ead3b7e4",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Run_CreateSession-600.png",
+          "sha256": "7a1efb09949b583b8634743d8684db0368e2dbc775e27c709ad514e30b51bbb1",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Run_CreateSession-1200.webp",
+          "sha256": "1813d19b2593f4fe7babeaad97a0ea20a83269bced1703dcb8257b3dd52fcb43",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Run/DE/Run_Active_DE.png",
+      "source_sha256": "853439b3b07e5bfa511cff88b7c2704dc2915169442e3d9196c31414ca99cd0b",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Run_Active",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Run_Active-600.webp",
+          "sha256": "23db83e00b65d4893e93366542ec0da528f532481750adff6d85b97109bacc57",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Run_Active-600.png",
+          "sha256": "8a266ad92ba104ec96ec7adca23f76f48c36c5d141ef87d9145a09c0a17ef1d4",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Run_Active-1200.webp",
+          "sha256": "27fabaa5fae7dafdef88eedec139a9fe729ca72b5e61446838bf1d9d9e50b760",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Run/DE/Run_Detail_DE.png",
+      "source_sha256": "5b84e1960809d294a6c95aa1fe8da7786c419329056ad64d3a783531c94ea4a0",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Run_Detail",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Run_Detail-600.webp",
+          "sha256": "6c96a972bc5f4cc3d1a243dce6246a842c6ba5dc1b376321d895913f23295ac1",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Run_Detail-600.png",
+          "sha256": "77c47d1690fb8f02b5d26ed6235cb8fe19eea19fccb9195d2e98a8ad0f853e21",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Run_Detail-1200.webp",
+          "sha256": "1264463a88ed0a101f27df2370dd043c44dcc64e711707071d01708fcf8ce728",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Home/DE/Home_Summary_DE.png",
+      "source_sha256": "3acae561a5a910c65433ee9a94f3d5070d4a96fb8b21a04bc83bedd4bad70a5f",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Home_Summary",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Home_Summary-600.webp",
+          "sha256": "dd45516c99e13c8c389e362b8630c52bf91150bf776bd7550cddd5eb850d82fc",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Home_Summary-600.png",
+          "sha256": "090cb898bb61dd35177368844be2386f1d55e8b73246c7832d1b519c531613ce",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Home_Summary-1200.webp",
+          "sha256": "eb729fd61b4b8091a7cc70f09ed729013e4af3b9624517e9bda02371a168aa96",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Home/DE/Home_WorkoutDetail1_DE.png",
+      "source_sha256": "93c2b2ad3ef4a7691cb86663ef94efb696665387f1fb72489ba40eb835d94035",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Home_WorkoutDetail1",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Home_WorkoutDetail1-600.webp",
+          "sha256": "4d9e89bae48c9e3f525beac62857fff8901eaeba2cf6a28c93ffdc06386ee054",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Home_WorkoutDetail1-600.png",
+          "sha256": "05e0235fc17e12f8a212e6fa5a5037594db9e503561ae66be8b52aa70754d1ef",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Home_WorkoutDetail1-1200.webp",
+          "sha256": "edcd6baca2947144b5cafe04bbb4fa52e49959d7c671ee66308b58f0fd1c6c42",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Home/DE/Home_WorkoutDetail2_DE.png",
+      "source_sha256": "90bb626fae9060572fa8971c61576ec48b81ce335b453ca2a5c5a48f094aadaf",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Home_WorkoutDetail2",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Home_WorkoutDetail2-600.webp",
+          "sha256": "ef679840c648e5e9814ac934a2cdd11ef4fd823f812666ed0ec50cc1671ba3b9",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Home_WorkoutDetail2-600.png",
+          "sha256": "b251289ee511c6616d79bd0093c35d124c6e6d10b24233089d0eafaab5d21990",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Home_WorkoutDetail2-1200.webp",
+          "sha256": "4e9620f444f8ace76a2cfc6d7cb4e742e96c653016041af6a8d3a6b53b6e5f24",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Nutrition/DE/Nutrition_Home_DE.png",
+      "source_sha256": "103964e394f9ff9efecfa1c3b9edc49a4710c4a4f71fc50971ec707dff84805e",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Nutrition_Home",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Nutrition_Home-600.webp",
+          "sha256": "4d9c372f14722252295db73590ba3f1f04318608de8ed01e19fb9fb560584b58",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Nutrition_Home-600.png",
+          "sha256": "c2957f69293c4456861f260988fd27e3c7d990e0b34d2aedb1111783e401622a",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Nutrition_Home-1200.webp",
+          "sha256": "aa88c77848b139130e8bd15f1c78265e18928e96d2fc83048dcbda293ecfb27a",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Nutrition/DE/Nutrition_Day_DE.png",
+      "source_sha256": "dd9dc6bde4b60c9b4136bcf87bf9338a3a4bba2b5e6eadde9e4b999904f5570f",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Nutrition_Day",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Nutrition_Day-600.webp",
+          "sha256": "6b67b6625e6ee50183fe6b190260a677e5300a836963b82b3df5b349439ea6ee",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Nutrition_Day-600.png",
+          "sha256": "ce2e0969e84f5bfd9264bdb44397e667f073552629c62612cb0b333fce03c8ef",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Nutrition_Day-1200.webp",
+          "sha256": "5227024f8a423a583de7a7f9dff07a247c9619e9331a955389a7713e6f9c44f2",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Nutrition/DE/Nutrition_Weight_DE.png",
+      "source_sha256": "f805a82b751ce323aafe642ce043cc32321608a1f75e300b7f82d6aab7f9bf92",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "Nutrition_Weight",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Nutrition_Weight-600.webp",
+          "sha256": "4e243fe3e4c9890d35e94540825fdcff925ec36c7f7a80aa90cf37547c2496fa",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Nutrition_Weight-600.png",
+          "sha256": "101c830f42c905cbbc6925965344f714cddbe36d56c784ea1e4220559192143f",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Nutrition_Weight-1200.webp",
+          "sha256": "6d27c78d7f0f52dad756b7306b7350f163569512e5957546f4d79be6de5a957f",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/AI/DE/AI_FoodLog_DE.png",
+      "source_sha256": "03ca4b9b3400ec2b39530a042130ab1303313eb4844ac4fd6a7f75d669709dd1",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "de",
+      "screen": "AI_FoodLog",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/AI_FoodLog-600.webp",
+          "sha256": "bd9f4edcc60913b27c826bf708e6c517e6f550793f2ee77cb23aace8f723ff99",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/AI_FoodLog-600.png",
+          "sha256": "90c220b13e839ad0b7704993d69b57acdbf5eed99e580bfb4ce2c9ec751716c1",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/AI_FoodLog-1200.webp",
+          "sha256": "e8b85915aa215fd04e04e0589ce4e178508be16595df1217507ccdafa4cd669b",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/EN/Workout_Home_EN.png",
+      "source_sha256": "2c93e5a70750ad09802c36dff69cc9ab4f27340b20a56342ac77af9e05f01580",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Workout_Home",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Workout_Home-600.webp",
+          "sha256": "fbe032ccc2e61f0e29bad50f76545ba4c6ddef509e87fc35e9bfc2c9f9e6273a",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_Home-600.png",
+          "sha256": "a8b79bac4dc49875ce0b20c196b6ecdd83c4cc3b4fb5cc1d7c0b83a55264bb50",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_Home-1200.webp",
+          "sha256": "32e8fda66ec5aed5bce6157741f724eb449b01a84f16c7c6eb5430fba5294d6f",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/EN/Workout_Plan_EN.png",
+      "source_sha256": "a40e8c691fb258b0fd5274e8b4c9793f7555a4c38d5bb9467ff87f2ee9ef3318",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Workout_Plan",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Workout_Plan-600.webp",
+          "sha256": "1167b349002ec609bf8bbbe81bc3e2af07488f2c74b8c3597f50e46fbcb958d9",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_Plan-600.png",
+          "sha256": "d91e3e33ea37cb142ba6053d833ef38698d45c245355f65d52d006f8901fb9c2",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_Plan-1200.webp",
+          "sha256": "6d73a5e617156702421cc00dea180e4ef471045a10c2ae0b78c97764f7e3c5c1",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/EN/Workout_Active_EN.png",
+      "source_sha256": "94f0771b3b03ea35af96b816485d30516743258fd04675014c7931deaaa3e977",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Workout_Active",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Workout_Active-600.webp",
+          "sha256": "dcb791b836c50b21c644934a3d7e7caa0f78b080a36cf24f0a16c1c05073d4c4",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_Active-600.png",
+          "sha256": "00fb31c71ac90bf34cca93fc50461bf6b9a08211527ff8b3ec6cc982a2d08188",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_Active-1200.webp",
+          "sha256": "628991d82acb40a072afc97ed76c2083dfa6143de71ba5642feb3302ca91781e",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/EN/Workout_Performance_EN.png",
+      "source_sha256": "5ac9a97a5557d40c2303d541f910175c9da10cfb96602d60e60ea134a5816576",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Workout_Performance",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Workout_Performance-600.webp",
+          "sha256": "24cd490305e7e2441ef8c28a2576745d544c17d039996d736d14f9672cd138e0",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_Performance-600.png",
+          "sha256": "9d707b8160002bbdda2d638cfba1918c6deb63e9da05106a6bb7d253ad4eeaa6",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_Performance-1200.webp",
+          "sha256": "3b9839fb3fa9352919679dcea597ccb10c0f15c1ba8a3b4a423125b37fd16206",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/EN/Workout_History_EN.png",
+      "source_sha256": "bb6263701e2cfceb70ce35dd08f4983c10c24eb4568a14f133fcf576cd0b31c8",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Workout_History",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Workout_History-600.webp",
+          "sha256": "1a641142debe681e69091c8159dce1f5d0fa93d03f4b8420da782c2b54aae4d7",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_History-600.png",
+          "sha256": "3f075adb4700557b4ae861b207e5ca93591b016a8080968e0095d4ea27bf906f",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_History-1200.webp",
+          "sha256": "4d3f056bc9c42be086ac4145e352880e56ccb659dc33428b879b18d1b0fd9b54",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Workout/EN/Workout_ExercisePerformance_EN.png",
+      "source_sha256": "ee9dd65372c684d819879edc6481cfabdf27cc1b2da54afcdaeb8e1a2dc365c9",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Workout_ExercisePerformance",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Workout_ExercisePerformance-600.webp",
+          "sha256": "f47183a2ee881c5754cb00f49aed056ccb88ac83fe8bcc087c3fcbaaa47b6af0",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_ExercisePerformance-600.png",
+          "sha256": "2040a7885d8998c749b8b0f7ae25fbeba37d309ac96a276e0945fcd0b816b17d",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Workout_ExercisePerformance-1200.webp",
+          "sha256": "a199586aef5bc0c21f767831eb39e43cceb573009389823afad1629b80dd7939",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Run/EN/Run_RunPlan_EN.png",
+      "source_sha256": "3a3ae509fe059a42fcc09ccc1cd1d41b8e9d0a562b6eeca0366c0d28523da3c7",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Run_RunPlan",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Run_RunPlan-600.webp",
+          "sha256": "4907d6a9e520cf9a639cf2e090e033bc2b720ffe2f8042985adcb7a8ef05bd2b",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Run_RunPlan-600.png",
+          "sha256": "56eb9c4ddf3fd88409c67d37ce998cad830a4721f83940355a8b04d0e8fafeb7",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Run_RunPlan-1200.webp",
+          "sha256": "00b733585323dda5240017e24b88a89e59129173d4f81db22059c96ab012753f",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Run/EN/Run_CreateSession_EN.png",
+      "source_sha256": "eb8f85b8004821a70f4d460ac804c75d7d8238868126231a29ec22f556bc506a",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Run_CreateSession",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Run_CreateSession-600.webp",
+          "sha256": "cfdb6449ce3c08b7ad8849b50907a421d1d9d78880dd0f00bfe03fd23525b31f",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Run_CreateSession-600.png",
+          "sha256": "92b2a9d5ef3a324e7f5204a89d07d03d2e67bba365a5d3bcca872678c0e181a2",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Run_CreateSession-1200.webp",
+          "sha256": "5ed3f3ece73f444a7f98ec02d24009c976e422fbc6a5630edecc8cfbe685a10a",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Run/EN/Run_Active_EN.png",
+      "source_sha256": "3487fa8778664db072f17d6f9d4b59cb9d392b8263dbf92179c1c797af381e4b",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Run_Active",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Run_Active-600.webp",
+          "sha256": "d4537df6c1465ce2da953deb1d3566ee08f38283adfe8889b3e6d4f2db1892cf",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Run_Active-600.png",
+          "sha256": "25aa73f0a120014949ae7820b8b45de310fff6fed8f60b4ba516d350045cddd3",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Run_Active-1200.webp",
+          "sha256": "7ecb03c6000f4a0c052c435376b7103d4eedd2ee046ff3c50b067a8f4833ff55",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Run/EN/Run_Detail_EN.png",
+      "source_sha256": "dfd1e66eafca354709049578377524811fb054cc95182040d9312713f5b15b17",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Run_Detail",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Run_Detail-600.webp",
+          "sha256": "b3d53bbe9835ab8d0c574860c400aece2fbb5271528c9be50ce06590de590c1a",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Run_Detail-600.png",
+          "sha256": "98d07e8548eab7df25790243230f374339a907365146d510b961757b011b79a7",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Run_Detail-1200.webp",
+          "sha256": "d39e11d46c641d53fb14ab8dce94e48f52663bed8803878c0ce033b0ac5fe5bd",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Home/EN/Home_Summary_EN.png",
+      "source_sha256": "6492944d3ecdb951226c221c6242818cc82568a8c01a2d941644b3da9a795192",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Home_Summary",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Home_Summary-600.webp",
+          "sha256": "f85a33b5e738fd78afb522e5acecccc6b41e3687bd74ce86ec12072a5b85f3b2",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Home_Summary-600.png",
+          "sha256": "6cbeaff9c8813070e6bc7ceb747c98ecfe51cb30393c6101bbf34f1f73eddd43",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Home_Summary-1200.webp",
+          "sha256": "211a7c86d63167121b4734069e7d213504900326bfa33c637d19b1d5c6283448",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Home/EN/Home_WorkoutDetail1_EN.png",
+      "source_sha256": "698a243c42220c0761f8cfa7f8dddaf538860b0a6a9b54f5e73948179a8bfcef",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Home_WorkoutDetail1",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Home_WorkoutDetail1-600.webp",
+          "sha256": "9fedcc99855e88ac8d8e24aaa697c3a199f8818ad9fd2bd27c45b87832bdfd1b",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Home_WorkoutDetail1-600.png",
+          "sha256": "b6035a22ca80237ed514d8fcf3e4aff8175cde83530e79df5c3f9a40d2e88d9b",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Home_WorkoutDetail1-1200.webp",
+          "sha256": "44b0e727d436d7481e4860bda791da1ce5d7de60aa33503fe16e6412f3f421e3",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Home/EN/Home_WorkoutDetail2_EN.png",
+      "source_sha256": "92ed02931dcc737af03fe286c5fb6f3fb437e7d336d2b2022a001df03d2e60aa",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Home_WorkoutDetail2",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Home_WorkoutDetail2-600.webp",
+          "sha256": "36efa020058cbb96e5d0bfc1af24f5668903fed26ca53204f53f07ca35c2b6cd",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Home_WorkoutDetail2-600.png",
+          "sha256": "1fe9f98615d1f7afa515da6c8b0db635ce1a8b46a9cc1c6a912617839faf3d53",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Home_WorkoutDetail2-1200.webp",
+          "sha256": "ce39519181bc7b69a9200805ae67e6708038b5cd6c36d03703869e5fdbab6d14",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Nutrition/EN/Nutrition_Home_EN.png",
+      "source_sha256": "57848069581eebc82d084d3ec730788b13a2d814df2403e6dc7f5db3f4c72a70",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Nutrition_Home",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Nutrition_Home-600.webp",
+          "sha256": "fad6a425f916aa17773d94b554ac0a66785f7f2cc476395c33d67c6743c6aebe",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Nutrition_Home-600.png",
+          "sha256": "a2e4a68f7ea9d9fd9b9664791f41d3625ba92197bca91d0fba212844f4802b8e",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Nutrition_Home-1200.webp",
+          "sha256": "d6d3425fd2c9d8d1ad806341e43dae04a234198d4c0a93ebb4d29b2bf5a885bf",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Nutrition/EN/Nutrition_Day_EN.png",
+      "source_sha256": "8bd45c5993b56cd369ab7aadf0aeb106bea81e3691f87c8a153158cb54fff57e",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Nutrition_Day",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Nutrition_Day-600.webp",
+          "sha256": "5896fc891e4d5416c4f8a941e444661fc5fa32815dd5371ecd0114851118e525",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Nutrition_Day-600.png",
+          "sha256": "cf1301c02e082fe69eaadc9f1df949858fbcc0db7a66431970ff1c99f7c995d9",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Nutrition_Day-1200.webp",
+          "sha256": "6076f13379e1a45d6e7c1b88e1c5940a6e6a6b1e18218a2ef4c226b49a488a31",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/Nutrition/EN/Nutrition_Weight_EN.png",
+      "source_sha256": "e062e02192668bec2b9fa3850676daa46e3cbb3f146f11ffd8c4ec1bbf00e575",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "Nutrition_Weight",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Nutrition_Weight-600.webp",
+          "sha256": "4b156849d41fd65cdd8f5d1ee006fe165e2ee3c9c25b04bd78228ebbf2b74286",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Nutrition_Weight-600.png",
+          "sha256": "d8425cd580ba4cd86481cbd791cb3fd1eaca363395d18c3efd7a37570cfb5700",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Nutrition_Weight-1200.webp",
+          "sha256": "1963ceb6f050bf463477032a1ad8350e21e27e66f88c1576f1c15d2c6120401b",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-demo/AI/EN/AI_FoodLog_EN.png",
+      "source_sha256": "a5228a68d3d27de4f60e702e83ffcb995138791b269fbd9b584ccd0236e4547d",
+      "source_dimensions": [
+        1206,
+        2622
+      ],
+      "language": "en",
+      "screen": "AI_FoodLog",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/AI_FoodLog-600.webp",
+          "sha256": "3d4b021d1c4a9a63c886267933f538c60c3ef8ccf7421e513361e6dc60430416",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/AI_FoodLog-600.png",
+          "sha256": "0b2afa0e3945bf1608cdf208742ec0cd40f2e4cb8c615ba7f1984f2469a21f00",
+          "dimensions": [
+            600,
+            1304
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/AI_FoodLog-1200.webp",
+          "sha256": "56103984f7fed26681e39d1300da16511819bc727c646816f6fb75afe23f3ec1",
+          "dimensions": [
+            1200,
+            2609
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-15-duo/DE/Duo_Home_Open.png",
+      "source_sha256": "56912919a444e8cdef6648897c7e831d8e861aa71267ed7bbfa0204ed50a624d",
+      "source_dimensions": [
+        2853,
+        2007
+      ],
+      "language": "de",
+      "screen": "Duo_Home_Open",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Duo_Home_Open.webp",
+          "sha256": "fe83848c1741eb26221735d85095d149397749f61906f84665ce25406537dddd",
+          "dimensions": [
+            1400,
+            985
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Duo_Home_Open.png",
+          "sha256": "81e9e6a89228285e5cb7da1896971ed58914b64301be6608e5cb8a90e4a63006",
+          "dimensions": [
+            1400,
+            985
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-15-duo/DE/Duo_Nutrition_Book.png",
+      "source_sha256": "536f11c015495a685e48b0fcb53fb3f86b7cde0a34ba1059c1d91655b707e417",
+      "source_dimensions": [
+        2853,
+        2007
+      ],
+      "language": "de",
+      "screen": "Duo_Nutrition_Book",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/Duo_Nutrition_Book.webp",
+          "sha256": "b948052e4553dd1683d527f1d76dcc98cad3d4a9debabc947edfc98d018568f4",
+          "dimensions": [
+            1400,
+            985
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/de/Duo_Nutrition_Book.png",
+          "sha256": "932d87df681536d7b93d2981f67ee249428531574d13a286736f73cf6d74db0c",
+          "dimensions": [
+            1400,
+            985
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-15-duo/EN/Duo_Home_Open.png",
+      "source_sha256": "618a044f64e4712d3de168882d7c0d862c43abd2741a81238b9f5998414bb65c",
+      "source_dimensions": [
+        2853,
+        2007
+      ],
+      "language": "en",
+      "screen": "Duo_Home_Open",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Duo_Home_Open.webp",
+          "sha256": "1e531cabb83c47136a728c6a6c4726e820e66f4727b7efa6d344fa8908fca802",
+          "dimensions": [
+            1400,
+            985
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Duo_Home_Open.png",
+          "sha256": "1bbb21e50f6b602a896f9b08d963d1f1daff406df7a4178dbfa619b4b457fcb8",
+          "dimensions": [
+            1400,
+            985
+          ]
+        }
+      ]
+    },
+    {
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-15-duo/EN/Duo_Nutrition_Book_Landscape.png",
+      "source_sha256": "56fc5e60f8ec7172c69eab84688d2a69248f22e7618d8e0560b56d7a056b263d",
+      "source_dimensions": [
+        2853,
+        2007
+      ],
+      "language": "en",
+      "screen": "Duo_Nutrition_Book",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/Duo_Nutrition_Book.webp",
+          "sha256": "1ce9495e09a11184956d8f3968becff94d587b85d66bbce83c15fbf1d39eb95a",
+          "dimensions": [
+            1400,
+            985
+          ]
+        },
+        {
+          "path": "assets/fitdata-2026/en/Duo_Nutrition_Book.png",
+          "sha256": "663bbba81b5aa2f0a047e71307487078fc25e40826415c4a61e1d5f5678e3599",
+          "dimensions": [
+            1400,
+            985
+          ]
+        }
+      ]
+    }
+  ],
+  "duo_capture": {
+    "date": "2026-10-15",
+    "xcode": "27.1 (27A9275)",
+    "runtime": "iOS 27.1 (24A94401)",
+    "device": "iPhone Duo",
+    "app_version": "3.4",
+    "app_build": "1",
+    "app_branch": "feature/iphone-duo-migration",
+    "launch_arguments": [
+      "-FDScreenshotMode",
+      "-AppleLanguages (de|en)",
+      "-AppleLocale de_DE|en_US"
+    ],
+    "data": "Existing registered test-account data; no seeding or deletion",
+    "recording": "Continuous fixed desktop region; native pose changes, no synthesized frames; opening launch splash trimmed from DE; uniformly retimed to 25 seconds",
+    "region_points": [
+      591,
+      89,
+      1209,
+      788
+    ],
+    "originals_directory": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-15-duo"
+  },
+  "videos": [
+    {
+      "language": "de",
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-15-duo/DE/Duo_Demo_DE_publish.mov",
+      "source_sha256": "a6f34454560a8a9e209ae71f20257860d6696fa446b60e0c5f3a26f1a8d65437",
+      "source_duration": 42.026667,
+      "trim_start_seconds": 1.5,
+      "speed_factor": 1.6210666800000002,
+      "cuts": "Opening trim only; no internal cuts",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/de/duo-demo.mp4",
+          "sha256": "7e1d8402cb5aa2a3edb7fd361b4fe9b0a79f34382d906372c6bb24be36952417",
+          "bytes": 727621
+        },
+        {
+          "path": "assets/fitdata-2026/de/duo-demo.webm",
+          "sha256": "14ecbb4bfc7767be0548a8c7970f8177d43fe2fc793ac389907399824dbbe957",
+          "bytes": 737705
+        },
+        {
+          "path": "assets/fitdata-2026/de/duo-poster.jpg",
+          "sha256": "d2f5753b6c3957419c4305f17ef7e6e8b2491a2b7ee8e6fc5816402598e5f985",
+          "bytes": 64120
+        }
+      ]
+    },
+    {
+      "language": "en",
+      "source": "/Users/canata/FitData - Weiteres/02-Screenshots/2026-10-15-duo/EN/Duo_Demo_EN_publish.mov",
+      "source_sha256": "81a68e82b047bae342add8514c8c15d2b133c2b18857cf0ab1766d3b8a3d19d2",
+      "source_duration": 42.006667,
+      "trim_start_seconds": 0,
+      "speed_factor": 1.68026668,
+      "cuts": "Opening trim only; no internal cuts",
+      "outputs": [
+        {
+          "path": "assets/fitdata-2026/en/duo-demo.mp4",
+          "sha256": "935c0f28bf1e5a4af47fdf26b149e13d9a3738700f260bdee14784fcf414fc46",
+          "bytes": 855516
+        },
+        {
+          "path": "assets/fitdata-2026/en/duo-demo.webm",
+          "sha256": "383cd23850a4274e727104e423f6653fe6f6a1372a3e5f01d25225e466a863a0",
+          "bytes": 810837
+        },
+        {
+          "path": "assets/fitdata-2026/en/duo-poster.jpg",
+          "sha256": "222a93cda0911a46cc63aa7909f145623e810fe4f86e0dde4f8f2997e10aaa04",
+          "bytes": 63056
+        }
+      ]
+    }
+  ]
+}

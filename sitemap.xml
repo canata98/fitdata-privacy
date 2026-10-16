@@ -13,18 +13,18 @@
     <xhtml:link rel="alternate" hreflang="de" href="https://fitdata.app/index-de.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fitdata.app/index.html"/>
   </url>
-  <url>
+  <!-- <url>
     <loc>https://fitdata.app/blog-en.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fitdata.app/blog-en.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fitdata.app/blog-de.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fitdata.app/blog-en.html"/>
-  </url>
-  <url>
+  </url> -->
+  <!-- <url>
     <loc>https://fitdata.app/blog-de.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fitdata.app/blog-en.html"/>
     <xhtml:link rel="alternate" hreflang="de" href="https://fitdata.app/blog-de.html"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://fitdata.app/blog-en.html"/>
-  </url>
+  </url> -->
   <url>
     <loc>https://fitdata.app/support-en.html</loc>
     <xhtml:link rel="alternate" hreflang="en" href="https://fitdata.app/support-en.html"/>

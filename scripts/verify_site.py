@@ -43,8 +43,14 @@ class Page(HTMLParser):
             self.switch += 1
         if tag == "a" and data.get("href"):
             self.refs.append(data["href"])
-        if tag in ("img", "script", "source") and data.get("src"):
+        if tag in ("img", "script", "source", "video") and data.get("src"):
             self.refs.append(data["src"])
+        if tag in ("img", "source") and data.get("srcset"):
+            self.refs.extend(item.strip().split()[0] for item in data["srcset"].split(","))
+        if tag == "source" and data.get("data-src"):
+            self.refs.append(data["data-src"])
+        if tag == "video" and data.get("poster"):
+            self.refs.append(data["poster"])
         if tag == "img":
             self.images.append(data)
         if tag == "script":

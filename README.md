@@ -109,3 +109,19 @@ Before publication:
 - `verify_site.py`: all local references and isolated blog regeneration passed.
 - These checks do not verify live deployment, mail delivery, App Store access,
   legal completeness, real-device app behavior or a productive backend rollout.
+
+## FitData refresh — October 15, 2026
+
+FitData DE/EN now includes nutrition, structured runs and an iPhone Duo showcase.
+Current screenshot derivatives, native Duo stills, 25-second MP4/WebM demos and posters
+are under `assets/fitdata-2026/`; `sources.json` records provenance and processing.
+Originals stay in `02-Screenshots/2026-10-15-duo` outside this repository.
+
+The Duo player uses `data-user-playback`, native controls and a localized Play button.
+It loads sources near the viewport, pauses offscreen, and does not autoplay.
+`assets/fitdata-refresh.css` is loaded only by the FitData landing pages.
+Changed script/style URLs are versioned to avoid stale cached assets.
+
+See [the refresh and simulator report](FITDATA-REFRESH-2026-10-15.md) for verification,
+recording details, the existing legacy UI-test selector failure and PRD/specs follow-up.
+Publication remains separate from this local branch.

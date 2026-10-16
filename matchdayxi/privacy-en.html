@@ -22,7 +22,7 @@
 <link rel="icon" type="image/png" href="assets/app-icon.png">
 <link rel="preload" href="../assets/fonts/gabarito-400.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="stylesheet" href="../assets/site.css">
-<link rel="stylesheet" href="assets/matchday.css">
+<link rel="stylesheet" href="assets/matchday.css?v=20261016">
 </head>
 <body>
 <a class="skip-link" href="#main">Skip to content</a>
@@ -51,44 +51,92 @@
 <header class="md-page-header">
 <a class="back" href="index.html">← Back to Matchday XI</a>
 <h1>Privacy policy</h1>
-<p>Updated: October 15, 2026</p>
+<p>Updated: October 16, 2026</p>
 </header>
 <div class="md-document">
-<section>
-<h2>1. Who is responsible for your data</h2>
-<p>Can Ata is responsible for Matchday XI. The address and other provider details are in the <a href="imprint-en.html">imprint</a>. For questions about your data, email <a href="mailto:support@canata.app">support@canata.app</a>.</p>
+<section id="overview">
+<h2>Your data at a glance</h2>
+<p>Matchday XI processes the data needed for your account and shared gameplay. Usage statistics and delivery of crash reports are optional and initially disabled. You decide separately whether to enable each in the app.</p>
+<p><a href="#choices">Analytics and crash reports</a> · <a href="#deletion">Delete your account</a> · <a href="#rights">Your rights</a></p>
 </section>
-<section>
-<h2>2. Your account and league</h2>
-<p>We use Firebase Authentication for sign-in. Depending on the method you choose, we process your account ID, email address, display name and sign-in provider information. Firestore stores the data needed to play together: leagues and memberships, roles and invitations, squads, lineups, bids, offers, transactions and matchday results. Other league members can see the data intended for shared gameplay.</p>
+<section id="controller">
+<h2>1. Controller and contact</h2>
+<p>The controller is Can Ata, Hans-Böckler-Str. 176A, 46242 Bottrop, Germany. For questions about your data, email <a href="mailto:support@canata.app">support@canata.app</a>. Further provider details are in the <a href="imprint-en.html">imprint</a>.</p>
 </section>
-<section>
-<h2>3. Data on your device</h2>
-<p>The app also stores account data, previously loaded content and your Squad Builder lineups locally. Sign-in, bids and current sports data require an internet connection. After successful account deletion, the associated local account data and builds are removed.</p>
+<section id="account">
+<h2>2. Your account and shared gameplay</h2>
+<p>We use Firebase Authentication for sign-in. Even without personal registration, the app creates a technical guest account with an account ID when it starts with an internet connection. “Guest” describes this sign-in method; it does not mean that no data is sent to Firebase. Registering may add your email address, display name and information about your Apple, Google or email sign-in.</p>
+<p>Firestore stores leagues, memberships, roles, invitations and join requests, as well as squads, lineups, bids, offers, virtual transactions and matchday results. Other league members can see the information intended for shared gameplay, such as your display name, squad, standings and visible league activity. This does not make your credentials or private account settings public.</p>
+<p>If you contact us, we process your message, email address and the information you send to help resolve your request. Please do not send passwords, sign-in codes or complete access tokens.</p>
 </section>
-<section>
-<h2>4. Notifications</h2>
-<p>If you enable notifications, we store a device push token to send updates about matters such as bids and matchdays. You choose which notifications to receive in the app and in iOS Settings. Account deletion removes the push tokens stored under your user profile.</p>
+<section id="purposes">
+<h2>3. Purposes and legal bases</h2>
+<ul>
+<li><strong>Account and gameplay:</strong> Sign-in, storage, synchronization, league management and settlement provide the services you use (Art. 6(1)(b) GDPR).</li>
+<li><strong>Secure operation:</strong> Technical request data and operational logs help diagnose faults, secure access and prevent abuse. This is based on our legitimate interest in a secure and reliable service (Art. 6(1)(f) GDPR).</li>
+<li><strong>Optional diagnostics and analytics:</strong> Firebase Analytics and delivery of Crashlytics reports rely on your separate consent for each service (Art. 6(1)(a) GDPR). Gameplay remains available without these permissions.</li>
+<li><strong>Support:</strong> We handle messages about your use of the app to perform our user agreement or respond to your request; other enquiries are handled on the basis of our legitimate interest in communication.</li>
+</ul>
+<p>Required account data is needed for the relevant online features. We do not sell personal data or use optional analytics for personalized advertising.</p>
 </section>
-<section>
-<h2>5. Crash reports and usage data</h2>
-<p>Firebase Crashlytics helps us investigate crashes. Reports may be linked to your user ID. Firebase Analytics processes usage events to help us understand and improve the app. This processing is not fully anonymous.</p>
+<section id="device">
+<h2>4. Data on your device</h2>
+<p>The app stores items such as session information, preferences, favorites, previously loaded content and your Squad Builder lineups locally. This makes parts of the app usable offline. Sign-in, bids, league changes and current sports data require an internet connection.</p>
+<p>Your two privacy choices are also stored locally. Crashlytics may initially buffer crash reports on your device even though automatic delivery is disabled. The <a href="#choices">section about your choices</a> explains how the app handles those reports.</p>
 </section>
-<section>
-<h2>6. Services we use</h2>
-<p>We use Firebase and Google services for sign-in, the database, server processing, push notifications, crash reports and usage analytics. Apple or Google may also be involved depending on your sign-in method. Football data comes from the BSD Sports API. The Matchday section of this website currently includes no website analytics. Fonts are served directly by the website.</p>
+<section id="notifications">
+<h2>5. Notifications</h2>
+<p>We use Apple Push Notification Service (APNs) and Firebase Cloud Messaging for push notifications. This involves processing push tokens and technical installation identifiers. Associated tokens are stored under your user profile so that updates reach the right device.</p>
+<p>You choose which notifications to receive in Matchday XI and in iOS Settings. Account deletion removes the push tokens stored under your user profile. The two optional analytics and crash-report switches do not disable all necessary sign-in, synchronization and notification services.</p>
 </section>
-<section>
-<h2>7. Deleting your account</h2>
-<p>Start deletion under Profile → Account → Delete account. Your Matchday account, profile and stored push tokens are removed. Leagues you own are deleted. You leave other leagues, which remain available to their other members. Attributed contributions and display names are selectively removed. However, historical transactions, matchday data and technical user IDs may remain. Older contributions without clear attribution, or data in leagues no longer associated with your account, may also remain. Account deletion therefore does not remove every historical link. Analytics data and crash reports already collected are not separately deleted by this process. Complete deletion of all history within a fixed period is not guaranteed.</p>
+<section id="choices">
+<h2>6. Your choice: analytics and crash reports</h2>
+<p>Under <strong>Profile → Privacy</strong>, you have two separate switches. Both are initially disabled:</p>
+<ul>
+<li><strong>Share usage statistics:</strong> Firebase Analytics helps us understand which features are used, for example through app launches and usage events.</li>
+<li><strong>Share crash reports:</strong> Firebase Crashlytics helps us investigate technical faults using crash data and information about the app, device and operating-system version.</li>
+</ul>
+<p>The current app version does not attach your account ID, name or email address to these services. Technical SDK and installation identifiers may still be included. This processing is therefore not fully anonymous.</p>
+<p>Automatic Crashlytics delivery stays disabled. Without permission, the app does not release buffered reports for delivery and requests their deletion. A new grant discards older pending reports; subsequently consented reports may be sent on the next app launch.</p>
+<p>You can withdraw either choice here at any time. Signing out or switching to a different account resets both permissions. Withdrawal stops further consented deliveries and discards unsent crash reports. Transfers already started may still finish. Withdrawal or account deletion does not automatically erase data already transmitted to these services, including older reports.</p>
 </section>
-<section>
-<h2>8. Questions and rights concerning your data</h2>
-<p>You can contact us about access, correction, deletion, portability or restriction of processing. Depending on the processing involved, you may also object or withdraw consent. You can also complain to a competent data protection supervisory authority. We do not sell personal data.</p>
+<section id="services">
+<h2>7. Recipients and services</h2>
+<ul>
+<li><strong>Google Firebase / Google:</strong> We use Authentication for sign-in, Cloud Firestore for the database, Cloud Functions for server processing and Cloud Messaging for notifications. Analytics and Crashlytics are used only within the optional scope described above. Depending on the service, Google's data-processing or separate service terms apply. See <a href="https://firebase.google.com/support/privacy">privacy at Firebase</a>.</li>
+<li><strong>Apple and Google as sign-in providers:</strong> They are involved when you choose the corresponding sign-in method. Apple also participates in push-notification delivery.</li>
+<li><strong>BSD Sports API, Bzzoiro LLC:</strong> The app and our backend obtain football information and images from BSD. The app may also fetch data and images directly. The provider then receives information such as your IP address and technical request data, including the requested player or club ID. We do not send your Matchday sign-in credentials with these requests. See the <a href="https://sports.bzzoiro.com/docs/privacy/">BSD privacy notice</a>.</li>
+<li><strong>Other image addresses:</strong> A fallback from football-data.org or its image host may be used for individual club badges. When an image is fetched directly, that host also receives your IP address and technical request data. This is separate from optional app analytics.</li>
+<li><strong>Website hosting:</strong> The Matchday pages on fitdata.app are served through GitHub Pages; see <a href="#website">section 10</a>.</li>
+</ul>
 </section>
-<section>
-<h2>9. Updates to this information</h2>
-<p>We update this information when the app or its data processing changes. The date at the top identifies the version you are reading.</p>
+<section id="locations">
+<h2>8. Processing locations</h2>
+<p>Our Firestore database is configured in the EU. The current Cloud Functions run in the US region <code>us-central1</code>. This does not mean that all participating services process data exclusively in the EU. Depending on the service, Google, Apple, GitHub and Bzzoiro in particular may also process data outside the European Economic Area.</p>
+<p>International transfers are subject to the safeguards of the relevant service, such as an applicable adequacy decision or EU Standard Contractual Clauses. Google describes its participation in the EU-US Data Privacy Framework and the relevant terms in its <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>. Using an EU database alone does not rule out processing in other countries.</p>
+</section>
+<section id="deletion">
+<h2>9. Retention and account deletion</h2>
+<p>We generally keep account data for the lifetime of your account. Gameplay data is needed for as long as it supports the shared league and traceable settlement. Technical logs support operation and the investigation of security incidents or faults; participating services also have their own retention and backup processes.</p>
+<p>Start deletion under <strong>Profile → Account → Delete account</strong>. Depending on your sign-in method, you may need to confirm your credentials again. Successful deletion removes your Auth account, profile and the push tokens stored there. Leagues you own are deleted. Other leagues remain for their members and you leave them. The app also removes the associated local account data and saved Squad Builder teams.</p>
+<p>Attributed contributions and personal display names are selectively removed. Historical transactions, matchday settlement, results and necessary technical references may remain in surviving leagues so that league history and subsequent corrections stay traceable. Technical identifiers are not automatically anonymous. Older data without clear attribution may also remain.</p>
+<p>There is currently no automatic removal of all personal references at a fixed season-end date. For a review or further deletion, contact us through our <a href="mailto:support@canata.app">privacy contact</a>. We assess whether the specific personal reference is still necessary or can be removed, taking justified retention grounds and other league members' rights into account.</p>
+<p>Account deletion does not separately erase Analytics data or crash reports already transmitted. Analytics is subject to the retention and deletion settings configured in that service. According to Google, Crashlytics retains reports and associated identifiers for 90 days before starting removal from live and backup systems. The <a href="https://firebase.google.com/support/privacy">provider information</a> also explains the separate backup and deletion processes for other Firebase services.</p>
+</section>
+<section id="website">
+<h2>10. This website</h2>
+<p>The Matchday section loads no website-analytics script and sets no analytics cookies. Fonts and the app screenshots embedded here are served directly by the website. GitHub Pages processes technical connection data to serve the site; GitHub in particular logs IP addresses for security. Serving and securing this website is based on our legitimate interest in a secure website (Art. 6(1)(f) GDPR). See the <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">GitHub privacy statement</a>.</p>
+<p>If you switch to FitData, the <a href="../privacy-en.html">FitData privacy information</a> applies there. Its optional website analytics is a separate choice and does not enable analytics in the Matchday app.</p>
+</section>
+<section id="rights">
+<h2>11. Your rights and minors</h2>
+<p>You can request access, rectification, erasure, restriction of processing and data portability (Art. 15–20 GDPR). You may object to processing based on legitimate interests under Art. 21 GDPR. You may withdraw consent for the future at any time; this does not affect processing that was lawful before withdrawal.</p>
+<p>To exercise these rights, email <a href="mailto:support@canata.app">support@canata.app</a>. You may also complain to a data protection supervisory authority, such as the State Commissioner for Data Protection and Freedom of Information of North Rhine-Westphalia, Germany.</p>
+<p>Matchday XI is not specifically directed at children. For minors, any consent legally required from a parent or guardian must be obtained. If you believe a child has sent us data without a required consent, please contact us.</p>
+</section>
+<section id="changes">
+<h2>12. Updates</h2>
+<p>We update this information when the app or its data processing changes. The version date appears at the top. New purposes requiring consent need the corresponding permission; changing this page does not replace it.</p>
 </section>
 <section class="contact-box">
 <h2>Contact</h2>

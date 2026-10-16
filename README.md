@@ -19,7 +19,7 @@ python3 -m http.server 8765 --bind 127.0.0.1
 Matchday has ten pages: home, support, privacy, terms and imprint, each in DE/EN.
 Its future public base URL is `https://fitdata.app/matchdayxi/`. The header and
 footer switch between apps without changing the selected language. The language
-switch stays on the equivalent page. FitData retains its blog; Matchday has none.
+switch stays on the equivalent page. FitData keeps its blog sources, but the refreshed navigation hides the blog. Matchday has no blog.
 
 ## Editing and verification
 
@@ -46,7 +46,7 @@ temporary directory. CI performs the same checks; the workflow does not deploy.
 FitData's existing consent-based analytics can load only on `fitdata.app` or
 `www.fitdata.app`. Other hostnames, including localhost, return before reading
 consent or contacting Google. Matchday does not include the analytics script.
-Its existing app Analytics/Crashlytics behavior is separate from website tracking.
+Its app Analytics/Crashlytics choices are separate from website tracking: two optional switches, both initially disabled, under Profile → Privacy.
 
 ## App image provenance
 
@@ -72,9 +72,7 @@ sites and in blog templates. Language and download controls remain separate.
 The static checker verifies this placement, including generated articles.
 
 Landing-page, support, FAQ, metadata, privacy, terms and contact copy have been
-reviewed in both languages. Legal processing/deletion limits and provider details
-remain consistent with the earlier technical draft; the review is editorial,
-not legal approval or a change to the app's data processing.
+reviewed in both languages. The October 16 Matchday refresh now reflects the deployed deletion flow, two optional telemetry choices, guest authentication, direct sports-data/image requests, processing locations and website hosting. It does not change the app's processing or establish legal approval; actual Analytics retention and historical-identity review remain explicit publication checks.
 
 ## Publication is a separate step
 
@@ -83,9 +81,11 @@ Before publication:
 
 1. Confirm provider/contact details copied from the existing FitData imprint.
    Matchday uses the app's existing `support@canata.app` contact.
-2. Finalize the public privacy/terms text, processing grounds, retention policy,
-   relevant provider/hosting details and release/backend state. Current texts
-   describe known technical limits; they are not a declaration of legal approval.
+2. Review the October 16 DE/EN privacy/terms update against the final distributed
+   app. The backend deletion rollout is complete; actual Analytics retention,
+   necessary historical identity retention and provider agreements still need
+   owner verification. Current texts describe known technical limits; they are
+   not a declaration of legal approval.
    In particular, account deletion retains some historical IDs and does not
    separately erase existing Analytics/Crashlytics records. Do not import
    FitData's blanket 30-day deletion promise or HealthKit/AI/subscription sections.
@@ -125,3 +125,19 @@ Changed script/style URLs are versioned to avoid stale cached assets.
 See [the refresh and simulator report](FITDATA-REFRESH-2026-10-15.md) for verification,
 recording details, the existing legacy UI-test selector failure and PRD/specs follow-up.
 Publication remains separate from this local branch.
+
+## Matchday privacy and support refresh — October 16, 2026
+
+See [the comparison and verification report](MATCHDAY-PRIVACY-REFRESH-2026-10-16.md).
+All ten Matchday pages were reviewed after the FitData 3.4 website refresh.
+Privacy is now aligned in DE/EN with optional Analytics/Crashlytics, technical guest
+accounts, shared league data, direct sports/image requests, current processing
+locations and the deployed account-deletion flow. Support and landing FAQs explain
+the privacy choices; the FitData discovery card now includes nutrition and progress.
+Phone frames, screenshots, app-switch placement and all FitData pages/assets are preserved.
+
+The public root returned HTTP 200, while both Matchday privacy URLs returned HTTP 404
+on October 16. GitHub Pages is configured to publish from `main` at `/`, with HTTPS
+required. This refresh is local on `codex/matchdayxi-website`; no push, merge or deployment
+was performed. App `GSAppLinks` still needs the separate agreed change after the new
+public URLs have been published and verified.

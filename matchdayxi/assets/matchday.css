@@ -72,6 +72,10 @@ html[data-app="matchdayxi"] {
 .md-document h2 { font-size: 24px; line-height: 1.25; margin-bottom: 18px; }
 .md-document p { font-size: 18px; color: var(--text-2); line-height: 1.8; }
 .md-document a { color: var(--accent); text-underline-offset: 3px; }
+.md-document p + p, .md-document ul + p { margin-top: 16px; }
+.md-document ul { padding-left: 24px; margin: 16px 0; font-size: 18px; color: var(--text-2); line-height: 1.8; }
+.md-document li + li { margin-top: 12px; }
+.md-document section[id] { scroll-margin-top: 110px; }
 .md-document .contact-box { margin-top: 48px; padding: 28px; background: var(--bg-cream); border: 1.5px solid var(--border); border-radius: 24px; }
 .contact-box .text-link { display: inline-block; margin-top: 18px; font-weight: 700; }
 @media(max-width:1250px) and (min-width:981px) {

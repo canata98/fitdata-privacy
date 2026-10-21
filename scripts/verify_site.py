@@ -159,8 +159,10 @@ def main():
             failures.append(f"{path.name}: unexpected website analytics")
         if any("alt" not in image for image in page.images):
             failures.append(f"{path.name}: missing image alternative")
-        if any("blog" in ref or "apps.apple.com" in ref for ref in page.refs):
-            failures.append(f"{path.name}: unexpected blog or download link")
+        if any("blog" in ref for ref in page.refs):
+            failures.append(f"{path.name}: unexpected blog link")
+        if any("apps.apple.com" in ref and "/id6799665635" not in ref for ref in page.refs):
+            failures.append(f"{path.name}: download link is not the Matchday XI App Store page")
     if len(matchday_sitemap(ROOT / "sitemap.xml")) != 10:
         failures.append("Expected ten Matchday sitemap entries")
     if failures:

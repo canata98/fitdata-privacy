@@ -106,3 +106,6 @@ html[data-app="matchdayxi"] {
  .md-faq { padding: 40px 24px 64px; }
  .md-page-header { padding-top: 112px; }
 }
+.md-badge { display: inline-flex; min-height: 48px; }
+.md-badge img { display: block; height: 48px; width: auto; }
+.md-availability .md-actions { justify-content: center; margin-bottom: 0; }

@@ -115,7 +115,7 @@
     }
     .eyebrow {
       font-family: 'Gabarito', sans-serif;
-      font-size: 14.64px; font-weight: 700; color: var(--accent);
+      font-size: 14.64px; font-weight: 700; color: var(--accent-text);
       letter-spacing: 0.5px; text-transform: uppercase;
       display: block; margin-bottom: 20px;
     }
@@ -136,7 +136,7 @@
       transition: opacity .15s;
       flex-shrink: 0;
     }
-    .btn-primary:hover { opacity: .84; }
+    @media (hover: hover) and (pointer: fine) { .btn-primary:hover { opacity: .84; } }
     .btn-primary img { height: 46px; display: block; border-radius: 10px; }
     .btn-ghost {
       font-family: 'Gabarito', sans-serif; font-size: 14.64px; font-weight: 500;
@@ -145,7 +145,7 @@
       border: 1px solid var(--border); text-decoration: none;
       transition: background .15s, border-color .15s;
     }
-    .btn-ghost:hover { background: var(--bg-cream); border-color: var(--accent); }
+    @media (hover: hover) and (pointer: fine) { .btn-ghost:hover { background: var(--bg-cream); border-color: var(--accent-text); } }
 
     .hero-social {
       display: flex; align-items: center; justify-content: center; gap: 12px;
@@ -158,10 +158,10 @@
       box-shadow: var(--shadow-sm); text-decoration: none;
       transition: transform .15s, color .15s, border-color .15s, box-shadow .15s;
     }
-    .hero-social-link:hover {
-      color: var(--accent); border-color: var(--accent); transform: translateY(-1px);
+    @media (hover: hover) and (pointer: fine) { .hero-social-link:hover {
+      color: var(--accent-text); border-color: var(--accent-text); transform: translateY(-1px);
       box-shadow: rgba(232,114,42,0.18) 0px 8px 22px 0px; text-decoration: none;
-    }
+    } }
     .hero-social-link svg { width: 20px; height: 20px; display: block; fill: currentColor; }
     .hero-trust {
       font-family: 'Atkinson Hyperlegible', sans-serif;
@@ -298,7 +298,7 @@
     .feat-header { text-align: center; margin-bottom: 80px; }
     .label-tag {
       font-family: 'Gabarito', sans-serif;
-      font-size: 14.64px; font-weight: 700; color: var(--accent);
+      font-size: 14.64px; font-weight: 700; color: var(--accent-text);
       text-transform: uppercase; letter-spacing: 0.6px;
       display: block; margin-bottom: 12px;
     }
@@ -325,7 +325,7 @@
 
     .feat-text .tag {
       font-family: 'Gabarito', sans-serif;
-      font-size: 14.64px; font-weight: 700; color: var(--accent);
+      font-size: 14.64px; font-weight: 700; color: var(--accent-text);
       text-transform: uppercase; letter-spacing: 0.6px;
       display: block; margin-bottom: 14px;
     }
@@ -342,7 +342,7 @@
       font-family: 'Atkinson Hyperlegible', sans-serif;
       font-size: 17px; color: var(--text-2); display: flex; gap: 12px; line-height: 1.5;
     }
-    .feat-bullets li::before { content: '–'; color: var(--accent); flex-shrink: 0; }
+    .feat-bullets li::before { content: '–'; color: var(--accent-text); flex-shrink: 0; }
 
     /* Phone in feature row — centred, clipped at bottom */
     .feat-phone-wrap {

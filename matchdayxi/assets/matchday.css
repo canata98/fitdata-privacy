@@ -1,6 +1,6 @@
 /* Product colors; type, navigation and the SVG phone frame match FitData. */
 html[data-app="matchdayxi"] {
-  --accent: #247344; --accent-h: #195531; --bg: #f8fbf6;
+  --accent: #247344; --accent-h: #195531; --accent-text: #247344; --bg: #f8fbf6;
   --bg-cream: #e9f2e5; --border: #d5e2d0; --text-2: #4c584b; --text-3: #63725e;
   --shadow-sm: 0 1px 2px #193b1910, 0 16px 32px #193b1912;
   --shadow-md: 0 2px 8px #193b1920; --shadow-nav: 0 1px 0 #d5e2d0;
@@ -12,7 +12,7 @@ html[data-app="matchdayxi"] {
 [data-app="matchdayxi"] nav { background: #f8fbf6ed; }
 [data-app="matchdayxi"] nav::after { background: linear-gradient(#f8fbf699, transparent); }
 [data-app="matchdayxi"] .nav-links .btn-nav { color: white; }
-[data-app="matchdayxi"] .btn-nav:hover { box-shadow: 0 4px 14px #24734433; }
+@media (hover: hover) and (pointer: fine) { [data-app="matchdayxi"] .btn-nav:hover { box-shadow: 0 4px 14px #24734433; } }
 [data-app="matchdayxi"] main { overflow-wrap: anywhere; }
 
 /* Same frame, inset and clipping geometry as FitData's .iphone component. */
@@ -30,9 +30,9 @@ html[data-app="matchdayxi"] {
 .md-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; margin: 32px 0 28px; }
 .md-button, .md-secondary { display: inline-flex; padding: 14px 24px; border-radius: 999px; font-weight: 700; font-size: 16px; text-decoration: none; align-items: center; min-height: 48px; }
 .md-button { background: var(--accent); color: white; border: 1px solid var(--accent); }
-.md-button:hover { background: var(--accent-h); }
+@media (hover: hover) and (pointer: fine) { .md-button:hover { background: var(--accent-h); } }
 .md-secondary { border: 1px solid var(--border); color: var(--text); }
-.md-secondary:hover { background: var(--bg-cream); }
+@media (hover: hover) and (pointer: fine) { .md-secondary:hover { background: var(--bg-cream); } }
 .md-trust { display: flex; flex-wrap: wrap; gap: 18px; color: var(--text-2); font-size: 14px; }
 .md-trust span::before { content: '✓ '; color: var(--accent); }
 .md-hero-phones { display: flex; align-items: center; justify-content: center; min-width: 0; padding: 18px 0; }

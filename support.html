@@ -33,7 +33,7 @@
       font-size: 15px; color: var(--text-2); text-decoration: none;
       margin-bottom: 28px; transition: color .15s;
     }
-    .back:hover { color: var(--accent); }
+    @media (hover: hover) and (pointer: fine) { .back:hover { color: var(--accent-text); } }
     .page-header h1 {
       font-size: clamp(36px, 5vw, 56px); font-weight: 700;
       letter-spacing: -1.5px; line-height: 1.05; margin-bottom: 10px;
@@ -47,7 +47,7 @@
     .intro-section { margin-bottom: 64px; }
     .section-label {
       font-family: 'Gabarito', sans-serif;
-      font-size: 14.64px; font-weight: 700; color: var(--accent);
+      font-size: 14.64px; font-weight: 700; color: var(--accent-text);
       text-transform: uppercase; letter-spacing: 0.6px;
       display: block; margin-bottom: 16px;
     }
@@ -59,7 +59,7 @@
       padding: 8px 16px; font-size: 15px; color: var(--text-2);
       transition: border-color .15s;
     }
-    .chip:hover { border-color: var(--accent); }
+    @media (hover: hover) and (pointer: fine) { .chip:hover { border-color: var(--accent-text); } }
 
     /* Fragen */
     .faq-section { margin-bottom: 64px; }
@@ -74,7 +74,7 @@
     details.fq summary::-webkit-details-marker { display: none; }
     details.fq summary::after { content: '+'; font-size: 22px; color: var(--text-3); flex-shrink: 0; transition: transform .2s; font-family: system-ui; }
     details.fq[open] summary::after { transform: rotate(45deg); }
-    details.fq[open] summary { color: var(--accent); }
+    details.fq[open] summary { color: var(--accent-text); }
     details.fq .fqb { padding-bottom: 20px; font-size: 17px; color: var(--text-2); line-height: 1.7; }
 
     /* TROUBLESHOOTING */
@@ -86,11 +86,11 @@
       border-radius: 20px; padding: 24px 28px;
       transition: border-color .2s, box-shadow .2s;
     }
-    .ts-card:hover { border-color: var(--accent); box-shadow: var(--shadow-sm); }
+    @media (hover: hover) and (pointer: fine) { .ts-card:hover { border-color: var(--accent-text); box-shadow: var(--shadow-sm); } }
     .ts-card h3 { font-size: 17px; font-weight: 700; margin-bottom: 14px; color: var(--text); }
     .ts-card ul { list-style: none; display: flex; flex-direction: column; gap: 9px; }
     .ts-card ul li { font-size: 15px; color: var(--text-2); display: flex; gap: 10px; line-height: 1.55; }
-    .ts-card ul li::before { content: '→'; color: var(--accent); flex-shrink: 0; }
+    .ts-card ul li::before { content: '→'; color: var(--accent-text); flex-shrink: 0; }
 
     /* CONTACT */
     .contact-section { padding-bottom: 120px; }
@@ -104,8 +104,8 @@
     .c-row:last-child { border-bottom: none; padding-bottom: 0; }
     .c-row-before-bugs { border-bottom: none; }
     .c-label { font-family: 'Gabarito', sans-serif; font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.7px; color: var(--text-3); width: 96px; flex-shrink: 0; }
-    .c-row a { color: var(--accent); text-decoration: none; }
-    .c-row a:hover { text-decoration: underline; }
+    .c-row a { color: var(--accent-text); text-decoration: none; }
+    @media (hover: hover) and (pointer: fine) { .c-row a:hover { text-decoration: underline; } }
     .c-row span { color: var(--text-2); }
     .bug-list { margin-top: 24px; padding-top: 24px; border-top: 1px solid var(--border); }
     .bug-list-label {
@@ -116,7 +116,7 @@
     }
     .bug-list ul { list-style: none; display: flex; flex-direction: column; gap: 8px; }
     .bug-list ul li { font-size: 17px; color: var(--text-2); display: flex; gap: 10px; }
-    .bug-list ul li::before { content: '–'; color: var(--accent); }
+    .bug-list ul li::before { content: '–'; color: var(--accent-text); }
 
     @media (max-width: 640px) { .ts-cards { grid-template-columns: 1fr; } } footer { padding: 40px 20px 28px; } }
   </style>

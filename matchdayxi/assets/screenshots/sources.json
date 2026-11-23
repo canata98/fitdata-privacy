@@ -1,62 +1,122 @@
 {
   "assets/screenshots/de/market.png": {
-    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Fantasy/DE/Market.png",
-    "sourceSHA256": "acea360ae58b0f6e04cf1b0c3c391abad202f6de3d271e8032dece13bfd1ec11",
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/Release-Screenshots-1.2-Premier-League/iPhone-18-Pro/DE/03-Transfermarkt-Saisonwerte.png",
+    "sourceSHA256": "3ab4f6a21750a73e142d408148e83b463a57f96bcc6785a1fe2c4aac992771c5",
     "dimensions": [
       828,
       1800
     ],
-    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
-    "websiteSHA256": "71e7f7ca89fabddfa7d9846a8f3115e00a859cae3a352394e0a10f73dcbe25f5"
+    "processing": "Raw 1206x2622 release capture (version 1.2), resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "1ec0eac85a434e4a65ea22645bddd6efe388905ae9255d184e93b17a927128f7"
   },
   "assets/screenshots/de/lineup.png": {
-    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Fantasy/DE/Lineup.png",
-    "sourceSHA256": "c2f419f8a1f1d0515663410ba50c3cc1f1dda8d441a28a8018be7a82ace24909",
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/Release-Screenshots-1.2-Premier-League/iPhone-18-Pro/DE/09-Aufstellung.png",
+    "sourceSHA256": "ac4c16ec55c94a8188bf3312b6988838d41d05706c6f587ab2782ae9aff61de0",
     "dimensions": [
       828,
       1800
     ],
-    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
-    "websiteSHA256": "b651f2eeac2c39cc021ce17d3a488d62398fddb3f079c13de2200dc75d47a1de"
+    "processing": "Raw 1206x2622 release capture (version 1.2), resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "9a98720694a6bdb651c4d72bdb0f3d919d4a355bc1bb9276401fffaa10df874c"
   },
-  "assets/screenshots/de/pitch.png": {
-    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Builder/DE/Pitch.png",
-    "sourceSHA256": "579112f253df4b12d6b129c2db33102a5612718adf64c91c9bd2f95a90ba94b5",
+  "assets/screenshots/de/matchday.png": {
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/Release-Screenshots-1.2-Premier-League/iPhone-18-Pro/DE/02-Manager-Spieltag.png",
+    "sourceSHA256": "65a90d6998abc960a90747d7453aeee5ff2f5bc23b89f19e926ec7793c9a0056",
     "dimensions": [
       828,
       1800
     ],
-    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
-    "websiteSHA256": "7d6484d5d78104a17ccd0afe8d792d872721806cbde24859c571ba46ecd6afc6"
+    "processing": "Raw 1206x2622 release capture (version 1.2), resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "7d69f870e8cf38b3e99516cfa8afb1ad32926877683660feb0e65d9e5f48805c"
+  },
+  "assets/screenshots/de/match.png": {
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/Release-Screenshots-1.2-Premier-League/iPhone-18-Pro/DE/11-Liverpool-Real-Madrid-Uebersicht.png",
+    "sourceSHA256": "074f6fb5708a47349b54e848ef4e849140720a7163724e223cbed7891cabd603",
+    "dimensions": [
+      828,
+      1800
+    ],
+    "processing": "Raw 1206x2622 release capture (version 1.2), resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "62877dfb1a1b278947700b24e7a59863a63ea190d22ab0abe038f39115d7080f"
+  },
+  "assets/screenshots/de/player.png": {
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/Release-Screenshots-1.2-Premier-League/iPhone-18-Pro/DE/14-Spielerprofil-Alexis-Mac-Allister.png",
+    "sourceSHA256": "6add84145fe9342d1513bc3021a17cea81ddbfa3e7675c254ebb34a1ee3346f5",
+    "dimensions": [
+      828,
+      1800
+    ],
+    "processing": "Raw 1206x2622 release capture (version 1.2), resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "eac5c0cdd37eaaf277c1c99b21dbc387ad972de54eb1c42b7ba999638b36b2c1"
+  },
+  "assets/screenshots/de/grounds.png": {
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/Release-Screenshots-1.2-Premier-League/iPhone-18-Pro/DE/15-Grounds-Uebersicht.png",
+    "sourceSHA256": "618e149dac4bd678728f757340701aaf6f1b18ad62419c5cba4470016fc3416b",
+    "dimensions": [
+      828,
+      1800
+    ],
+    "processing": "Raw 1206x2622 release capture (version 1.2), resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
+    "websiteSHA256": "ac6e66d9b4a3ddcbff75656d9e53ed10cdf423579f0b4edac395aad915fadfbb"
   },
   "assets/screenshots/en/market.png": {
-    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Fantasy/EN/Market.png",
-    "sourceSHA256": "d549f2f09427acdd0ac70d482390769ab6264c898031c39355a3ec5b691bb7e1",
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/iPhone/EN/03-Transfermarkt-Saisonwerte_en.png",
+    "sourceSHA256": "793501ef290be74e2c516d077d458a7ccda3acff6a35482ac5409de3f65c73e8",
     "dimensions": [
       828,
       1800
     ],
-    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
-    "websiteSHA256": "641a2ccd880e09e0d6045d16c91673bec79870cb489eb7abdd5dde1b37bf49ad"
+    "processing": "No raw English capture supplied: app screen cut out of the 1.2 App Store image (crop 904x1966 at x=151, y=640, i.e. the screen placed at scale 0.75; geometry verified against the German raw capture), then resized. No retouching; iPhone frame rendered separately in HTML/CSS.",
+    "websiteSHA256": "65a2b4ae0efdf18c2677e056c3e95688986c28b1f6a586926d352ebdac722ffd"
   },
   "assets/screenshots/en/lineup.png": {
-    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Fantasy/EN/Lineup.png",
-    "sourceSHA256": "22c88e36c762944d6d1d179a0fea8d6db2cac525d7dd7d9f76b19ac69e4c3df4",
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/iPhone/EN/09-Aufstellung_en.png",
+    "sourceSHA256": "207d11b9f855be8d9c6e19a1ef5a953165d6e3905e6fd6aa8eee3e3a94fa0505",
     "dimensions": [
       828,
       1800
     ],
-    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
-    "websiteSHA256": "97576783cf544fc663dfc39d71182dfe06deae56372807ba8347eeb09ff91904"
+    "processing": "No raw English capture supplied: app screen cut out of the 1.2 App Store image (crop 904x1966 at x=151, y=640, i.e. the screen placed at scale 0.75; geometry verified against the German raw capture), then resized. No retouching; iPhone frame rendered separately in HTML/CSS.",
+    "websiteSHA256": "0eb36c021df55c14516725176b37e5f13bb2b21108fcce046ecd731e70a02d9d"
   },
-  "assets/screenshots/en/pitch.png": {
-    "source": "/Users/canata/Goalscorer - Weiteres/Goalscorer-Screenshots/Builder/EN/Pitch.png",
-    "sourceSHA256": "8ecd8e0169b2e5a789cd1fa57fe740c3ce2a39c201a0bddcd8b1f9d66cc842cd",
+  "assets/screenshots/en/matchday.png": {
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/iPhone/EN/02-Manager-Spieltag_en.png",
+    "sourceSHA256": "9877fde806b730ba331a949e616af93304beadc86396508133b592e738659956",
     "dimensions": [
       828,
       1800
     ],
-    "processing": "Resized only; iPhone frame rendered separately in HTML/CSS using the existing FitData SVG.",
-    "websiteSHA256": "a7341bfb3ec75740ff17ec1ada9838c2c4203da3aa8db33eeb0083ef6c29c3e3"
+    "processing": "No raw English capture supplied: app screen cut out of the 1.2 App Store image (crop 904x1966 at x=151, y=640, i.e. the screen placed at scale 0.75; geometry verified against the German raw capture), then resized. No retouching; iPhone frame rendered separately in HTML/CSS.",
+    "websiteSHA256": "ba3dad71905510460a9fdef2e7379253bbb2111e2e843b9595b7b13b8783ab52"
+  },
+  "assets/screenshots/en/match.png": {
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/iPhone/EN/11-Liverpool-Real-Madrid-Uebersicht_en.png",
+    "sourceSHA256": "51c0d8558d105c329bf9789b975647aef37e6794cdbfe01d1af9135485a25b74",
+    "dimensions": [
+      828,
+      1800
+    ],
+    "processing": "No raw English capture supplied: app screen cut out of the 1.2 App Store image (crop 904x1966 at x=151, y=640, i.e. the screen placed at scale 0.75; geometry verified against the German raw capture), then resized. No retouching; iPhone frame rendered separately in HTML/CSS.",
+    "websiteSHA256": "a2a82458bb50c88837d31c109643a9345881a8699aef630808d96382a4fa29ac"
+  },
+  "assets/screenshots/en/player.png": {
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/iPhone/EN/14-Spielerprofil-Alexis-Mac-Allister_en.png",
+    "sourceSHA256": "24b15b2f92024f841ebde38598dccf386d4183790fe4fe233c12003fa883fdf9",
+    "dimensions": [
+      828,
+      1800
+    ],
+    "processing": "No raw English capture supplied: app screen cut out of the 1.2 App Store image (crop 904x1966 at x=151, y=640, i.e. the screen placed at scale 0.75; geometry verified against the German raw capture), then resized. No retouching; iPhone frame rendered separately in HTML/CSS.",
+    "websiteSHA256": "0015de6a9fc176ef528769fe1f4a055f3dc552358c821162b2852b924cd77f1d"
+  },
+  "assets/screenshots/en/grounds.png": {
+    "source": "/Users/canata/MatchdayXI - Weiteres/App-Store-Bilder-1.2/iPhone/EN/15-Grounds-Uebersicht_en.png",
+    "sourceSHA256": "7a7e4ed241e41b1fda1d1817e63712d4495372bd69d32892987a5887b03beaa7",
+    "dimensions": [
+      828,
+      1800
+    ],
+    "processing": "No raw English capture supplied: app screen cut out of the 1.2 App Store image (crop 904x1966 at x=151, y=640, i.e. the screen placed at scale 0.75; geometry verified against the German raw capture), then resized. No retouching; iPhone frame rendered separately in HTML/CSS.",
+    "websiteSHA256": "387da24c3adaab3f8ab1c3e0136e1d55afab417c8cf0e66e4ef95c67986658bb"
   }
 }
